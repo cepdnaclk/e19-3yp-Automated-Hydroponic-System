@@ -9,14 +9,16 @@ title: Project Template
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
 
-# Project Title
+# Automated Hydroponic System
 
 ---
 
 ## Team
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
+-  E/19/060, Danujan S., [email](mailto:e19060@eng.pdn.ac.lk)
+-  E/19/131, Hansachapa A.P.K., [email](mailto:e19131@eng.pdn.ac.lk)
+-  E/19/166, W.W.K.Jayathunga, [email](mailto:e19166@eng.pdn.ac.lk)
+-  E/19/224, M.M.S.H. Madhurasinghe, [email](mailto:e19224@eng.pdn.ac.lk)
+-  E/19/266, Nithusikan T., [email](mailto:e19266@eng.pdn.ac.lk)
 
 <!-- Image (photo/drawing of the final hardware) should be here -->
 
@@ -62,12 +64,13 @@ All items and costs
 
 What was achieved, future developments, commercialization plans
 
-## Links
+## GitHub Links
 
-- [Project Repository](https://github.com/cepdnaclk/{{ page.repository-name }}){:target="_blank"}
-- [Project Page](https://cepdnaclk.github.io/{{ page.repository-name}}){:target="_blank"}
+- [Project Repository](https://github.com/cepdnaclk/cepdnaclk/e19-3yp-Automated-Hydroponic-System)
+- [Project Page](https://cepdnaclk.github.io/cepdnaclk/e19-3yp-Automated-Hydroponic-System)
 - [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
 - [University of Peradeniya](https://eng.pdn.ac.lk/)
 
+### CN Portfolio Links
 [//]: # (Please refer this to learn more about Markdown syntax)
 [//]: # (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
