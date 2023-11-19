@@ -1,6 +1,6 @@
 ___
 # HydroGrowPro (Automated Hydroponic System)
-![logo](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/5e10d8b0-0223-4833-8ab1-a1eb6d7109c1)
+![logo](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/0c7a9f77-0f10-4899-8bee-feaffcaef557)
 
 ___
 
