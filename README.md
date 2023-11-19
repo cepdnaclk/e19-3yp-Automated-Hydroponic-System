@@ -1,56 +1,44 @@
 ___
-# DELETE THIS INSTRUCTIONS AND ADD AN INTRODUCTION ABOUT YOUR PROJECT
+# HydroGrowPro (Automated Hydroponic System)
+![logo](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/5e10d8b0-0223-4833-8ab1-a1eb6d7109c1)
+
 ___
 
-# eYY-3yp-project-template
 
-This is a sample repository you can use for your Embedded Systems project. Once you followed these instructions, remove the text and add a brief introduction to here.
+## Table of Contents
 
-### Enable GitHub Pages
+- [HydroGroPro](#hydrogrowpro)
+- [Table of Contents](#tableofcontents)
+- [Problem Overview](#problemoverview)
+- [Augmented Features](#augmentedfeatures)
 
-You can put the things to be shown in GitHub pages into the _docs/_ folder. Both html and md file formats are supported. You need to go to settings and enable GitHub pages and select _main_ branch and _docs_ folder from the dropdowns, as shown in the below image.
 
-![image](https://user-images.githubusercontent.com/11540782/98789936-028d3600-2429-11eb-84be-aaba665fdc75.png)
+## Problem Overview
 
-### Special Configurations
+Traditional farming methods typically rely on a piece of land with good soil quality and are highly susceptible to the unpredictability of weather conditions. Farmers often need to engage in manual labor, such as tilling, planting, weeding, and harvesting, which can be physically demanding and time-consuming. The success of these traditional farming methods is on factors like soil fertility, climate, and access to sufficient water.Hydroponic systems represent an innovative solution to these challenges. These systems enable plants to grow in a controlled environment without soil. Instead, they are nourished by nutrient rich water solutions. Hydroponics have gained popularity due to several advantages, such as Water Efficiency, Crop Yield Optimization, Minimized Pest and Disease Impact.
+However, while hydroponic systems have clear benefits, they are not without their challenges. The key issue we are looking to address is the need for regular monitoring and adjustment of critical environmental parameters. This includes:
 
-These projects will be automatically added into [https://projects.ce.pdn.ac.lk](). If you like to show more details about your project on this site, you can fill the parameters in the file, _/docs/index.json_
+      1. pH Levels: The acidity or alkalinity of the water needs to be maintained within a specific range to ensure optimal nutrient absorption by plants.
+      2. Temperature: Plants thrive within specific temperature ranges, and maintaining these conditions is crucial for their health and growth.
+      3. Nutrient Levels: The nutrient concentrations in the water need to be closely monitored and adjusted as plants grow and uptake nutrients.
 
-```
-{
-  "title": "This is the title of the project",
-  "team": [
-    {
-      "name": "Team Member Name 1",
-      "email": "email@eng.pdn.ac.lk",
-      "eNumber": "E/yy/xxx"
-    },
-    {
-      "name": "Team Member Name 2",
-      "email": "email@eng.pdn.ac.lk",
-      "eNumber": "E/yy/xxx"
-    },
-    {
-      "name": "Team Member Name 3",
-      "email": "email@eng.pdn.ac.lk",
-      "eNumber": "E/yy/xxx"
-    }
-  ],
-  "supervisors": [
-    {
-      "name": "Dr. Supervisor 1",
-      "email": "email@eng.pdn.ac.lk"
-    },
-    {
-      "name": "Supervisor 2",
-      "email": "email@eng.pdn.ac.lk"
-    }
-  ],
-  "tags": ["Web", "Embedded Systems"]
-}
-```
+Failure to monitor and regulate these parameters effectively can lead to stunted plant growth, poor yield, or even crop failure in hydroponic systems. Current solutions on the market often provide basic automation, like timers for nutrient pumps and light control. However, these systems may not offer the level of precision and intelligence required to optimize plant growth and maximize crop yields.
+The problem we are trying to solve is the need for an automated hydroponic system that leverages technologies such as embedded systems, network and web applications, computer and network security, and machine learning to efficiently manage and optimize these crucial environmental variables. Typically, hydroponic systems require human interaction when it comes to the regulation of certain elements that allow the plant to grow. The goal of our project is to make a system that is cost-effective and, most importantly, is completely automated and requires virtually no human interaction after placing the germinated plant into the system. The other aspect is to create a system that can be used by a typical consumer; meaning that it is relatively small and simple to use. By doing so, our system will provide an easier and more productive way for farmers and hobbyists to grow plants hydroponically, overcoming the limitations of existing solutions and ensuring better results with less manual intervention.
 
-Once you filled this _index.json_ file, please verify the syntax is correct. (You can use [this](https://jsonlint.com/) tool).
+
+## Augmented Features
+
+The augmented product features that will differentiate our IoT-Based Automated Hydroponic System from existing products are as follows:
+
+      1. Ease of Use: Our system will feature a user-friendly interface accessible through web applications and mobile apps. This intuitive interface will simplify the control and monitoring of the hydroponic            system, ensuring that users of varying technical backgrounds can operate it with ease. This feature will eliminate barriers to entry for individuals new to hydroponics and technology.
+      2. Data-Driven Insights: Machine learning algorithms will be integrated to analyze data from various sensors. This data analysis will provide users with valuable insights and recommendations. For example,          it can suggest optimal nutrient levels, predict growth rates, and detect issues like nutrient deficiencies in their early stages. These insights empower users to make informed decisions, optimize crop           growth, and reduce the risk of crop loss. For example, use ML models to predict optimal nutrient levels, detect patterns indicating plant health issues, or optimize lighting schedules based on                   historical data. Continuously improve these algorithms to enhance system efficiency and user experience. 
+      3. Network and Web Applications: Implement a secure communication protocol (HTTPS, MQTT, etc.) to transmit sensor data from the hydroponic system to a central server or cloud platform. Develop a web                application for users to remotely monitor and control the system. Enable features like setting desired parameters, receiving notifications/alerts, and accessing historical data for analysis.
+      4. Security: Robust security measures will be implemented to protect the system from cyber threats. Ensuring the confidentiality and integrity of data generated and stored is vital. By safeguarding the             system against potential breaches, we provide peace of mind to users and protect sensitive information related to their hydroponic operations. Furthermore, Implement encryption techniques to secure              data transmission between the embedded system and the server/cloud. Use authentication mechanisms to ensure authorized access to the web application. Regularly update software and firmware to patch              security vulnerabilities, ensuring the system is resilient against potential cyber threats.
+      5. Scalability: The system will be designed to be scalable, enabling users to easily expand their hydroponic setups. This feature accommodates users with diverse needs, whether they start with a small              scale system and later decide to scale up their hydroponic farming or experiment with different plant varieties.
+      6. Affordability: Striving to keep the product cost-effective is a crucial factor. By offering an affordable solution, we make advanced hydroponic technology accessible to a broader range of users,                 including small-scale farmers and enthusiasts who might have budget constraints. This affordability contributes to the wider adoption of hydroponic farming.
+      7. Customization: Allowing users to customize growth conditions for different plants is a valuable feature. It promotes versatility in hydroponic farming by tailoring the system to suit the specific needs          of various plant types. This flexibility can accommodate a range of crops and growing preferences.
+      
+In summary, these augmented features will set our IoT-Based Automated Hydroponic System apart from existing products by emphasizing ease of use, data-driven decision-making, security, scalability, affordability, and customization. By addressing these aspects, our system aims to meet the diverse needs and preferences of users while making hydroponic farming more accessible, efficient, and user-friendly.
 
 ### Page Theme
 
