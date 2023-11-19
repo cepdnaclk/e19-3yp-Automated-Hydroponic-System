@@ -28,17 +28,19 @@ title: Project Template
 
 #### Table of Contents
 1. [Introduction](#introduction)
-2. [Solution Architecture](#solution-architecture )
-3. [Hardware & Software Designs](#hardware-and-software-designs)
-4. [Testing](#testing)
-5. [Detailed budget](#detailed-budget)
-6. [Conclusion](#conclusion)
-7. [Links](#links)
+3. [Solution Architecture](#solution-architecture )
+4. [Hardware & Software Designs](#hardware-and-software-designs)
+5. [Testing](#testing)
+6. [Detailed budget](#detailed-budget)
+7. [Conclusion](#conclusion)
+8. [Links](#links)
 
 ## Introduction
 
-Description of the real world problem and solution, impact
-
+![logo](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/5e10d8b0-0223-4833-8ab1-a1eb6d7109c1)
+The project "IoT-Based Automated Hydroponic System" aims to develop a modern and sustainable approach to hydroponic farming that maximizes efficiency by using technology to monitor and control growth conditions, reducing resource consumption, and enabling users to make data-driven decisions for better crop management.
+Customers want fresh, locally grown produce, and hydroponic farming provides an eco-friendly, space-efficient, and resource-saving solution. They are looking for high-quality, user-friendly, and automated hydroponic systems that can be easily monitored and managed remotely to meet their demand for convenience and sustainability.The market for hydroponic systems, particularly in urban and controlled environments, is growing. This presents an opportunity to develop a product 
+that is not only cost-effective but also provides value by integrating automation and data-driven insights. Such a product can cater to the increasing demand for sustainable and efficient farming methods while remaining economically viable for both individual consumers and businesses
 
 ## Solution Architecture
 
