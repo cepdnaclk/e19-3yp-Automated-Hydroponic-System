@@ -8,12 +8,18 @@ ___
 ## Table of Contents
 
 - [HydroGroPro](#hydrogrowpro)
+- [Overview](#overview)
 - [Table of Contents](#tableofcontents)
-- [Problem Overview](#problemoverview)
+- [Problem Statement](#problemstatement)
 - [Augmented Features](#augmentedfeatures)
 
 
-## Problem Overview
+## Overview
+
+The project "IoT-Based Automated Hydroponic System" aims to develop a modern and sustainable approach to hydroponic farming that maximizes efficiency by using technology to monitor and control growth conditions, reducing resource consumption, and enabling users to make data-driven decisions for better crop management.Customers want fresh, locally grown produce, and hydroponic farming provides an eco friendly, space-efficient, and resource-saving solution. They are looking for high-quality, user-friendly, and automated hydroponic systems that can be easily monitored and managed remotely to meet their demand for convenience and sustainability.The market for hydroponic systems, particularly in urban and controlled environments, is growing. This presents an opportunity to develop a product that is not only cost effective but also provides value by integrating automation and data-driven insights. Such a product can cater to the increasing demand for sustainable and efficient farming methods while remaining economically viable for both individual consumers and businesses
+
+
+## Problem Statement
 
 Traditional farming methods typically rely on a piece of land with good soil quality and are highly susceptible to the unpredictability of weather conditions. Farmers often need to engage in manual labor, such as tilling, planting, weeding, and harvesting, which can be physically demanding and time-consuming. The success of these traditional farming methods is on factors like soil fertility, climate, and access to sufficient water.Hydroponic systems represent an innovative solution to these challenges. These systems enable plants to grow in a controlled environment without soil. Instead, they are nourished by nutrient rich water solutions. Hydroponics have gained popularity due to several advantages, such as Water Efficiency, Crop Yield Optimization, Minimized Pest and Disease Impact.
 However, while hydroponic systems have clear benefits, they are not without their challenges. The key issue we are looking to address is the need for regular monitoring and adjustment of critical environmental parameters. This includes:
