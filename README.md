@@ -9,9 +9,10 @@ ___
 
 - [HydroGroPro](#hydrogrowpro)
 - [Overview](#overview)
-- [Table of Contents](#tableofcontents)
-- [Problem Statement](#problemstatement)
-- [Augmented Features](#augmentedfeatures)
+- [Table of Contents](#table-of-contents)
+- [Problem Statement](#problem-statement)
+- [User Interface (A Mobile Application)](#user-interface-a-mobile-application)
+- [Augmented Features](#augmented-features)
 
 
 ## Overview
@@ -36,8 +37,16 @@ The problem we are trying to solve is the need for an automated hydroponic syste
 
 Our solution includes a dedicated mobile application, empowering users with continuous access and control over the hydroponic system. This mobile platform ensures round-the-clock interaction and monitoring capabilities, offering users unparalleled convenience and oversight at any hour.
 
-      ### Features and Functionalities
-            1. <b>Real-Time Monitoring:</b> Users can view live sensor data for pH levels, Nitrogen concentrations, temperature, room humidity, and other vital parameters of their hydroponic setup.
+### Features and Functionalities
+<ul>
+      <li>Real-Time Monitoring : Users can view live sensor data for pH levels and Nutrient concentrations of their hydroponic setup.</li>
+      <li>Customized Plant Management : The app allows users to access individual plant profiles, enabling specific adjustments tailored to each plant's unique needs.</li>
+      <li>Alerts and Notifications : Receive instant alerts on the mobile app regarding critical conditions such as low pH levels, or low nutrient levels and any other deviations from optimal plant parameters.</li>
+      <li>Remote Control : Users can remotely adjust settings and parameters like nutrient dosing and pH dosing within the hydroponic system.</li>
+      <li>Data Analysis and Insights : The app provides historical data and analysis, offering insights into trends and patterns in plant health and environmental conditions.</li>
+      <li>User Management : For commercial or shared systems, the app might include user access controls, allowing multiple users or teams to manage different aspects based on permissions.</li>
+      <li>User Management : For commercial or shared systems, the app might include user access controls, allowing multiple users or teams to manage different aspects based on permissions.</li>
+</ul>
 
 
 ## Augmented Features
