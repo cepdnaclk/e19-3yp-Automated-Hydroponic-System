@@ -33,7 +33,7 @@ Failure to monitor and regulate these parameters effectively can lead to stunted
 The problem we are trying to solve is the need for an automated hydroponic system that leverages technologies such as embedded systems, network and web applications, computer and network security, and machine learning to efficiently manage and optimize these crucial environmental variables. Typically, hydroponic systems require human interaction when it comes to the regulation of certain elements that allow the plant to grow. The goal of our project is to make a system that is cost-effective and, most importantly, is completely automated and requires virtually no human interaction after placing the germinated plant into the system. The other aspect is to create a system that can be used by a typical consumer; meaning that it is relatively small and simple to use. By doing so, our system will provide an easier and more productive way for farmers and hobbyists to grow plants hydroponically, overcoming the limitations of existing solutions and ensuring better results with less manual intervention.
 
 
-## User Interface (A Mobile Application)
+## User Interface (Mobile Application)
 
 Our solution includes a dedicated mobile application, empowering users with continuous access and control over the hydroponic system. This mobile platform ensures round-the-clock interaction and monitoring capabilities, offering users unparalleled convenience and oversight at any hour.
 
