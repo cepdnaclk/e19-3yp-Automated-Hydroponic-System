@@ -11,7 +11,7 @@ ___
 - [Overview](#overview)
 - [Table of Contents](#table-of-contents)
 - [Problem Statement](#problem-statement)
-- [User Interface (A Mobile Application)](#user-interface-a-mobile-application)
+- [User Interface (Mobile Application)](#user-interface-mobile-application)
 - [Augmented Features](#augmented-features)
 
 
