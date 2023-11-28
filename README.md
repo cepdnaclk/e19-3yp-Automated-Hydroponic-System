@@ -32,6 +32,26 @@ Failure to monitor and regulate these parameters effectively can lead to stunted
 The problem we are trying to solve is the need for an automated hydroponic system that leverages technologies such as embedded systems, network and web applications, computer and network security, and machine learning to efficiently manage and optimize these crucial environmental variables. Typically, hydroponic systems require human interaction when it comes to the regulation of certain elements that allow the plant to grow. The goal of our project is to make a system that is cost-effective and, most importantly, is completely automated and requires virtually no human interaction after placing the germinated plant into the system. The other aspect is to create a system that can be used by a typical consumer; meaning that it is relatively small and simple to use. By doing so, our system will provide an easier and more productive way for farmers and hobbyists to grow plants hydroponically, overcoming the limitations of existing solutions and ensuring better results with less manual intervention.
 
 
+## User Interface (A Mobile Application)
+
+Our solution includes a dedicated mobile application, empowering users with continuous access and control over the hydroponic system. This mobile platform ensures round-the-clock interaction and monitoring capabilities, offering users unparalleled convenience and oversight at any hour.
+
+### Features and Functionalities
+<ul>
+      <li>liReal-Time Monitoring: Users can view live sensor data for pH levels and Nutrient concentrations of their hydroponic setup.</li>
+      <li>Customized Plant Management: The app allows users to access individual plant profiles, enabling specific adjustments tailored to each plant's unique needs.</li>
+
+      Alerts and Notifications: Receive instant alerts on the mobile app regarding critical conditions such as low pH levels, nutrient levels or deviations from optimal plant parameters.
+
+      Remote Control: Users can remotely adjust settings and parameters like nutrient dosing, and pH dosing within the hydroponic system.
+
+      Data Analysis and Insights: The app provides historical data and analysis, offering insights into trends and patterns in plant health and environmental conditions.
+
+      User Management: For commercial or shared systems, the app might include user access controls, allowing multiple users or teams to manage different aspects based on permissions.
+
+      Support and Resources: Access to guides, tutorials, or FAQs within the app to assist users in optimizing plant growth and troubleshooting.
+</ul>
+
 ## Augmented Features
 
 The augmented product features that will differentiate our IoT-Based Automated Hydroponic System from existing products are as follows:
