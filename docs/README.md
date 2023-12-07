@@ -13,12 +13,6 @@ title: Project Template
 
 ---
 
-## Team
--  E/19/060, Danujan S., [email](mailto:e19060@eng.pdn.ac.lk)
--  E/19/131, Hansachapa A.P.K., [email](mailto:e19131@eng.pdn.ac.lk)
--  E/19/166, W.W.K.Jayathunga, [email](mailto:e19166@eng.pdn.ac.lk)
--  E/19/224, M.M.S.H. Madhurasinghe, [email](mailto:e19224@eng.pdn.ac.lk)
--  E/19/266, Nithusikan T., [email](mailto:e19266@eng.pdn.ac.lk)
 
 <!-- Image (photo/drawing of the final hardware) should be here -->
 
@@ -56,15 +50,25 @@ Testing done on hardware and software, detailed + summarized results
 
 ## Detailed budget
 
-All items and costs
+![Detailed Budget](./images/Detailed_budget.png)
+
+<!--All items and costs
 
 | Item          | Quantity  | Unit Cost  | Total  |
 | ------------- |:---------:|:----------:|-------:|
-| Sample item   | 5         | 10 LKR     | 50 LKR |
+| Sample item   | 5         | 10 LKR     | 50 LKR |-->
 
 ## Conclusion
 
 What was achieved, future developments, commercialization plans
+
+## Team
+-  E/19/060, Danujan S., [email](mailto:e19060@eng.pdn.ac.lk)
+-  E/19/131, Hansachapa A.P.K., [email](mailto:e19131@eng.pdn.ac.lk)
+-  E/19/166, W.W.K.Jayathunga, [email](mailto:e19166@eng.pdn.ac.lk)
+-  E/19/224, M.M.S.H. Madhurasinghe, [email](mailto:e19224@eng.pdn.ac.lk)
+-  E/19/266, Nithusikan T., [email](mailto:e19266@eng.pdn.ac.lk)
+
 
 ## GitHub Links
 
