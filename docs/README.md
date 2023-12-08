@@ -62,6 +62,14 @@ Testing done on hardware and software, detailed + summarized results
 
 What was achieved, future developments, commercialization plans
 
+## Introduction Video
+<video width="640" height="360" controls>
+  <source src="videos/HYDROGROWPRO.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
+
 ## Team
 -  E/19/060, Danujan S., [email](mailto:e19060@eng.pdn.ac.lk)
 -  E/19/131, Hansachapa A.P.K., [email](mailto:e19131@eng.pdn.ac.lk)
