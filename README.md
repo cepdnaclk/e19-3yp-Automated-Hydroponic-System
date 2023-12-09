@@ -9,9 +9,14 @@ ___
 
 - [Overview](#overview)
 - [Problem Statement](#problem-statement)
+- [Why Us](#why-us)
 - [User Interface (Mobile Application)](#user-interface-mobile-application)
 - [User Interface (Web Application)](#user-interface-web-application)
 - [Augmented Features](#augmented-features)
+- [High Level System Organization](#high-level-system-organization)
+- [Storage](#storage)
+- [Technology Stack](#technology-stack)
+- [Links](#links)
 
 
 ## Overview
@@ -32,6 +37,12 @@ However, while hydroponic systems have clear benefits, they are not without thei
 
 Failure to monitor and regulate these parameters effectively can lead to stunted plant growth, poor yield, or even crop failure in hydroponic systems. Current solutions on the market often provide basic automation, like timers for nutrient pumps and light control. However, these systems may not offer the level of precision and intelligence required to optimize plant growth and maximize crop yields.
 The problem we are trying to solve is the need for an automated hydroponic system that leverages technologies such as embedded systems, network and web applications, computer and network security, and machine learning to efficiently manage and optimize these crucial environmental variables. Typically, hydroponic systems require human interaction when it comes to the regulation of certain elements that allow the plant to grow. The goal of our project is to make a system that is cost-effective and, most importantly, is completely automated and requires virtually no human interaction after placing the germinated plant into the system. The other aspect is to create a system that can be used by a typical consumer; meaning that it is relatively small and simple to use. By doing so, our system will provide an easier and more productive way for farmers and hobbyists to grow plants hydroponically, overcoming the limitations of existing solutions and ensuring better results with less manual intervention.
+
+
+## Why Us
+
+![comparison](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/99294a54-3c0a-4e49-8ea9-883b1e31225f)
+
 
 
 ## User Interface (Mobile Application)
@@ -69,9 +80,23 @@ The augmented product features that will differentiate our IoT-Based Automated H
       5. Scalability: The system will be designed to be scalable, enabling users to easily expand their hydroponic setups. This feature accommodates users with diverse needs, whether they start with a small scale system and later decide to scale up their hydroponic farming or experiment with different plant varieties.
       6. Affordability: Striving to keep the product cost-effective is a crucial factor. By offering an affordable solution, we make advanced hydroponic technology accessible to a broader range of users,including small-scale farmers and enthusiasts who might have budget constraints. This affordability contributes to the wider adoption of hydroponic farming.
       7. Customization: Allowing users to customize growth conditions for different plants is a valuable feature. It promotes versatility in hydroponic farming by tailoring the system to suit the specific needs of various plant types. This flexibility can accommodate a range of crops and growing preferences.
+
+## High Level System Organization
+
+
+
+## Storage
+
+![storage](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/59debd13-4039-46f6-9a7b-fb4c7d97b8ec)
+
+
+## Technology Stack
+
+
       
 In summary, these augmented features will set our IoT-Based Automated Hydroponic System apart from existing products by emphasizing ease of use, data-driven decision-making, security, scalability, affordability, and customization. By addressing these aspects, our system aims to meet the diverse needs and preferences of users while making hydroponic farming more accessible, efficient, and user-friendly.
 
-### Page Theme
+## Links
 
-A custom theme integrated with this GitHub Page, which is based on [github.com/cepdnaclk/eYY-project-theme](https://github.com/cepdnaclk/eYY-project-theme). If you like to remove this default theme, you can remove the file, _docs/\_config.yml_ and use HTML based website.
+- [Project Repository](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System)
+- [Project Page](
