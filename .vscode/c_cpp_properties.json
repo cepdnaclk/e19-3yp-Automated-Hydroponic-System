@@ -6,7 +6,10 @@
             "compilerPath": "",
             "cStandard": "${default}",
             "cppStandard": "${default}",
-            "includePath": [],
+            "includePath": [
+                "${workspaceFolder}/Firmware/.pio/libdeps/espwroom32/PubSubClient/src",
+                "${workspaceFolder}/Firmware/.pio/libdeps/espwroom32/ArduinoJson/src"
+            ],
             "compilerArgs": [
                 "-g",
                 "-Os",

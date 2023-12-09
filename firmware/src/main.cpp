@@ -1,15 +1,22 @@
 #include <Arduino.h>
+#include "utils.h"
+#include <PubSubClient.h>
+ 
+
+
+
 
 void setup() {
-  // put your setup code here, to run once:
-  pinMode(32, OUTPUT);
-
+    Serial.begin(115200);
+    connectAWS();
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  digitalWrite(32, HIGH);
-  delay(1000);
-  digitalWrite(32, LOW);
+  int metricsValue = random(1, 100);
+  Serial.print(F(" metrics: "));
+  Serial.print(metricsValue);
+
+  publishMessage(metricsValue);
+  client.loop();
   delay(1000);
 }
