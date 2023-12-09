@@ -1,7 +1,13 @@
+import React from "react";
+import UserHome from "./components/Users Home/Home_Users";
 
 function App() {
   return (
-    <div>Hello, Users of HydroGrowPro..</div>
+    <>
+    <div>
+      <UserHome/>
+    </div>
+    </>
   );
 }
 

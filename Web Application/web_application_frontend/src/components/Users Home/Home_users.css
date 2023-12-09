@@ -1,0 +1,33 @@
+.user-home-container{
+    height: 100px;
+    padding: 10px;
+    
+}
+
+.custom-rounded{
+    border-radius: 10px;
+}
+
+.responsive-logo{
+    height: 75px;
+    width: 100px;
+}
+
+.custom-navbar-color{
+    background-color: rgb(211, 242, 214);
+}
+.offcavas{
+    display: none;
+}
+
+@media (max-width: 576px) {
+    .custom-display {
+        display: none;
+    }
+}
+
+@media (min-width: 576px){
+    .offcavas{
+        display: contents;
+    }
+}
