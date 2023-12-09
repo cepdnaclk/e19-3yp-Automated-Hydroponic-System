@@ -99,4 +99,6 @@ In summary, these augmented features will set our IoT-Based Automated Hydroponic
 ## Links
 
 - [Project Repository](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System)
-- [Project Page](
+- [Project Page](https://cepdnaclk.github.io/e19-3yp-Automated-Hydroponic-System/)
+- [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
+- [University of Peradeniya](https://eng.pdn.ac.lk/)
