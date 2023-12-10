@@ -93,7 +93,7 @@ The augmented product features that will differentiate our IoT-Based Automated H
 
 ## Storage
 
-![storage](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/59debd13-4039-46f6-9a7b-fb4c7d97b8ec)
+
 
 
 ## Technology Stack
