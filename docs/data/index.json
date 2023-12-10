@@ -30,11 +30,7 @@
         {
             "name": "Dr. Isuru Nawinne",
             "email": "isurunawinne@eng.pdn.ac.lk"
-        },
-        {
-            "name": "Supervisor 2",
-            "email": "email@eng.pdn.ac.lk"
         }
     ],
-    "tags": ["Web", "Embedded Systems"]
+    "tags": ["Web Application Development", "Embedded Systems", "Cyber Security"]
 }
