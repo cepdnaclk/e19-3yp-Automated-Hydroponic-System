@@ -235,5 +235,7 @@ What was achieved, future developments, commercialization plans
 - [University of Peradeniya](https://eng.pdn.ac.lk/)
 
 ### CN Portfolio Links
+
+- [Jayathunga W.W.K.](https://www.thecn.com/WJ299)
 [//]: # (Please refer this to learn more about Markdown syntax)
 [//]: # (https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
