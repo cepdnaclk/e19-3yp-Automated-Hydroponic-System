@@ -19,6 +19,8 @@ ___
 - [Technology Stack](#technology-stack)
 - [Security & Privacy](#security-&-privacy)
 - [Power & Perfomance](#power-&-performance)
+- [Scalability](#scalability)
+- [Budget](#budget)
 - [Links](#links)
 
 
@@ -132,6 +134,20 @@ The augmented product features that will differentiate our IoT-Based Automated H
 - Optimized data communication
 - Optimized apps
 - Caching Mechanism
+
+
+## Scalability
+
+- Evaluating space and resources
+- Cost-Effective Solution
+- Monitoring & Maintenance
+- Testing and optimization
+
+
+## Budget
+
+![Detailed_budget](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/6c6aa0a3-b13d-4c98-9380-20a381706610)
+
 
       
 In summary, these augmented features will set our IoT-Based Automated Hydroponic System apart from existing products by emphasizing ease of use, data-driven decision-making, security, scalability, affordability, and customization. By addressing these aspects, our system aims to meet the diverse needs and preferences of users while making hydroponic farming more accessible, efficient, and user-friendly.
