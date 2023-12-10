@@ -10,6 +10,7 @@ ___
 - [Overview](#overview)
 - [Problem Statement](#problem-statement)
 - [Why Us](#why-us)
+- [Hardware Design](#hardware-design)
 - [User Interface (Mobile Application)](#user-interface-mobile-application)
 - [User Interface (Web Application)](#user-interface-web-application)
 - [Augmented Features](#augmented-features)
@@ -44,15 +45,21 @@ The problem we are trying to solve is the need for an automated hydroponic syste
 ![comparison](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/99294a54-3c0a-4e49-8ea9-883b1e31225f)
 
 
+## Hardware Design
 
-## User Interface (Mobile Application)
+![Untitled Sketch_bb](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/477a5aac-fed1-4745-8f60-ddbcc5480793)
+
+
+## Software Design
+
+### User Interface (Mobile Application)
 
 Our solution includes a dedicated mobile application, empowering users with continuous access and control over the hydroponic system. This mobile platform ensures round-the-clock interaction and monitoring capabilities, offering users unparalleled convenience and oversight at any hour.
 
-## User Interface (Web Application)
+### User Interface (Web Application)
 For the web application while logging in the normal user will get the same facilities as the mobile user. But for the admin user, he/she will be able to add the kind of plants we can grow in the hydroponics system and preferred conditions for the plants. The user management and the registering the new system will also handled in the web application
 
-### Features and Functionalities
+#### Features and Functionalities
 - The status of the pumps which are in the reservoir, resources( pH & Nutritional Solution )
 - The measurement of the pH level and the TDS value of the reservoir
 - The user will also get the details of the pH and nutritional sources in the system
