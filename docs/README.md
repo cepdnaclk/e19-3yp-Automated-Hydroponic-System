@@ -55,6 +55,11 @@ High level diagram + description
 
 ## Hardware and Software Designs
 
+### Hardware Design
+
+![Untitled Sketch_bb](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/6b776799-3f0d-408c-9f0f-6efabe07d232)
+
+
 ### User Interface (Mobile Application)
 
 Our solution includes a dedicated mobile application, empowering users with continuous access and control over the hydroponic system. This mobile platform ensures round-the-clock interaction and monitoring capabilities, offering users unparalleled convenience and oversight at any hour.
