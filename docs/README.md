@@ -23,18 +23,19 @@ title: HydroGrowPro
 #### Table of Contents
 1. [Introduction](#introduction)
 2. [Why Us](#why-us)
-3. [Solution Architecture](#solution-architecture )
-4. [Hardware & Software Designs](#hardware-and-software-designs)
-5. [Generation of Data](#generation-of-data)
-6. [Power & Performance](#power-&-performance)
-7. [Storage](#storage)
-8. [Security & Privacy](#security-&-privacy)
-9. [Testing](#testing)
-10. [Demonstration Plan](#demonstration-plan)
-11. [Scalability](#scalability)
-12. [Detailed budget](#detailed-budget)
-13. [Conclusion](#conclusion)
-14. [Links](#links)
+3. [Target Market](#target-market)
+4. [Solution Architecture](#solution-architecture )
+5. [Hardware & Software Designs](#hardware-and-software-designs)
+6. [Generation of Data](#generation-of-data)
+7. [Power & Performance](#power-&-performance)
+8. [Storage](#storage)
+9. [Security & Privacy](#security-&-privacy)
+10. [Testing](#testing)
+11. [Demonstration Plan](#demonstration-plan)
+12. [Scalability](#scalability)
+13. [Detailed budget](#detailed-budget)
+14. [Conclusion](#conclusion)
+15. [Links](#links)
 
 ## Introduction
 
@@ -54,6 +55,13 @@ that is not only cost-effective but also provides value by integrating automatio
 
 ![comparison](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/9c9943de-80dc-475c-a93a-8f85d9a8bea2)
 
+
+## Target Market
+
+- Domestic users seeking effortless home gardening
+- Adaptable for commercial-scale farming
+
+
 ## Solution Architecture
 
 High level diagram + description
@@ -63,6 +71,40 @@ High level diagram + description
 ### Hardware Design
 
 ![Untitled Sketch_bb](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/6b776799-3f0d-408c-9f0f-6efabe07d232)
+
+#### Dealing With Limitations
+
+1. Contamination & Maintenance Requirement
+   - Give users a weekly reminder via apps
+   - Provide a detailed video guide via the mobile app
+   - Provide a detailed guide via the user manual
+
+ 2. Value Drifts
+    - Get two measurements from a sensor, calculate the average value and act accordingly
+
+3. Dry Running Risk of Pumps
+   - Connect the water pump to the bottom of the water reservoir
+   - Give a notification when water level is significantly reduced
+
+#### Interfacing
+
+![Untitled Diagram drawio](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/2774fe1b-f786-4831-94c9-89f12635556d)
+
+#### Hardware Error Handling
+
+- Error Checking Mechanisms
+- Fail-Self Mechanism
+- Watchdog Timers
+- Power Switching Mode
+- Reliable & Resilience Firmware
+- Notification Mechanism
+
+#### Network Failure Handling
+
+- Use MQTT inherent Features
+- Local Storage Mechanism
+- Message Buffering
+- Periodic Retry
 
 
 ### User Interface (Mobile Application)
@@ -112,6 +154,13 @@ For the web application while logging in the normal user will get the same facil
 
 ## Testing
 
+### Hardware Testing
+
+- Use Unity Framework via Platformio for unit testing
+
+![Unity](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/7e766aac-ab4a-4181-99ac-857bb5a3ab43)
+![platformio](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/f09cd0df-2352-4c33-b075-b2f98365e3a3)
+
 
 ## Demonstration Plan
 
@@ -130,6 +179,16 @@ For the web application while logging in the normal user will get the same facil
 - Encryption
   1. JWT Token
   2. Time Out Mechanism
+
+### Security for Communication & Hardware
+
+- Secure Firmware Update & Testing
+- Network Security
+- Device Authentication
+- Secure Communication
+- Secure Storage
+- Access Control
+- Physical Security 
   
 
 Testing done on hardware and software, detailed + summarized results
