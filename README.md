@@ -10,6 +10,7 @@ ___
 - [Overview](#overview)
 - [Problem Statement](#problem-statement)
 - [Why Us](#why-us)
+- [Target Market](#target-market)
 - [Hardware Design](#hardware-design)
 - [Software Design](#software-design)
 - [Augmented Features](#augmented-features)
@@ -20,6 +21,7 @@ ___
 - [Security & Privacy](#security-&-privacy)
 - [Power & Perfomance](#power-&-performance)
 - [Scalability](#scalability)
+- [Testing](#hardware-testing)
 - [Budget](#budget)
 - [Links](#links)
 
@@ -49,9 +51,47 @@ The problem we are trying to solve is the need for an automated hydroponic syste
 ![comparison](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/99294a54-3c0a-4e49-8ea9-883b1e31225f)
 
 
+## Target Market
+
+- Domestic users seeking effortless home gardening
+- Adaptable for commercial-scale farming
+
+
 ## Hardware Design
 
 ![Untitled Sketch_bb](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/477a5aac-fed1-4745-8f60-ddbcc5480793)
+
+### Dealing With Hardware Limitations
+
+- Contamination & Maintenance Requirement
+  1. Give weekly reminders to the users via the apps
+  2. Provide a very detailed maintenance guide via the user manual
+
+- Value Drifts
+  1. Take 2 measurements from sensors and calculate the average value and act accordingly
+
+- Dry Running Risk
+  1. Connect the pump to the bottom of the water reservoir and give notification to users          when the water level changedsignificantly
+
+### Hardware Interfacing
+
+![Untitled Diagram drawio](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/113d1e59-4017-4fc0-bedc-bbc6656a2336)
+
+### Hardware Error Handling
+
+- Error Checking Mechanisms
+- Fail-Self Mechanism
+- Watchdog Timers
+- Power Switching Mode
+- Reliable & Resilience Firmware
+- Notification Mechanism
+
+### Network Failure Handling
+
+- Use MQTT inherent Features
+- Local Storage Mechanism
+- Message Buffering
+- Periodic Retry
 
 
 ## Software Design
@@ -125,6 +165,16 @@ The augmented product features that will differentiate our IoT-Based Automated H
 - JWT Token
 - Time Out Mechanism
 
+### Security for Communication Hardware
+
+- Secure Firmware Update & Testing
+- Network Security
+- Device Authentication
+- Secure Communication
+- Secure Storage
+- Access Control
+- Physical Security 
+
 
 ## Power & Performance
 
@@ -142,6 +192,15 @@ The augmented product features that will differentiate our IoT-Based Automated H
 - Cost-Effective Solution
 - Monitoring & Maintenance
 - Testing and optimization
+
+
+## Testing
+
+### Hardware Testing
+
+Implement unit testing with Unity framework via Platformio
+![Unity](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/63a5c1b4-08eb-4c92-bbc0-c3daa5d29b78)
+
 
 
 ## Budget
