@@ -25,11 +25,16 @@ title: HydroGrowPro
 2. [Why Us](#why-us)
 3. [Solution Architecture](#solution-architecture )
 4. [Hardware & Software Designs](#hardware-and-software-designs)
-5. [Storage](#storage)
-6. [Testing](#testing)
-7. [Detailed budget](#detailed-budget)
-8. [Conclusion](#conclusion)
-9. [Links](#links)
+5. [Generation of Data](#generation-of-data)
+6. [Power & Performance](#power-&-performance)
+7. [Storage](#storage)
+8. [Security & Privacy](#security-&-privacy)
+9. [Testing](#testing)
+10. [Demonstration Plan](#demonstration-plan)
+11. [Scalability](#scalability)
+12. [Detailed budget](#detailed-budget)
+13. [Conclusion](#conclusion)
+14. [Links](#links)
 
 ## Introduction
 
@@ -82,12 +87,50 @@ For the web application while logging in the normal user will get the same facil
 - The user is able to switch off the pumps in the system for the maintainance kind of things.
 
 
+## Generation of Data
+
+### Sensor Data
+
+- PH Sensor
+- TDS Water Conductivity Sensor
+- Float Switch
+
+
+## Power & Performance
+
+- Power Switching Mode
+- Optimized Code
+- Appropriate Hardware Items
+- Optimized Data Communication
+- Optimized Apps
+- Caching Mechanism
+
+
 ## Storage
 
 
 
 ## Testing
 
+
+## Demonstration Plan
+
+- Reliable Functionality of Hardware Setup with Software Nodes
+- Power Switching Capability
+- Critical Situation and Responses
+
+
+## Security & Privacy
+
+- Authentication
+  1. User Authentication
+  2. Central Unit Authentication
+- Authorization
+  1. Role Based Access
+- Encryption
+  1. JWT Token
+  2. Time Out Mechanism
+  
 
 Testing done on hardware and software, detailed + summarized results
 
@@ -100,6 +143,14 @@ Testing done on hardware and software, detailed + summarized results
 | Item          | Quantity  | Unit Cost  | Total  |
 | ------------- |:---------:|:----------:|-------:|
 | Sample item   | 5         | 10 LKR     | 50 LKR |-->
+
+
+## Scalability
+
+- Evaluating Space and Resources
+- Cost-Effective Solution
+- Monitoring & Maintenance
+- Testing & Optimization
 
 ## Conclusion
 
