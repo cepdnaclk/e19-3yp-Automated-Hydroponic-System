@@ -1,11 +1,13 @@
 import React from "react";
-import UserHome from "./components/Users Home/Home_Users";
+import NavBar from "./components/Navbar";
+import Home from "../src/components/Users Home/Home_User"
 
 function App() {
   return (
     <>
     <div>
-      <UserHome/>
+      <NavBar/>
+      <Home/>
     </div>
     </>
   );
