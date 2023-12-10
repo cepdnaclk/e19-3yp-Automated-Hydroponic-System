@@ -84,7 +84,7 @@ For the web application while logging in the normal user will get the same facil
 
 ## Storage
 
-![storage](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/42fa602c-ff39-414e-85de-01abbef71534)
+
 
 ## Testing
 
