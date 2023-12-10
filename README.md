@@ -14,8 +14,11 @@ ___
 - [Software Design](#software-design)
 - [Augmented Features](#augmented-features)
 - [High Level System Organization](#high-level-system-organization)
+- [Generation of Data](#generation-of-data)
 - [Storage](#storage)
 - [Technology Stack](#technology-stack)
+- [Security & Privacy](#security-&-privacy)
+- [Power & Perfomance](#power-&-performance)
 - [Links](#links)
 
 
@@ -90,6 +93,14 @@ The augmented product features that will differentiate our IoT-Based Automated H
 ## High Level System Organization
 
 
+## Generation of Data
+
+### Sensor Data
+
+- PH Sensor
+- TDS Water Conductivity Sensor
+- Float Switch
+
 
 ## Storage
 
@@ -98,6 +109,29 @@ The augmented product features that will differentiate our IoT-Based Automated H
 
 ## Technology Stack
 
+
+## Security & Privacy
+
+### Authentication
+- User Authentication
+- Central Unit Authentication
+
+### Authorization
+- Role Based Access
+
+### Encryption
+- JWT Token
+- Time Out Mechanism
+
+
+## Power & Performance
+
+- Power switching mode
+- Optimized Code 
+- Appropriate hardware items
+- Optimized data communication
+- Optimized apps
+- Caching Mechanism
 
       
 In summary, these augmented features will set our IoT-Based Automated Hydroponic System apart from existing products by emphasizing ease of use, data-driven decision-making, security, scalability, affordability, and customization. By addressing these aspects, our system aims to meet the diverse needs and preferences of users while making hydroponic farming more accessible, efficient, and user-friendly.
