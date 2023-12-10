@@ -199,7 +199,10 @@ The augmented product features that will differentiate our IoT-Based Automated H
 ### Hardware Testing
 
 Implement unit testing with Unity framework via Platformio
+
 ![Unity](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/63a5c1b4-08eb-4c92-bbc0-c3daa5d29b78)
+
+![platformio](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/411ffb51-3589-4b65-b81c-910deb19ecc3)
 
 
 
