@@ -64,9 +64,14 @@ that is not only cost-effective but also provides value by integrating automatio
 
 ## Solution Architecture
 
-High level diagram + description
+![Detailed Budget](./images/Untitled-2023-11-19-1641223.png)
 
-## Hardware and Software Designs
+### Control Flow I
+![CF1](./images/WhatsApp%20Image%202023-12-11%20at%2000.49.17_eeacbcfc.jpg)
+
+### Control Flow II
+![CF2](./images/WhatsApp%20Image%202023-12-11%20at%2001.02.47_c0c0e51e.jpg)
+
 
 ### Hardware Design
 
@@ -128,6 +133,18 @@ For the web application while logging in the normal user will get the same facil
   are over.
 - The user is able to switch off the pumps in the system for the maintainance kind of things.
 
+#### For the normal Users
+![image1](./images/Group%2016.png)
+![image1](./images/Group%2019.png)
+![image1](./images/Group%2018.png)
+![image2](./images/Group%2013.png)
+![image1](./images/Group%2014.png)
+![image1](./images/Group%2015.png)
+
+#### For admin users
+![image3](./images/Group%2022.png)
+![image3](./images/Group%2020.png)
+![image3](./images/Group%2021.png)
 
 ## Generation of Data
 
@@ -148,7 +165,7 @@ For the web application while logging in the normal user will get the same facil
 - Caching Mechanism
 
 
-## Storage
+
 
 
 

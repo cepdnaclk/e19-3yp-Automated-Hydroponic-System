@@ -149,11 +149,10 @@ The augmented product features that will differentiate our IoT-Based Automated H
 
 
 
-## Technology Stack
+
 
 
 ## Security & Privacy
-
 ### Authentication
 - User Authentication
 - Central Unit Authentication
