@@ -203,6 +203,49 @@ Implement unit testing with Unity framework via Platformio
 
 ![platformio](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/411ffb51-3589-4b65-b81c-910deb19ecc3)
 
+### Software Testing
+
+#### <b>Testing Java Spring Boot Backend:</b>
+
+<b>Unit Testing:</b>
+
+JUnit testing will be used to write unit tests for individual components, services, repositories, and controllers. Mock dependencies and test the functionality of each unit in isolation.
+
+<b>Integration Testing:</b> 
+
+Verify the interaction between various components within the Spring context. Spring's testing annotations like @SpringBootTest to perform integration tests that cover multiple layers of the application
+
+<b>REST API Testing:</b>
+
+Postman will be used to test endpoints' functionality, input validation, error handling, and authentication/authorization mechanisms.
+<br>
+<br>
+
+#### <b>Testing React Web Application:</b>
+
+<b>Unit Testing:</b> 
+
+React Testing Library to write unit tests for individual React components. Test rendering, state changes, user interactions, and component behavior in isolation.
+
+<b>Integration Testing:</b>
+
+
+The integration of multiple components within the React application will be tested to ensure that different parts of the application work together as expected.
+
+<br><br>
+
+#### <b>Testing for Flutter Mobile Application:</b>
+
+<b>Unit Testing:</b> 
+
+Flutter's testing framework to write unit tests for individual widgets and test widget behavior, rendering, and interactions in isolation.
+
+
+<b>Integration Testing:</b>
+
+Flutter_driver package to perform integration tests that drive the app as a real user would, testing interactions across multiple screen
+
+
 
 
 ## Budget
