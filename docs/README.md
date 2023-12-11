@@ -22,7 +22,8 @@ title: HydroGrowPro
 
 #### Table of Contents
 1. [Introduction](#introduction)
-2. [Why Us](#why-us)
+2. [Introduction Video](#introduction-video)
+3. [Why Us](#why-us)
 3. [Target Market](#target-market)
 4. [Solution Architecture](#solution-architecture )
 5. [Hardware & Software Designs](#hardware-and-software-designs)
@@ -61,21 +62,19 @@ that is not only cost-effective but also provides value by integrating automatio
 - Domestic users seeking effortless home gardening
 - Adaptable for commercial-scale farming
 
-
 ## Solution Architecture
 
-![Detailed Budget](./images/Untitled-2023-11-19-1641223.png)
+### High level system organization
 
-## Generation of Data
+![High level system organization](./images/Untitled-2023-11-19-1641223.png)
 
-### Sensor Data
+### Generation of Data
+
+#### Sensor Data
 
 - PH Sensor
 - TDS Water Conductivity Sensor
 - Float Switch
-
-
-
 
 ### Control Flow I
 ![CF1](./images/WhatsApp%20Image%202023-12-11%20at%2000.49.17_eeacbcfc.jpg)
@@ -92,11 +91,13 @@ that is not only cost-effective but also provides value by integrating automatio
 
 ![Untitled Diagram drawio](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/2774fe1b-f786-4831-94c9-89f12635556d)
 
-### User Interface (Mobile Application)
+## User Interface
+
+### Mobile Application
 
 Our solution includes a dedicated mobile application, empowering users with continuous access and control over the hydroponic system. This mobile platform ensures round-the-clock interaction and monitoring capabilities, offering users unparalleled convenience and oversight at any hour.
 
-### User Interface (Web Application)
+## Web Application
 
 For the web application while logging in the normal user will get the same facilities as the mobile user. But for the admin user, he/she will be able to add the kind of plants we can grow in the hydroponics system and preferred conditions for the plants. The user management and the registering the new system will also handled in the web application
 
