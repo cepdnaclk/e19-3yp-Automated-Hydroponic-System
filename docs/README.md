@@ -66,6 +66,17 @@ that is not only cost-effective but also provides value by integrating automatio
 
 ![Detailed Budget](./images/Untitled-2023-11-19-1641223.png)
 
+## Generation of Data
+
+### Sensor Data
+
+- PH Sensor
+- TDS Water Conductivity Sensor
+- Float Switch
+
+
+
+
 ### Control Flow I
 ![CF1](./images/WhatsApp%20Image%202023-12-11%20at%2000.49.17_eeacbcfc.jpg)
 
@@ -77,40 +88,9 @@ that is not only cost-effective but also provides value by integrating automatio
 
 ![Untitled Sketch_bb](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/6b776799-3f0d-408c-9f0f-6efabe07d232)
 
-#### Dealing With Limitations
-
-1. Contamination & Maintenance Requirement
-   - Give users a weekly reminder via apps
-   - Provide a detailed video guide via the mobile app
-   - Provide a detailed guide via the user manual
-
- 2. Value Drifts
-    - Get two measurements from a sensor, calculate the average value and act accordingly
-
-3. Dry Running Risk of Pumps
-   - Connect the water pump to the bottom of the water reservoir
-   - Give a notification when water level is significantly reduced
-
 #### Interfacing
 
 ![Untitled Diagram drawio](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/2774fe1b-f786-4831-94c9-89f12635556d)
-
-#### Hardware Error Handling
-
-- Error Checking Mechanisms
-- Fail-Self Mechanism
-- Watchdog Timers
-- Power Switching Mode
-- Reliable & Resilience Firmware
-- Notification Mechanism
-
-#### Network Failure Handling
-
-- Use MQTT inherent Features
-- Local Storage Mechanism
-- Message Buffering
-- Periodic Retry
-
 
 ### User Interface (Mobile Application)
 
@@ -146,28 +126,27 @@ For the web application while logging in the normal user will get the same facil
 ![image3](./images/Group%2020.png)
 ![image3](./images/Group%2021.png)
 
-## Generation of Data
+## Security & Privacy
+Our system have the sensitive datas like User details and credentials, device credentials, and the sensor data saved in the cloud and what sort of plants we have planted in the system. So if the unathorized people get the access to our system, they could be able to manipulate the the sensitive data.So we have implemented so many security features in our system.
 
-### Sensor Data
+This is how the security aspects of our system is handled.
+1. Strong authentication & authorization
+- Multifactor authentication
+- Role based access
+- Verification certificates for devices
 
-- PH Sensor
-- TDS Water Conductivity Sensor
-- Float Switch
+2. Data Encryption
+- JWT token
+- MQTT (port : 8883) over TLS 
+#### Security for Communication & Hardware
 
-
-## Power & Performance
-
-- Power Switching Mode
-- Optimized Code
-- Appropriate Hardware Items
-- Optimized Data Communication
-- Optimized Apps
-- Caching Mechanism
-
-
-
-
-
+- Secure Firmware Update & Testing
+- Network Security
+- Device Authentication
+- Secure Communication
+- Secure Storage
+- Access Control
+- Physical Security 
 
 ## Testing
 
@@ -178,37 +157,59 @@ For the web application while logging in the normal user will get the same facil
 ![Unity](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/7e766aac-ab4a-4181-99ac-857bb5a3ab43)
 ![platformio](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/f09cd0df-2352-4c33-b075-b2f98365e3a3)
 
+### Software Testing
+- Unit testing with JUnit  
+- Integrated testing with Flutter such as Unit tests, widget tests, and integration tests
+- For the testing purpose of the React application Jest and React testing libraries 
+- API testing with Postman
+- Load & Stress Testing  with JMeter
+
+### Dealing With Limitations
+
+1. Contamination & Maintenance Requirement
+   - Give users a weekly reminder via apps
+   - Provide a detailed video guide via the mobile app
+   - Provide a detailed guide via the user manual
+
+ 2. Value Drifts
+    - Get two measurements from a sensor, calculate the average value and act accordingly
+
+3. Dry Running Risk of Pumps
+   - Connect the water pump to the bottom of the water reservoir
+   - Give a notification when water level is significantly reduced
+
+
+
+## Hardware Error Handling
+
+- Error Checking Mechanisms
+- Fail-Self Mechanism
+- Watchdog Timers
+- Power Switching Mode
+- Reliable & Resilience Firmware
+- Notification Mechanism
+
+## Network Failure Handling
+
+- Use MQTT inherent Features
+- Local Storage Mechanism
+- Message Buffering
+- Periodic Retry
+
+## Power & Performance
+
+- Power Switching Mode
+- Optimized Code
+- Appropriate Hardware Items
+- Optimized Data Communication
+- Optimized Apps
+- Caching Mechanism
 
 ## Demonstration Plan
 
 - Reliable Functionality of Hardware Setup with Software Nodes
 - Power Switching Capability
 - Critical Situation and Responses
-
-
-## Security & Privacy
-
-- Authentication
-  1. User Authentication
-  2. Central Unit Authentication
-- Authorization
-  1. Role Based Access
-- Encryption
-  1. JWT Token
-  2. Time Out Mechanism
-
-### Security for Communication & Hardware
-
-- Secure Firmware Update & Testing
-- Network Security
-- Device Authentication
-- Secure Communication
-- Secure Storage
-- Access Control
-- Physical Security 
-  
-
-Testing done on hardware and software, detailed + summarized results
 
 ## Detailed budget
 
@@ -230,9 +231,6 @@ Testing done on hardware and software, detailed + summarized results
 
 ## Conclusion
 
-What was achieved, future developments, commercialization plans
-
-
 
 
 
@@ -248,10 +246,13 @@ What was achieved, future developments, commercialization plans
 
 - [Project Repository](https://github.com/cepdnaclk/cepdnaclk/e19-3yp-Automated-Hydroponic-System)
 - [Project Page](https://cepdnaclk.github.io/cepdnaclk/e19-3yp-Automated-Hydroponic-System)
-- [Department of Computer Engineering](http://www.ce.pdn.ac.lk/)
-- [University of Peradeniya](https://eng.pdn.ac.lk/)
+
 
 ### CN Portfolio Links
 
+- [Danujan S.](https://www.thecn.com/DS1680)
+- [Hansachapa A.P.K.](https://www.thecn.com/AH2396)
 - [Jayathunga W.W.K.](https://www.thecn.com/WJ299)
+- [Madhurasinghe M.M.S.H.](https://www.thecn.com/SM3179)
+- [Nithusikan T.](https://www.thecn.com/NT1459)
 
