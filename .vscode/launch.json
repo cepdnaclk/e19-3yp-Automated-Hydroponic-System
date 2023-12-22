@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/AAApera/aca/CO300/e19-3yp-Automated-Hydroponic-System/firmware/src",
-      "program": "d:/AAApera/aca/CO300/e19-3yp-Automated-Hydroponic-System/firmware/src/build/Debug/outDebug",
+      "cwd": "d:/AAApera/aca/CO300/e19-3yp-Automated-Hydroponic-System/Firmware/src",
+      "program": "d:/AAApera/aca/CO300/e19-3yp-Automated-Hydroponic-System/Firmware/src/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
