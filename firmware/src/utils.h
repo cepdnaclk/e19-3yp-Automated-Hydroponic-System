@@ -7,8 +7,8 @@
 
 
 /* Define publish and subscribe topics */
-#define AWS_IOT_PUBLISH_TOPIC   "esp32/pub"
-#define AWS_IOT_SUBSCRIBE_TOPIC "esp32/sub"
+#define AWS_IOT_PUBLISH_TOPIC   "esp32pub"
+#define AWS_IOT_SUBSCRIBE_TOPIC "esp32sub"
 
 WiFiClientSecure net = WiFiClientSecure();
 PubSubClient client(net);
