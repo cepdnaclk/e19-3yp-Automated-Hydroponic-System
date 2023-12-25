@@ -7,14 +7,15 @@
 
 
 /* Define publish and subscribe topics */
-#define AWS_IOT_PUBLISH_TOPIC   "esp32/pub"
-#define AWS_IOT_SUBSCRIBE_TOPIC "esp32/sub"
+#define AWS_IOT_PUBLISH_TOPIC   "esp32pub"
+#define AWS_IOT_SUBSCRIBE_TOPIC "esp32sub"
+#define PH_SENSOR_TOPIC "phsensor"
 
 WiFiClientSecure net = WiFiClientSecure();
 PubSubClient client(net);
 
 void messageHandler(char* topic, byte* payload, unsigned int length) {
-    Serial.print("Incoming: ");
+    Serial.print(" Incoming: ");
     Serial.println(topic);
 
     StaticJsonDocument<200> doc;
@@ -23,7 +24,7 @@ void messageHandler(char* topic, byte* payload, unsigned int length) {
     Serial.print(message);
 }
 
-void connectAWS() {
+void connectAWS(const char* topic) {
     WiFi.mode(WIFI_STA);
     WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
 
@@ -58,17 +59,17 @@ void connectAWS() {
     }
 
     // Subscribe to a topic
-    client.subscribe(AWS_IOT_SUBSCRIBE_TOPIC);
+    client.subscribe(topic);
 
     Serial.println("AWS IoT Connected!");
 }
 
-void publishMessage(int metricsValue) {
+void publishMessage(float sensorValue, const char* topic, const char* dataName) {
   StaticJsonDocument<200> doc;
-  doc["metrics"] = metricsValue;
+  doc[dataName] = sensorValue;
 
   char jsonBuffer[512];
   serializeJson(doc, jsonBuffer);
  
-  client.publish(AWS_IOT_PUBLISH_TOPIC, jsonBuffer);
+  client.publish(topic, jsonBuffer);
 }
