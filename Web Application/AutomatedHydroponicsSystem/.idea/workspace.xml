@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78e606ca-8da8-43d3-9370-feddef44668b" name="Changes" comment="Required Files Add">
-      <change afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/Demo/DemoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/User/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/User/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/auth/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/config/ApplicationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/config/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/config/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/config/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/token/Token.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/token/TokenRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/token/TokenType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AutomatedHydroponicsSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AutomatedHydroponicsSystem.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/User/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/User/User.java" afterDir="false" />
-    </list>
+    <list default="true" id="78e606ca-8da8-43d3-9370-feddef44668b" name="Changes" comment="Required Files Add" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,9 +13,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -53,7 +32,21 @@
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Danujan06"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="2cdcc0b4-fd55-4392-a119-616f7e360230" />
+        <option name="url" value="https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -78,8 +71,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "master__1",
-    "last_opened_file_path": "E:/Engineering/5th Seme 2023/CO300/Project_GitHub/e19-3yp-Automated-Hydroponic-System/Web_Application/AutomatedHydroponicsSystem",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "E:/Engineering/5th Seme 2023/CO300/Project_GitHub/Original/e19-3yp-Automated-Hydroponic-System/Web Application/AutomatedHydroponicsSystem",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -128,6 +121,7 @@
       <workItem from="1703470366674" duration="3767000" />
       <workItem from="1703484352932" duration="1595000" />
       <workItem from="1703514071833" duration="2111000" />
+      <workItem from="1703531916439" duration="1170000" />
     </task>
     <task id="LOCAL-00001" summary="User class added">
       <option name="closed" value="true" />
