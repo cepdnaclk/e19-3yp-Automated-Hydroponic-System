@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/new_plant.dart';
 import 'package:testapp/plant_details.dart';
 import 'package:testapp/plant_status.dart';
 import 'header.dart';
@@ -134,7 +135,12 @@ class _PlantLogState extends State<PlantLog> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => NewPlant(), // Replace YourAddPage with the add page widget
+            ),
+          );
         },
         child: Icon(
           Icons.add,
