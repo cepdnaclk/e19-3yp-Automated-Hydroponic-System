@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/plant_details.dart';
+import 'package:testapp/plant_status.dart';
 import 'header.dart';
 
 class PlantLog extends StatefulWidget {
@@ -18,12 +20,22 @@ class _PlantLogState extends State<PlantLog> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 30, 20, 0),
+            child: Text(
+              "Plant Log",
+              style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 18,
+                fontFamily: 'Poppins',
+              ),
+            ),
+          ),
           Card(
-
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.zero,
             ),
-            margin: EdgeInsets.fromLTRB(20, 30, 20, 25),
+            margin: EdgeInsets.fromLTRB(20, 20, 20, 25),
             child: Padding(
               padding: const EdgeInsets.all(0.0),
               child: Row(
@@ -43,7 +55,12 @@ class _PlantLogState extends State<PlantLog> {
                       children: [
                         TextButton(
                           onPressed: () {
-
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => PlantDetails(), // Replace YourAddPage with the add page widget
+                              ),
+                            );
                           },
                           child: Text(
                             'Aloe Vera',
@@ -72,7 +89,12 @@ class _PlantLogState extends State<PlantLog> {
                     flex: 1,
                     child: GestureDetector(
                       onTap: () {
-
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => PlantStatus(), // Replace YourAddPage with the add page widget
+                          ),
+                        );
                       },
                       child: Container(
                         width: 50,
