@@ -10,6 +10,7 @@
 #define AWS_IOT_PUBLISH_TOPIC   "esp32pub"
 #define AWS_IOT_SUBSCRIBE_TOPIC "esp32sub"
 #define PH_SENSOR_TOPIC "phsensor"
+#define TDS_SENSOR_TOPIC "tdssensor"
 
 WiFiClientSecure net = WiFiClientSecure();
 PubSubClient client(net);
