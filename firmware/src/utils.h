@@ -11,6 +11,7 @@
 #define AWS_IOT_SUBSCRIBE_TOPIC "esp32sub"
 #define PH_SENSOR_TOPIC "phsensor"
 #define TDS_SENSOR_TOPIC "tdssensor"
+#define FLOAT_SENSOR_TOPIC "floatsensor"
 
 WiFiClientSecure net = WiFiClientSecure();
 PubSubClient client(net);
