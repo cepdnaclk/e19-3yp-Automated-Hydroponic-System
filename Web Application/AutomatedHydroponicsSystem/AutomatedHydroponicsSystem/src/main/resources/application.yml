@@ -3,5 +3,8 @@ spring.datasource.url=jdbc:mysql://localhost:3306/user_details
 spring.datasource.username=root
 spring.datasource.password=
 spring.datasource.driver-class-name= com.mysql.cj.jdbc.Driver
+application.security.jwt.secret-key=529424ba8964aa3c4de609cf5b23f29a0741602186e31fdbd6605252faeef089
+application.security.jwt.expiration= 86400000
+application.security.jwt.refresh.expiration=604800000
 
 
