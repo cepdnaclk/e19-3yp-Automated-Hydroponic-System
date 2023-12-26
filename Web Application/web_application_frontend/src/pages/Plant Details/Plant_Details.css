@@ -1,0 +1,30 @@
+.plant-details{
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.data-container{
+  height: relative;
+  background-color: #E9F1E4 ;
+}
+.plant-data-inner-container{
+  background-color: white;
+
+  
+}
+
+.plant-data-container{
+  padding: 30px;
+}
+.plant-image-container{
+  padding: 30px;
+  text-align: center;
+}
+
+
+
+#plant-image{
+  width: 70%;
+  height: 70%;
+}

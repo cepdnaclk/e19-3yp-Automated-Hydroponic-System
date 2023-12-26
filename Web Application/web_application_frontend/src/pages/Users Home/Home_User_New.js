@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from "react";
 import alovera_image from "../../Images/alovera.png";
 import strawberry_image from "../../Images/strawberry.png";
-import "../Users Home/Home_User_New.css";
+import "./Home_User_New.css";
+import Navbar from "../../components/Navbar/Navbar"
 
 
 function Home_User_New() {
@@ -15,7 +16,7 @@ function Home_User_New() {
     }, []);
 */
 
-    const plantData =[
+    const plantData =[ /* Need to change with the database data, once db data is enabled, just delete this */
         {
             name: "Alovera",
             Hardware_setup_id: 1234556,
@@ -40,6 +41,7 @@ function Home_User_New() {
 
       return(
         <>
+        <Navbar/>
         <div className="main-container row">
             <div className="Home-container row">
                 <div className="plant-container ">
