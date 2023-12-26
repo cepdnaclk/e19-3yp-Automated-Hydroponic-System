@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78e606ca-8da8-43d3-9370-feddef44668b" name="Changes" comment="new files">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/AutomatedHydroponicsSystemApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/AutomatedHydroponicsSystemApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/Demo/DemoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/Demo/DemoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/User/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/User/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/User/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/User/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/User/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/User/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/config/ApplicationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/config/ApplicationConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/config/JwtAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/config/JwtAuthenticationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/config/JwtService.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/config/JwtService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/config/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/config/SecurityConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/token/Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/token/Token.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/token/TokenRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/token/TokenRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/token/TokenType.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/token/TokenType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/config/JwtAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/config/JwtAuthenticationFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +125,7 @@
       <workItem from="1703484352932" duration="1595000" />
       <workItem from="1703514071833" duration="2111000" />
       <workItem from="1703531916439" duration="1670000" />
-      <workItem from="1703560467725" duration="1221000" />
+      <workItem from="1703560467725" duration="2868000" />
     </task>
     <task id="LOCAL-00001" summary="User class added">
       <option name="closed" value="true" />
