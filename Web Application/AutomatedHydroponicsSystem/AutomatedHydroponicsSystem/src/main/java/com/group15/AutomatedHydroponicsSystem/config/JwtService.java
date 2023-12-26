@@ -6,6 +6,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
@@ -15,10 +16,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+import static javax.crypto.Cipher.SECRET_KEY;
+
 @Service
 public class JwtService {
-
-    private static final String SECRET_KEY = "529424ba8964aa3c4de609cf5b23f29a0741602186e31fdbd6605252faeef089";
+    @Value("${application.security.jwt.secret-key}")
+    private String secretKey;
+    @Value("${application.security.jwt.expiration}")
+    private long jwtExpiration;
+    @Value("${application.security.jwt.refresh-token.expiration}")
+    private long refreshExpiration;
+    //= "529424ba8964aa3c4de609cf5b23f29a0741602186e31fdbd6605252faeef089";
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
     }
@@ -37,6 +45,21 @@ public class JwtService {
             Map<String, Object> extraClaims,
             UserDetails userDetails
     ){
+        return buildToken(extraClaims,userDetails,jwtExpiration);
+    }
+
+    public String generateRefreshToken(
+            UserDetails userDetails
+    ){
+        return buildToken(new HashMap<>(),userDetails,refreshExpiration);
+    }
+
+    private String buildToken(
+            Map<String, Object> extraClaims,
+            UserDetails userDetails,
+            long expiration
+    ){
+
         return Jwts
                 .builder()
                 .setClaims(extraClaims)
@@ -70,7 +93,8 @@ public class JwtService {
     }
 
     private Key getSignInKey() {
-        byte[] keyBytes = Decoders.BASE64.decode(SECRET_KEY);
+        // String.valueOf is recently added by the recommendation
+        byte[] keyBytes = Decoders.BASE64.decode(String.valueOf(secretKey));
         return Keys.hmacShaKeyFor(keyBytes);
     }
 }
