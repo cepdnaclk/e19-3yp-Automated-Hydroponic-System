@@ -27,6 +27,7 @@ public class User implements UserDetails {
     private String lastname;
     private String email;
     private String password;
+    @Column(length = 200) // Adjust the length accordingly
     @Enumerated(EnumType.STRING)
     private Role role;
 
