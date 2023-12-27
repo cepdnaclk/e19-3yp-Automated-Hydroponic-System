@@ -59,7 +59,7 @@ The problem we are trying to solve is the need for an automated hydroponic syste
 
 ## Hardware Design
 
-![Untitled Sketch_bb](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/477a5aac-fed1-4745-8f60-ddbcc5480793)
+![new](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/6d6f9158-77a2-405f-a378-c28399600b12)
 
 ### Dealing With Hardware Limitations
 
