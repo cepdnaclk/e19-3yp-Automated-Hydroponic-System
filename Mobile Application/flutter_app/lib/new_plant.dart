@@ -72,7 +72,7 @@ class _NewPlantState extends State<NewPlant> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: Header(),
+      //appBar: Header(),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,

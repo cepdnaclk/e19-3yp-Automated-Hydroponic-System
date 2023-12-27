@@ -14,7 +14,7 @@ class _PlantStatusState extends State<PlantStatus> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: Header(),
+      //appBar: Header(),
     );
   }
 }

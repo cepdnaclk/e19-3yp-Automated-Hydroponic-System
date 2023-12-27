@@ -15,7 +15,7 @@ class _PlantDetailsState extends State<PlantDetails> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: Header(),
+      //appBar: Header(),
       body: Stack(
         children: [
           Column(
