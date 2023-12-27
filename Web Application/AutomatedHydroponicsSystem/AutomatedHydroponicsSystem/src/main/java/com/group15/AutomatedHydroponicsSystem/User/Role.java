@@ -9,6 +9,7 @@ import java.util.Set;
 
 import static com.group15.AutomatedHydroponicsSystem.User.Permission.*;
 
+@Getter
 public enum Role {
 
     USER(Collections.emptySet()),
@@ -33,8 +34,11 @@ public enum Role {
             )
     );
 
-    @Getter
     private final Set<Permission> permissions;
+
+    Role(Set<Permission> permissions){
+        this.permissions = permissions;
+    }
 
     public List<SimpleGrantedAuthority> getAuthorities(){
         var authorities = getPermissions()
