@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'header.dart';
+import 'package:testapp/static_header.dart';
+//import 'header.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 
@@ -72,7 +73,7 @@ class _NewPlantState extends State<NewPlant> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //appBar: Header(),
+      appBar: StaticHeader(),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,

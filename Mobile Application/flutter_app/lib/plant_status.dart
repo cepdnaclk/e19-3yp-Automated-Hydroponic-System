@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'header.dart';
+import 'package:testapp/static_header.dart';
+//import 'header.dart';
 
 class PlantStatus extends StatefulWidget {
   const PlantStatus({super.key});
@@ -14,7 +15,7 @@ class _PlantStatusState extends State<PlantStatus> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      //appBar: Header(),
+      appBar: StaticHeader(),
     );
   }
 }
