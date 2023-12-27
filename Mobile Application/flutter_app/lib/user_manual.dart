@@ -10,6 +10,19 @@ class UserGuide extends StatefulWidget {
 class _UserGuideState extends State<UserGuide> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Text(
+          "User Guide",
+          style: TextStyle(
+            fontSize: 16.0,
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.bold,
+            
+          ),
+        ),
+      ),
+    );
   }
 }
