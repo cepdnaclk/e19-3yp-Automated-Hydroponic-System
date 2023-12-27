@@ -125,6 +125,19 @@ img {
   font-weight: var(--font-semi);
 }
 
+
+
+.nav__logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo {
+  margin-left: 10px; /* Adjust the margin as needed for spacing between the image and text */
+  color:green;
+}
+
+
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
@@ -154,11 +167,17 @@ img {
 .nav__link:hover::after {
   position: absolute;
   content: '';
-  width: 100%;
+  /*width: 100%;
   height: 0.18rem;
   left: 0;
-  top: 2rem;
+  top: 2rem;*/
+  width: 0;
+  height: 0.18rem;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
   background-color: var(--first-color);
+  transition: width 0.3s ease-in-out;
 }
 
 .nav__logo {
@@ -227,7 +246,7 @@ img {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 260px;
+  width: 500px;
 }
 
 .home__blob {
@@ -235,8 +254,8 @@ img {
 }
 
 .home__blob-img {
-  width: 400px;
-  height: 300px;
+  width: 100%;
+  height: auto;
   
 }
 
