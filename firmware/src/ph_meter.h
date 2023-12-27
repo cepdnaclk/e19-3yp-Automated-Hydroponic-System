@@ -1,6 +1,5 @@
 #include <Arduino.h>
 
-
 // initializing pin for pH sensor
 const int phSensorPin = 35;  // Declaring analog pin 32 to the pH-sensor probe
 
@@ -9,12 +8,15 @@ unsigned long int avgValue;  // Store the average value of the sensor feedback
 float phValue;  // Storing the calculated pH reading in assigned to this variable
 int buf[10], temp;  // Temporary variable used to sort the 10 pH reading samples
 
+// Declare a function to get the pH sensor value
 void checkPhValue() {
     
     // Get 10 sample value from the sensor for smooth value
     for (int i = 0; i < 10; i++) {  
+
         buf[i] = analogRead(phSensorPin);
         delay(10);  // Delay 10ms
+        
     }
 
     // Sorting the analog from small to large

@@ -12,7 +12,6 @@ const char WIFI_PASSWORD[] = "DBYEF2Q94JT";
 const char AWS_IOT_ENDPOINT[] = "a398am5o3vbqfl-ats.iot.ap-south-1.amazonaws.com";
 
 /* Declare the certificate file (Amazon Root CA1)*/
-
 static const char AWS_CERT_CA[] PROGMEM = R"EOF(
 -----BEGIN CERTIFICATE-----
 MIIDQTCCAimgAwIBAgITBmyfz5m/jAo54vB4ikPmljZbyjANBgkqhkiG9w0BAQsF
