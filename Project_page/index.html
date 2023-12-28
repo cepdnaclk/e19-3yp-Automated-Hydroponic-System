@@ -35,6 +35,12 @@
             .advisor-card .social-icons a {
                 color: #007bff; /* Icon color for the advisor card */
             }
+            .about__video {
+                max-width: 900px;
+                width: 100%;
+                border-radius: .5rem;
+                /* Add any additional styles you need */
+            }
         </style>
         
     </head>
@@ -51,7 +57,7 @@
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">Introduction</a></li>
+                        <li class="nav__item"><a href="#introduction" class="nav__link">Introduction</a></li>
                         <li class="nav__item"><a href="#skills" class="nav__link">Solution Architecture</a></li>
 <!--                        <li class="nav__item"><a href="#work" class="nav__link">Portfolio</a></li>-->
                         <li class="nav__item"><a href="#blog" class="nav__link">UI/UX Design</a></li> 
@@ -69,11 +75,12 @@
 
         <main class="l-main">
             <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
+            <section class="full-width-bg-home home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title">HydroGrowPro<br>Automated<br><span class="home__title-color">Hydroponic</span><br> System</h1>
+                    <h1 class="home__title">HydroGrowPro<!--br>Automated<br><span class="home__title-color">Hydroponic</span><br--> </h1>
+                    <h2 class="home_subtitle">Automated <br> Hydroponic<br> System</h2>
 
-                    <a href="#" class="button">Hire me</a>
+                    <a href="#" class="button">Repository</a>
                 </div>
 
                 <div class="home__social">
@@ -97,17 +104,12 @@
                     </svg>
                 </div-->
                 <div class="home__img">
-                    <!--svg class="home__blob" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" fill="var(--second-color)"/> 
-                            
-                        </g>
-                    </svg-->
-                    <image x="0" y="0" href="assets/img/hydroponic-farm-man-harvesting-organic-vegetable-from-hydrophonic-green-house-concept-in-cartoon-illustration-vector.jpg" width="800" height="1000"/> <!-- Adjust x, y, width, and height as needed -->
+                    <div class="text-container">
+                        <!--h1>Your Text Here</h1-->
+                        <p>The project "Automated Hydroponic System" aims to develop a modern and sustainable approach to hydroponic farming that maximizes efficiency by using technology to monitor and control growth conditions, reducing resource consumption, and enabling users to make data-driven decisions for better crop management.</p>
+                    </div>
                 </div>
+                
                 
             </section>
 
@@ -117,24 +119,16 @@
             
 
             <!--===== ABOUT =====-->
-            <section class="full-width-bg about section " id="about">
-                <h2 class="section-title">About</h2>
-
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/prefil1.jpg" alt="">
+            <section class="full-width-bg about section " id="introduction">
+                <h2 class="section-title">Introduction</h2>
+                    <div class="about__container bd-grid"style="display: flex; align-items: center; justify-content: center; height: 100vh;">
+                        <div class="about__video">
+                            <video width="900px" controls>
+                                <source src="./assets/video/HYDROGROWPRO.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
                     </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'm Shivam</h2>
-                        <p class="about__text"> 
-<!--                            Hi, my name is Shivam and I am a Data Analyst. I hold a Bachelor’s degree in science(Information Technology, Hemvati Nandan Bahuguna Garhwal University Uttarakhand) and Master’s degree in(Computer Application, BBD University Lucknow).<br><br>-->
-                        
-                        Being an ambitious individual, I strongly believe in learning new technologies and analytical skills to conclude to optimized business solutions. I also believe in prioritizing understanding of the data model to get the best analytical view of data.<br><br>
-                        
-                        I am an experienced data analyst with over 2 years of experience in data analysis, visualization, and modeling. I have a strong understanding of the travel industry and its key performance indicators (KPIs), and I am skilled in statistical analysis, data mining, and machine learning.<br><br>I am highly proficient in Python, SQL, and Tableau, and have strong experience in data mining, machine learning, statistical analysis, and data visualization. </p>           
-                    </div>                                   
-                </div>
             </section>
 
             <!--===== SKILLS =====-->
@@ -287,7 +281,7 @@
             <div class="container" id="blog">
                   <section class="work section" id="work">
                  <h2 class="section-title" id="blog">My Latest Projects</h2>
-        <div class="grid">
+        <!--div class="grid">
             <div class="card">
                 <div class="card_img">
                     <img src="assets/img/block.webp" alt="">
@@ -321,7 +315,7 @@
                     <a href="https://medium.com/@gokusenset1/dataops-for-data-analysts-79c659d91065?source=friends_link&sk=b077e5ae7fb623d926228aa21d49917d" class="read_more">Read article</a>
                 </div>
             </div>
-        </div>
+        </div-->
    
 <!--    <a href="" target="_blank" class="link">Watch on youtube <i class="fab fa-youtube"></i></a>-->
             </div>

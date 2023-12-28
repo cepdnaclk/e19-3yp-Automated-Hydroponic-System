@@ -42,6 +42,7 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: rgba(9, 242, 67, 0.5);
 }
 
 body {
@@ -96,15 +97,19 @@ img {
 .section {
   padding-top: 3rem;
   padding-bottom: 2rem;
+  height: 100vh; /* Set the height to 100% of the viewport height */
+
 }
 /* Container for the full-width background image */
 .full-width-bg {
   background-image: url('../img/Background.jpeg'); /* Replace with the actual path to your image */
-  background-size: cover;
+  background-size: 120%; /* Increase the size by 20% */
   background-position: center;
   background-repeat: no-repeat;
   padding: 2rem; /* You can adjust the padding as needed */
   box-sizing: border-box;
+  height: 100vh; /* Set the height to 100% of the viewport height */
+
 }
 
 /*===== LAYOUT =====*/
@@ -121,7 +126,7 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
+  background-color: #018e05;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
@@ -216,6 +221,14 @@ img {
 }
 
 /*===== HOME =====*/
+.full-width-bg-home {
+  background-image: url('../img/Home_background_image.png'); /* Replace with the actual path to your image */
+  background-size:contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem; /* You can adjust the padding as needed */
+  box-sizing: border-box;
+}
 .home {
   position: relative;
   row-gap: 5rem;
@@ -229,6 +242,12 @@ img {
 .home__title {
   font-size: var(--big-font-size);
   margin-bottom: var(--mb-5);
+  
+}
+.home_subtitle{
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-2);
+
 }
 
 .home__title-color {
@@ -246,16 +265,32 @@ img {
   font-size: 1.5rem;
   color: var(--second-color);
 }
-
 .home__social-icon:hover {
   color: var(--first-color);
 }
 
 .home__img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 500px;
+  position:absolute;
+  right: 0px;
+  top:170px;
+  /*bottom: 0;*/
+ 
+}
+
+.text-container {
+  background-color: rgba(9, 242, 67, 0.5); /* Adjust the last value for transparency (0 is fully transparent, 1 is fully opaque) */
+  padding: 20px;
+  border-radius: 8px; /* Optional: add rounded corners to the container */
+}
+
+.text-container h1 {
+  margin: 0;
+  font-size: 2em; /* Adjust the font size as needed */
+}
+
+.text-container p {
+  margin-top: 10px; /* Optional: add spacing between heading and paragraph */
+  font-size: 1.2em; /* Adjust the font size as needed */
 }
 
 .home__blob {
@@ -372,14 +407,14 @@ img {
 
 /* ===== ABOUT =====*/
 .about__container {
-  row-gap: 2rem;
+  /*row-gap: 2rem;*/
   text-align: center;
   background-image: url('../img/Background.jpeg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /*padding: 2rem; /* You can adjust the padding as needed */
-  box-sizing: border-box;
+  /* padding: 2rem; /* You can adjust the padding as needed */
+  /*box-sizing: border-box;*/
 }
 
 .about__subtitle {
@@ -391,10 +426,12 @@ img {
 }
 
 .about__img img {
-  width: 200px;
-
+  max-width: 1200px; /* Set the maximum width of the video */
+  width: 100%; /* Ensure it is responsive */
   border-radius: .5rem;
+  margin-left:300px;
 }
+
 
 /* ===== SKILLS =====*/
 .skills__container {
