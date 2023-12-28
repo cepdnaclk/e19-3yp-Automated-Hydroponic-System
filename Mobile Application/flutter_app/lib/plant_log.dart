@@ -17,7 +17,7 @@ class _PlantLogState extends State<PlantLog> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: Header(),
+      //appBar: Header(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -44,7 +44,7 @@ class _PlantLogState extends State<PlantLog> {
                   Expanded(
                     flex: 2,
                     child: Image.asset(
-                      'assets/Aloe.png',
+                      'assets/aloevera.jpg',
                       fit: BoxFit.cover,
                     ),
                   ),

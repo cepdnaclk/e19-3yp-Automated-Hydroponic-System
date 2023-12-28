@@ -27,6 +27,7 @@ public class User implements UserDetails {
     private String lastname;
     private String email;
     private String password;
+    @Column(length = 200) // Adjust the length accordingly
     @Enumerated(EnumType.STRING)
     private Role role;
 
@@ -35,7 +36,7 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority(role.name()));
+        return role.getAuthorities();
     }
 
     @Override
