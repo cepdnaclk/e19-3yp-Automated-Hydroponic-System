@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>HydroGrowPro - Phase3</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Nova - v1.2.1
+  * Template URL: https://bootstrapmade.com/nova-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="page-team">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="d-flex align-items-center">HydroGrowPro</h1>
+        <img src="assets/img/logo.png" style="padding-left:10px"/>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html">admin</a></li>
+          <li><a href="about.html">About</a></li>
+          <!-- <li><a href="blog.html">Blog</a></li> -->
+          <li class="dropdown"><a href="#" class="active"><span>Phases</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="phase1.html">Design Achitecture</a></li>
+              <li><a href="phase2.html">Frontend Implementation</a></li>
+              <li><a href="phase3.html">Backend Implementation</a></li>
+              <li><a href="phase4.html">Hardware implementation</a></li>
+              <li><a href="phase5.html">Testing and integration</a></li>
+            </ul>
+          </li>
+          <li><a href="team.html" >Team</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/greenhouse.jpg');">
+      <div class="container position-relative d-flex flex-column align-items-center">
+
+        <h2>Backend Implementation</h2>
+        <ol>
+          <li><a href="index.html">admin</a></li>
+          <li>Phase3</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Team Section ======= -->
+    <section class="team">
+      <div class="container" data-aos="fade-up">
+        
+        <div class="card mb-3 text-light" style="background-color: rgba(23, 39, 2, 0.95)">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <a href="assets/img/system/flow.jpg" title="The ER-diagram of the database" data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><img src="assets/img/backend/ERDiagram.png" class="img-fluid" alt=""></a>
+                  
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h3 class="card-title">The Flow Control</h3>
+                <p class="card-text">
+                  <!-- <ul>
+                    <li>The two types of users proctor & student are defined using a disjoint specialization.</li>
+                    <li>Exam, Course, Device, and Recording are taken as strong entities with relevant primary keys.</li>
+                    <li>Since there can be multiple Chats, Warnings and joined times in an examination for a particular student, they are taken as multivalued.</li>
+                    <li>To keep track of the device a particular student is using the Device entity is used.</li>
+                    <li>Schedules is a ternary relationship connecting the entities Proctor, Course and Exam.</li>
+                  </ul> -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="team">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>DataBase</h2>
+        </div>
+
+        <div class="card">
+          <img src="assets/img/backend/database.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">MongoDB Atlas Cluster</h5>
+            <p class="card-text">cross-platform document-oriented MongoDB Atlas cluster is used as the database for this project. MongoDB is a NoSQL database that can be expanded horizontally by adding more machines to the resources. Therefore,  It’s easy and highly scalable. It supports integrated caching. System memory caching boosts data output performance. MongoDB has no schema hassles. The data model and formats can be modified without impacting applications since a NoSQL database can store the data without requiring a predefined schema.
+            </p>
+            <p>To connect the application with MongoDB, an additional library is needed.  Mongoose is a Node. js-based Object Data Modeling (ODM) library for MongoDB. Mongoose allows developers to enforce a specific schema at the application layer. In addition to enforcing a schema, Mongoose also offers a variety of hooks, model validation, and other features aimed at making it easier to work with MongoDB.
+            </p>
+            <p>Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB collection and defines the shape of the documents within that collection.</p>
+            <div class="card center" style="max-width: 40rem;">
+              <img src="assets/img/backend/schema.PNG" class="card-img-top" alt="..." >
+              <div class="card-body">
+                <div class="text-center">
+                  <a href="https://github.com/cepdnaclk/e17-3yp-remote-proctoring-system/tree/main/server/api/models" target="_blank" class="btn btn-primary">See full collection on Github</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="team">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>API</h2>
+        </div>
+
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-admin-tab" data-bs-toggle="pill" data-bs-target="#pills-admin" type="button" role="tab" aria-controls="pills-admin" aria-selected="true">Admin</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-proctor-tab" data-bs-toggle="pill" data-bs-target="#pills-proctor" type="button" role="tab" aria-controls="pills-proctor" aria-selected="false">Proctor</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-student-tab" data-bs-toggle="pill" data-bs-target="#pills-student" type="button" role="tab" aria-controls="pills-student" aria-selected="false">Student</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent" >
+          <div class="tab-pane fade show active" id="pills-admin" role="tabpanel" aria-labelledby="pills-admin-tab" >
+            <iframe src="assets/admin's API calls.pdf" width="100%" height="500px"></iframe>
+          </div>
+          <div class="tab-pane fade" id="pills-proctor" role="tabpanel" aria-labelledby="pills-proctor-tab">
+            <iframe src="assets/proctor's API calls.pdf" width="100%" height="500px"></iframe>
+          </div>
+          <div class="tab-pane fade" id="pills-student" role="tabpanel" aria-labelledby="pills-student-tab">
+            <iframe src="assets/student's API calls.pdf" width="100%" height="500px"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Team Section -->
+
+    <section id="recent-posts" class="recent-posts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Other Phases</h2>
+
+        </div>
+
+        <div class="row gy-5">
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="post-box">
+              <div class="post-img"><img src="assets/img/system/system.PNG" class="img-fluid" alt="" style="height:200px"></div>
+              
+              <h3 class="post-title">Design Architecture</h3>
+              <p>The device on the student's side is capable of capturing the video and audio stream from students continuously even incase of a power ....</p>
+              <a href="phase1.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="post-box">
+              <div class="post-img"><img src="assets/img/students_desktopapp/student.gif" class="img-fluid" alt="" style="height:200px"></div>
+              <h3 class="post-title">Frontend Implementation</h3>
+              <p>The student can create an account in the platform by registering to the service. Once the students email is verified....</p>
+              <a href="phase2.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="post-box">
+              <div class="post-img"><img src="assets/img/hardware/circuit1_bb.png" class="img-fluid" alt="" style="height:200px"></div>
+              
+              <h3 class="post-title">Hardware Implementation</h3>
+              <p>The proctoring device in the student's side has 2 main components.The raspberry pi 3B+ module with a touch screen,camera, ....</p>
+              <a href="phase4.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="post-box">
+              <div class="post-img"><img src="assets/img/Testing/proctorAPI.gif" class="img-fluid" alt="" style="height:200px"></div>
+              
+              <h3 class="post-title">Testing and Integration</h3>
+              <p>Functional requirements will be tested under three main stages.Unit testing, Integration testing, End-to-end testing ....</p>
+              <a href="phase5.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
