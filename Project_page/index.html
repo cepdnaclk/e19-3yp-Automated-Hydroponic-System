@@ -10,9 +10,33 @@
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
         <!-- Favicon -->
         <link rel="icon" href="./assets/img/Logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <!--link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"-->
 
 
         <title>HydroGrowPro</title>
+
+        <style>
+            .advisor-card {
+                border: 2px solid #007bff; /* Border color for the advisor card */
+                box-shadow: 0 0 10px rgba(0, 123, 255, 0.2); /* Box shadow for the advisor card */
+                background-color: #f8f9fa; /* Background color for the advisor card */
+            }
+        
+            .advisor-card .card-title {
+                color: #007bff; /* Text color for the advisor card title */
+                font-weight: bold; /* Bold font for the advisor card title */
+            }
+        
+            .advisor-card .card-text {
+                color: #6c757d; /* Text color for the advisor card text */
+            }
+        
+            .advisor-card .social-icons a {
+                color: #007bff; /* Icon color for the advisor card */
+            }
+        </style>
+        
     </head>
     <body>
         <!--===== HEADER=====-->
@@ -32,7 +56,7 @@
 <!--                        <li class="nav__item"><a href="#work" class="nav__link">Portfolio</a></li>-->
                         <li class="nav__item"><a href="#blog" class="nav__link">UI/UX Design</a></li> 
                         <li class="nav__item"><a href="#contact" class="nav__link">Budget</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Team</a></li>
+                        <li class="nav__item"><a href="#team" class="nav__link">Team</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact Us</a></li>
                     </ul>
                 </div>
@@ -47,7 +71,7 @@
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Shivam</span><br> Data Analyst</h1>
+                    <h1 class="home__title">HydroGrowPro<br>Automated<br><span class="home__title-color">Hydroponic</span><br> System</h1>
 
                     <a href="#" class="button">Hire me</a>
                 </div>
@@ -72,10 +96,28 @@
                         </g>
                     </svg>
                 </div-->
+                <div class="home__img">
+                    <!--svg class="home__blob" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" fill="var(--second-color)"/> 
+                            
+                        </g>
+                    </svg-->
+                    <image x="0" y="0" href="assets/img/hydroponic-farm-man-harvesting-organic-vegetable-from-hydrophonic-green-house-concept-in-cartoon-illustration-vector.jpg" width="800" height="1000"/> <!-- Adjust x, y, width, and height as needed -->
+                </div>
+                
             </section>
 
+            
+
+            
+            
+
             <!--===== ABOUT =====-->
-            <section class="about section " id="about">
+            <section class="full-width-bg about section " id="about">
                 <h2 class="section-title">About</h2>
 
                 <div class="about__container bd-grid">
@@ -284,6 +326,94 @@
 <!--    <a href="" target="_blank" class="link">Watch on youtube <i class="fab fa-youtube"></i></a>-->
             </div>
 <!--            --------------------My latest projects section----------------->
+
+            <section class="card-section" id="team">
+                <div class="custom-row">
+                    <div class="custom-col">
+                        <h2 class="custom-heading">Our Team</h2>
+                        <p class="custom-paragraph">We are a group of innovative, experienced, and proficient teams. You will love to collaborate with us.</p>
+                        <!--hr class="custom-hr"-->
+                    </div>
+                </div>
+                <div class="card-container">
+                    <div class="card">
+                        <img src="./assets/img/Team/Profile_pic_jpg.jpg" alt="Card Image">
+                        <div class="card-content">
+                            <h5 class="card-title">Danujan S.</h5>
+                            <p class="card-text">E/19/060</p>
+                            <div class="social-icons">
+                                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/Team/Kasuni.png" alt="Card Image">
+                        <div class="card-content">
+                            <h5 class="card-title">Hansachapa A.P.K.</h5>
+                            <p class="card-text">E/19/131</p>
+                            <div class="social-icons">
+                                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/Team/e19166.jpg" alt="Card Image">
+                        <div class="card-content">
+                            <h5 class="card-title">Jayathunga W.W.K.</h5>
+                            <p class="card-text">E/19/166</p>
+                            <div class="social-icons">
+                                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/Team/Sandamini.jpg" alt="Card Image">
+                        <div class="card-content">
+                            <h5 class="card-title"> Madhurasinghe M.M.S.H.</h5>
+                            <p class="card-text">E/19/224</p>
+                            <div class="social-icons">
+                                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/img/Team/nithusikan.jpg" alt="Card Image">
+                        <div class="card-content">
+                            <h5 class="card-title">Nithusikan T.</h5>
+                            <p class="card-text">E/19/266</p>
+                            <div class="social-icons">
+                                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card advisor-card">
+                        <h3 class="custom-heading">Our Advisor</h2>
+                        <img src="./assets/img/Team/Dr_isuru-nawinne.png" alt="Card Image">
+                        <div class="card-content">
+                            <h5 class="card-title">Dr. Isuru Nawinne</h5>
+                            <p class="card-text">Senior Lecturer</p>
+                            <!--div class="social-icons">
+                                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            </div-->
+                        </div>
+                    </div>
+                    <!-- Repeat the structure for other cards -->
+                </div>
+                
+                
+            </section>
             
             <!--===== CONTACT =====-->
             <section class="contact section" id="contact">
@@ -320,5 +450,8 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+
+        <!-- Include Font Awesome JS (for the icons) -->
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
     </body>
 </html>
