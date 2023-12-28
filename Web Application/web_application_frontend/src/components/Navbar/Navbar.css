@@ -3,6 +3,8 @@ body{
 }
 .navbar{
     background-color: #E9F1E4;
+    height: 15vh;
+    width: 100%;
 }
 
 .brand, .list-item{
