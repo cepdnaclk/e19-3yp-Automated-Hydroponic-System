@@ -1,5 +1,6 @@
 body{
     font-family: 'Rubik', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .navbar{
     background-color: #E9F1E4;
