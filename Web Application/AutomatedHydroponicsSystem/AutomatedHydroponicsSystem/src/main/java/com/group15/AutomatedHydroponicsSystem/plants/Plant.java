@@ -1,14 +1,13 @@
 package com.group15.AutomatedHydroponicsSystem.plants;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Data;
-import lombok.Getter;
+import lombok.*;
 
 
 @Entity
 @Data
 @Builder
+@AllArgsConstructor
 public class Plant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

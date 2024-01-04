@@ -17,7 +17,7 @@ public class PlantController {
     @Autowired
     private PlantRepository plantRepository;
 
-    @PostMapping("plants/add")
+    @PostMapping("/plants/add")
     public void addPlant(
             @RequestParam("name") String name,
             @RequestParam("details") String details,
@@ -45,13 +45,15 @@ public class PlantController {
 
     @PutMapping("/plants/{id}")
     Plant updatePlant(@RequestBody Plant newPlant, @PathVariable Integer id) {
-        Optional<Plant> plant = plantRepository.findById(id);
-        plant.setName(newPlant.getName());
-        plant.setDetails(newPlant.getDetails());
-        plant.setImage(newPlant.getImage());
-
-        return plantRepository.save(plant);
+        Optional<Plant> optionalPlant = plantRepository.findById(id);
+        return optionalPlant.map(plant -> {
+            plant.setName(newPlant.getName());
+            plant.setDetails(newPlant.getDetails());
+            plant.setImage(newPlant.getImage());
+            return plantRepository.save(plant);
+        }).orElseThrow(() -> new PlantNotFoundException(id));
     }
+
 
     @DeleteMapping("/plants/{id}")
     String deletePlant(@PathVariable Integer id) {
