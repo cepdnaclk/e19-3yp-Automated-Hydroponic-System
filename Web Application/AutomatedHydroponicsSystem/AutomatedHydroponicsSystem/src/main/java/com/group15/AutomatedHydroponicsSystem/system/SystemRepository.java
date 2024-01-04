@@ -1,2 +1,6 @@
-package com.group15.AutomatedHydroponicsSystem.system;public interface SystemRepository {
+package com.group15.AutomatedHydroponicsSystem.system;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface SystemRepository extends JpaRepository<System,Integer> {
 }
