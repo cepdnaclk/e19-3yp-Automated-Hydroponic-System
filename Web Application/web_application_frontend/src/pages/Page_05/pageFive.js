@@ -5,7 +5,7 @@ import Prototype from "../../Images/prototype.jpg";
 import axios from "axios";
 
 function PageFive(){
-/*
+
     const [plants, setPlants] = useState([]);
 
     useEffect(() => {
