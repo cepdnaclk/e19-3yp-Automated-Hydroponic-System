@@ -1,0 +1,54 @@
+.login-container{
+    width: 100%;
+    height: 85vh;
+    justify-content: center;
+    padding-top: 5vh;
+}
+
+.login-inner-container{
+    width: 60%;
+    height: 75vh;
+    background-color: #E9F1E4;
+    border-radius: 20px;
+}
+
+.auth-image{
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#auth-image{
+    width: 70%;
+    height: 250px;
+}
+
+
+.login-form-control{
+    border: none;
+}
+.user-name{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.pass-word{
+    margin-bottom: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.eye-icon{
+    cursor: pointer;
+}
+
+.login-button-container{
+    justify-content: center;
+}
+#login-button{
+    background-color: #0D7817;
+    width: 100px;
+}
+
