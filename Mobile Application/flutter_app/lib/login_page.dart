@@ -1,4 +1,7 @@
+/*import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -12,6 +15,8 @@ class _LoginPageState extends State<LoginPage> {
   late Color myGreenColor;
   TextEditingController passwordController = TextEditingController();
   TextEditingController emailController = TextEditingController();
+  
+  get http => null;
 
   @override
   Widget build(BuildContext context) {
@@ -146,7 +151,21 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _buildLoginButton(){
     return ElevatedButton(
-      onPressed: () {},
+
+      onPressed: () async {
+        String email = emailController.text;
+        String password = passwordController.text;
+
+        var url = Uri.http(api); // api
+        var response = await http.post(url, body: {
+          "email" : email,
+          "password" : password,
+        });
+
+        var data = jsonDecode(response.body);
+        //according to PHP file
+      },
+
       style: ElevatedButton.styleFrom(
         shape: const StadiumBorder(),
         elevation: 20,
@@ -168,3 +187,4 @@ class _LoginPageState extends State<LoginPage> {
 
 }
 
+*/

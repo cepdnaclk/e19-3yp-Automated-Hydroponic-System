@@ -1,12 +1,6 @@
 #include <Arduino.h>
 #include <unity.h>  // Arduino Unit Testing framework
-#include "utils.h"
-#include <WiFi.h>
-#include <WiFiClientSecure.h>
-#include <PubSubClient.h>
-#include "ph_meter.h"
-#include "ec_meter.h"
-#include "float_sensor.h"
+#include <main.cpp>
 
 
 // Mock classes for isolated testing
@@ -30,10 +24,7 @@ public:
     }
 };
 
-// Global variables and function declarations (assuming they are defined elsewhere)
-float phValue;
-int tdsValue;
-int floatSensorValue;
+
 
 void checkPhValue();
 void checkTdsValue();
@@ -92,11 +83,13 @@ void test_activatePumps() {
 
     activatePumps();
 
+    //int pumpPins = [14, 26, 27]
+
     // Assert pin states
-    //TEST_ASSERT_EQUAL_INT(HIGH, digitalRead(pumpPins[0])); // Expected pump 1 activated
+    //TEST_ASSERT_EQUAL(HIGH, digitalRead(pumpPins[0])); // Expected pump 1 activated
 }
 
-void setup() {
+int main(int argc, char** argv) {
     delay(2000);  // Give some time to open the Serial Monitor
     UNITY_BEGIN();
 
@@ -112,6 +105,3 @@ void setup() {
     UNITY_END();
 }
 
-void loop() {
-    // Nothing to do here (tests are run in setup())
-}

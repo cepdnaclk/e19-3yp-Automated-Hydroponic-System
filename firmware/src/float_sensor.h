@@ -3,7 +3,7 @@
 #include <Arduino.h>
 
 // Declare variables for float sensor
-int floatSensorPin = 33;
+int floatSensorPin = 17;
 int buttonState = 1;
 float floatSensorValue;
 

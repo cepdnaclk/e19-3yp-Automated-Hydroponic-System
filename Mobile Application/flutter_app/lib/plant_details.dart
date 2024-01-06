@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:testapp/plant_status.dart';
+import 'package:testapp/plant_status/plant_status.dart';
 import 'package:testapp/static_header.dart';
+import 'package:http/http.dart';
 //import 'header.dart';
 
 class PlantDetails extends StatefulWidget {

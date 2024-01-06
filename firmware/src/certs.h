@@ -5,8 +5,8 @@
 #define THINGNAME "esp32"
 
 /* Declare wifi credentials*/
-const char WIFI_SSID[] = "WJ";
-const char WIFI_PASSWORD[] = "DBYEF2Q94JT";
+const char WIFI_SSID[] = "WJ";  // "Eng-Student"
+const char WIFI_PASSWORD[] = "DBYEF2Q94JT";  // "3nG5tuDt"
 
 /* Declare aws iot endpoint*/
 const char AWS_IOT_ENDPOINT[] = "a398am5o3vbqfl-ats.iot.ap-south-1.amazonaws.com";
