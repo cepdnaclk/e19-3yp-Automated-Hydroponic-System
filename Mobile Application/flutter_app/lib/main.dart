@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:testapp/header.dart';
 import 'package:testapp/help.dart';
 import 'package:testapp/login_page.dart';
-import 'package:testapp/plant_log.dart';
+import 'package:testapp/plant_log/plant_log.dart';
+import 'package:testapp/plant_status/plant_status.dart';
 import 'package:testapp/profile.dart';
 import 'package:testapp/user_manual.dart';
 import 'package:http/http.dart';
@@ -44,7 +45,7 @@ class _SideBarState extends StatefulWidget {
 
 class __SideBarStateState extends State<_SideBarState> {
 
-  var currentPage = DrawerSections.plant_log;
+  var currentPage = DrawerSections.plant_status;
 
   @override
   Widget build(BuildContext context) {
@@ -53,8 +54,8 @@ class __SideBarStateState extends State<_SideBarState> {
     if (currentPage == DrawerSections.profile) {
       container = Profile();
     }
-    else if (currentPage == DrawerSections.plant_log) {
-      container = PlantLog();
+    else if (currentPage == DrawerSections.plant_status) {
+      container = PlantStatus();
     }
     else if (currentPage == DrawerSections.help) {
       container = Help();
@@ -108,7 +109,7 @@ class __SideBarStateState extends State<_SideBarState> {
             currentPage == DrawerSections.profile ? true : false
           ),
           menuItem(2, "Plant Log", Icons.arrow_forward_ios_outlined,
-            currentPage == DrawerSections.plant_log ? true : false
+            currentPage == DrawerSections.plant_status ? true : false
           ),
 
           Divider(),
@@ -135,7 +136,7 @@ class __SideBarStateState extends State<_SideBarState> {
               currentPage = DrawerSections.profile;
             }
             else if (id == 2) {
-              currentPage = DrawerSections.plant_log;
+              currentPage = DrawerSections.plant_status;
             }
             else if (id == 3) {
               currentPage = DrawerSections.help;
@@ -177,7 +178,7 @@ class __SideBarStateState extends State<_SideBarState> {
 
 enum DrawerSections {
   profile,
-  plant_log,
+  plant_status,
   help,
   user_manual,
 }
