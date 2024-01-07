@@ -1,15 +1,28 @@
 spring:
     datasource:
-        url: jdbc:mysql://localhost:3306/user_details
-        username: root
-        password:
+        url: jdbc:mysql://database-test1.cnc0wy0euvsl.ap-south-1.rds.amazonaws.com:3306/user_details
+        username: Danujan
+        password: Laptopproject
         driver-class-name: com.mysql.cj.jdbc.Driver
+        hikari:
+            connection-test-query: SELECT 1  # Test query for HikariCP
+            minimum-idle: 5
+            maximum-pool-size: 15
+            idle-timeout: 30000  # 30 seconds
+            max-lifetime: 1800000  # 30 minutes
+
     jpa:
         hibernate:
             ddl-auto: update
-            format_sql: true  # Move format_sql under hibernate
+            format_sql: true
         show-sql: false
         database: mysql
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQLDialect
+                jdbc:
+                    time_zone: UTC  # Use UTC time zone to avoid timezone-related issues
+
 
 application:
     security:
