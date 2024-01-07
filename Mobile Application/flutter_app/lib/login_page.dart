@@ -1,4 +1,4 @@
-/*import 'dart:convert';
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
@@ -156,7 +156,7 @@ class _LoginPageState extends State<LoginPage> {
         String email = emailController.text;
         String password = passwordController.text;
 
-        var url = Uri.http(api); // api
+        var url = Uri.http('/api/v1/auth/authenticate'); // api
         var response = await http.post(url, body: {
           "email" : email,
           "password" : password,
@@ -187,4 +187,3 @@ class _LoginPageState extends State<LoginPage> {
 
 }
 
-*/

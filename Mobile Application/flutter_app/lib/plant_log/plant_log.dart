@@ -16,13 +16,13 @@ class PlantLog extends StatefulWidget {
 }
 
 class _PlantLogState extends State<PlantLog> {
-  late Future<List<Plant>> _futurePlants;
+//   late Future<List<Plant>> _futurePlants;
 
-  @override
-  void initState() {
-    super.initState();
-    _futurePlants = PlantService.fetchPlants();
-  }
+//   @override
+//   void initState() {
+//     super.initState();
+//     _futurePlants = PlantService.fetchPlants();
+//   }
 
   @override
   Widget build(BuildContext context) {
@@ -43,16 +43,16 @@ class _PlantLogState extends State<PlantLog> {
               ),
             ),
           ),
-          FutureBuilder<List<Plant>>(
-            future: _futurePlants,
-            builder: (context,snapshot) {
-              if (snapshot.hasData) {
-                List<Plant> plants = snapshot.data!;
-                return ListView.builder(
-                  itemCount: plants.length,
-                  itemBuilder: (context, index) {
-                    Plant currentPlant = plants[index];
-                  return Card(
+          // FutureBuilder<List<Plant>>(
+          //   future: _futurePlants,
+          //   builder: (context,snapshot) {
+          //     if (snapshot.hasData) {
+          //       List<Plant> plants = snapshot.data!;
+          //       return ListView.builder(
+          //         itemCount: plants.length,
+          //         itemBuilder: (context, index) {
+          //           Plant currentPlant = plants[index];
+                  Card(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.zero,
                     ),
@@ -63,8 +63,8 @@ class _PlantLogState extends State<PlantLog> {
                         children: [
                           Expanded(
                             flex: 2,
-                            child: Image.network(
-                              currentPlant.image,
+                            child: Image.asset(
+                              "assets/aloevera.jpg",
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -84,7 +84,7 @@ class _PlantLogState extends State<PlantLog> {
                                     );
                                   },
                                   child: Text(
-                                    currentPlant.name,
+                                    'Aloe Vera',
                                     style: TextStyle(
                                         fontSize: 14,
                                         color: Color(0xFF0D7817),
@@ -150,22 +150,11 @@ class _PlantLogState extends State<PlantLog> {
                         ],
                       ),
                     ),
-                  );
-                  },
-                );
-            } else if (snapshot.hasError) {
-            return Center(
-              child: Text('Error fetching data'),
-            );
-          }
-          return Center(
-            child: CircularProgressIndicator(),
-          );
-        },
-          ),
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
+                  ),
+        ]
+    ),
+
+    floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
             context,
@@ -182,7 +171,26 @@ class _PlantLogState extends State<PlantLog> {
         shape: CircleBorder(),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+
     );
+
+    
+                  
+          //       );
+          //   } else if (snapshot.hasError) {
+          //   return Center(
+          //     child: Text('Error fetching data'),
+          //   );
+          // }
+          // return Center(
+          //   child: CircularProgressIndicator(),
+          // );
+       // },
+       //   ),
+       // ],
+     // ),
+      
+    // );
   }
 }
 
