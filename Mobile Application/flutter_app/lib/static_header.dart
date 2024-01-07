@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
 
 class StaticHeader extends StatelessWidget implements PreferredSizeWidget {
   @override

@@ -3,7 +3,6 @@ import 'package:testapp/static_header.dart';
 //import 'header.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
-import 'package:http/http.dart';
 
 class NewPlant extends StatefulWidget {
   const NewPlant({Key? key}) : super(key: key);

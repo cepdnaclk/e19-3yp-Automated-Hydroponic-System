@@ -1,12 +1,12 @@
 import React from "react";
-import "./page_04.css";
-import Navbar from "../../components/Navbar/Navbar";
+import "./LandingPage.css";
+import CommonNavBar from "../../components/Common_NavBar/Common_Navbar";
 import Symbol from "../../Images/symbol.png"
 
-function PageFour(){
+function LandingPage(){
     return(
         <>
-        <Navbar/>
+        <CommonNavBar/>
         <div className="main-container row">
             <div className="bg-image-container row">
                 <div className="text-container row">
@@ -22,4 +22,4 @@ function PageFour(){
     )
 }
 
-export default PageFour;
+export default LandingPage;

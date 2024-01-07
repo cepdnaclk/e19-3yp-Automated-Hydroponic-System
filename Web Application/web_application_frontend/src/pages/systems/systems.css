@@ -1,0 +1,59 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Applying Roboto font as the primary font */
+    width: 100%;
+    height: fit-content;
+    
+}
+
+.system-container{
+    width: 101%;
+    background-color: #C3FABE;
+    justify-content: center;
+}
+
+.system-title{
+    height: 10vh;
+    text-align: center;
+    align-items: center;
+}
+
+.system-form{
+    width: 70%;
+    justify-content: center;
+}
+
+
+.form-control{
+    margin-left: 50px;
+    margin-right: 100px;
+    margin-bottom: 25px;  
+    transition: all 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.form-control:hover {
+    border-color: #999; /* Change the border color on hover */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+    background-color: #f5f5f5; /* Change the background color on hover */
+    /* Add any other styles you want to apply when hovering */
+}
+
+.form-label{
+    text-align: right;
+    margin-left: 50px;
+    margin-bottom: 25px;
+    color: rgb(20, 61, 3);;
+}
+
+
+
+.system-button-container{
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+input::placeholder {
+    color: #e9e8e8; /* Fade the placeholder text  */
+}

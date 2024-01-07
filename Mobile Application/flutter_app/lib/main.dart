@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:testapp/header.dart';
 import 'package:testapp/help.dart';
 import 'package:testapp/login_page.dart';
-import 'package:testapp/plant_log/plant_log.dart';
-import 'package:testapp/plant_status/plant_status.dart';
+import 'package:testapp/plant_log.dart';
 import 'package:testapp/profile.dart';
 import 'package:testapp/user_manual.dart';
-import 'package:http/http.dart';
 
 void main() {
   runApp(const MyApp());
