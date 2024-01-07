@@ -1,0 +1,47 @@
+body{
+    font-family: 'Rubik', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar{
+    background-color: #E9F1E4;
+    height: 15vh;
+    width: 100%;
+}
+
+.brand, .list-item{
+    color : #000000;
+}
+
+/* Define the active link color */
+.nav-link.active .list-item {
+    color: #13AE2C; /* Change to your desired color */
+}
+
+.responsive-logo{
+    height: 90px;
+    width: 160px;
+    border-radius: 5px;    
+}
+
+
+/* Home_userNew.css */
+
+.navbar .list-item {
+    margin-right: 15px; /* Adjust the margin to increase space between list items */
+    transition: color 0.3s; /* Add transition for smoother color change */
+}
+
+.navbar .list-item:hover {
+    color: #13AE2C; /* Change color on hover */
+    /* Add other hover styles as needed */
+}
+
+/* For the logo image */
+.navbar .responsive-logo {
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.navbar .responsive-logo:hover {
+    transform: scale(1.1); /* Increase size on hover */
+    filter: brightness(80%); /* Adjust brightness on hover */
+}

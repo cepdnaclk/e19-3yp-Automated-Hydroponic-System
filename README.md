@@ -31,12 +31,6 @@ ___
 The project "IoT-Based Automated Hydroponic System" aims to develop a modern and sustainable approach to hydroponic farming that maximizes efficiency by using technology to monitor and control growth conditions, reducing resource consumption, and enabling users to make data-driven decisions for better crop management.Customers want fresh, locally grown produce, and hydroponic farming provides an eco friendly, space-efficient, and resource-saving solution. They are looking for high-quality, user-friendly, and automated hydroponic systems that can be easily monitored and managed remotely to meet their demand for convenience and sustainability.The market for hydroponic systems, particularly in urban and controlled environments, is growing. This presents an opportunity to develop a product that is not only cost effective but also provides value by integrating automation and data-driven insights. Such a product can cater to the increasing demand for sustainable and efficient farming methods while remaining economically viable for both individual consumers and businesses
 
 
-
-https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/9afc8e9e-eadd-4472-b16f-01a3fefad074
-
-
-
-
 ## Problem Statement
 
 Traditional farming methods typically rely on a piece of land with good soil quality and are highly susceptible to the unpredictability of weather conditions. Farmers often need to engage in manual labor, such as tilling, planting, weeding, and harvesting, which can be physically demanding and time-consuming. The success of these traditional farming methods is on factors like soil fertility, climate, and access to sufficient water.Hydroponic systems represent an innovative solution to these challenges. These systems enable plants to grow in a controlled environment without soil. Instead, they are nourished by nutrient rich water solutions. Hydroponics have gained popularity due to several advantages, such as Water Efficiency, Crop Yield Optimization, Minimized Pest and Disease Impact.
@@ -66,8 +60,6 @@ The problem we are trying to solve is the need for an automated hydroponic syste
 ## Hardware Design
 
 ![new](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/6d6f9158-77a2-405f-a378-c28399600b12)
-
-![model](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/1ec8d227-9b70-4bd4-bd61-eb7508469982)
 
 ### Dealing With Hardware Limitations
 
@@ -108,12 +100,8 @@ The problem we are trying to solve is the need for an automated hydroponic syste
 
 Our solution includes a dedicated mobile application, empowering users with continuous access and control over the hydroponic system. This mobile platform ensures round-the-clock interaction and monitoring capabilities, offering users unparalleled convenience and oversight at any hour.
 
-https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/61ed3c67-2578-48bd-91ad-0a7a36dd8ce7
-
 ### User Interface (Web Application)
 For the web application while logging in the normal user will get the same facilities as the mobile user. But for the admin user, he/she will be able to add the kind of plants we can grow in the hydroponics system and preferred conditions for the plants. The user management and the registering the new system will also handled in the web application
-
-https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/6a78b45f-eec6-4fb5-a974-b0785bb5970a
 
 #### Features and Functionalities
 - The status of the pumps which are in the reservoir, resources( pH & Nutritional Solution )
@@ -146,9 +134,6 @@ The augmented product features that will differentiate our IoT-Based Automated H
 
 ## High Level System Organization
 
-![my](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/a25d2deb-b8de-4c5c-a157-2eece1e063f4)
-
-![flow](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/1f32c3ae-c63d-4d29-80ef-69c58213170a)
 
 ## Generation of Data
 
@@ -178,9 +163,6 @@ The augmented product features that will differentiate our IoT-Based Automated H
 ### Encryption
 - JWT Token
 - Time Out Mechanism
-- MQTT protocol
-- TLS
-- Encryption in AWS server
 
 ### Security for Communication Hardware
 
@@ -263,9 +245,8 @@ Flutter's testing framework to write unit tests for individual widgets and test 
 
 Flutter_driver package to perform integration tests that drive the app as a real user would, testing interactions across multiple screen
 
-### End-to-end-testing
 
-The end to end testing is done by using Netsparker and NoGotofail
+
 
 ## Budget
 

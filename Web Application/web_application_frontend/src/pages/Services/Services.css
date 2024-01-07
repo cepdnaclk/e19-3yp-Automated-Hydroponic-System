@@ -8,10 +8,12 @@
 
 .page-five-content{
     height: 60vh;
+    align-items: center;
 }
 
 .page-five-content-left{
     width: 45%;
+    height: fit-content;
     margin-right: 5%;
     background-color: #E9F1E4;
 }
@@ -37,4 +39,5 @@
     color: white;
     margin-left: 150px;
     margin-top: 30px;
+    margin-bottom: 20px ;
 }

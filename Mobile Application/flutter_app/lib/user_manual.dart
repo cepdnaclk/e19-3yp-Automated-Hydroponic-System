@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart';
 
 class UserGuide extends StatefulWidget {
   const UserGuide({super.key});
