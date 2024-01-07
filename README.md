@@ -67,6 +67,8 @@ The problem we are trying to solve is the need for an automated hydroponic syste
 
 ![new](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/6d6f9158-77a2-405f-a378-c28399600b12)
 
+![model](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/1ec8d227-9b70-4bd4-bd61-eb7508469982)
+
 ### Dealing With Hardware Limitations
 
 - Contamination & Maintenance Requirement
@@ -106,8 +108,12 @@ The problem we are trying to solve is the need for an automated hydroponic syste
 
 Our solution includes a dedicated mobile application, empowering users with continuous access and control over the hydroponic system. This mobile platform ensures round-the-clock interaction and monitoring capabilities, offering users unparalleled convenience and oversight at any hour.
 
+https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/61ed3c67-2578-48bd-91ad-0a7a36dd8ce7
+
 ### User Interface (Web Application)
 For the web application while logging in the normal user will get the same facilities as the mobile user. But for the admin user, he/she will be able to add the kind of plants we can grow in the hydroponics system and preferred conditions for the plants. The user management and the registering the new system will also handled in the web application
+
+https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/6a78b45f-eec6-4fb5-a974-b0785bb5970a
 
 #### Features and Functionalities
 - The status of the pumps which are in the reservoir, resources( pH & Nutritional Solution )
@@ -142,6 +148,7 @@ The augmented product features that will differentiate our IoT-Based Automated H
 
 ![my](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/a25d2deb-b8de-4c5c-a157-2eece1e063f4)
 
+![flow](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/1f32c3ae-c63d-4d29-80ef-69c58213170a)
 
 ## Generation of Data
 
@@ -171,6 +178,9 @@ The augmented product features that will differentiate our IoT-Based Automated H
 ### Encryption
 - JWT Token
 - Time Out Mechanism
+- MQTT protocol
+- TLS
+- Encryption in AWS server
 
 ### Security for Communication Hardware
 
@@ -253,8 +263,9 @@ Flutter's testing framework to write unit tests for individual widgets and test 
 
 Flutter_driver package to perform integration tests that drive the app as a real user would, testing interactions across multiple screen
 
+### End-to-end-testing
 
-
+The end to end testing is done by using Netsparker and NoGotofail
 
 ## Budget
 
