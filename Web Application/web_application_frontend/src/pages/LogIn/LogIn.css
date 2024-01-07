@@ -2,12 +2,12 @@
     width: 100%;
     height: 85vh;
     justify-content: center;
-    padding-top: 5vh;
+    padding-top: 15px;
 }
 
 .login-inner-container{
-    width: 60%;
-    height: 75vh;
+    width: 40%;
+    height: 80vh;
     background-color: #E9F1E4;
     border-radius: 20px;
 }
@@ -46,6 +46,7 @@
 
 .login-button-container{
     justify-content: center;
+    text-align: center;
 }
 #login-button{
     background-color: #0D7817;

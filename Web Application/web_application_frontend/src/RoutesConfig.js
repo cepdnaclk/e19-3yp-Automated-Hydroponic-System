@@ -20,7 +20,7 @@ function RoutesConfig() {
             <Route path="/Login" element={<Login/>}/>
             
 
-            /* Protected Routes - Admin section */
+            /* Protected Routes - Admin sec */
             <Route element={<ProtectedRoutes/>}>
                 <Route path="/RegisterUser" element={<RegisterUser/>}/>
                 <Route path="/Systems" element={<Systems/>}/>

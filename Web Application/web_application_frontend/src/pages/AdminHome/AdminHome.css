@@ -3,12 +3,13 @@
     justify-content: center;
     text-align: center;
     width: 100%;
-    height: fit-content;
 }
 
 .plant-container{
-    width: 70%;
+    width: 72%;
     height: 20%;
+    justify-content: center;
+    margin-left: 150px;
 }
 
 .plant-card{
@@ -25,7 +26,6 @@
 .plant-image{
     height: 126px;
     width: 126px;
-    border: solid;
 }
 
 .plant-data-container{
@@ -35,6 +35,7 @@
     justify-content: center;
     height: 126px;
     margin-top: 30px;
+    width: 50%;
 }
 
 

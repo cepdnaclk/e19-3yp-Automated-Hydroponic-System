@@ -1,0 +1,43 @@
+.pagefive-container{
+    height: 85vh;
+    width: 90%;
+    margin-left: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-five-content{
+    height: 60vh;
+    align-items: center;
+}
+
+.page-five-content-left{
+    width: 45%;
+    height: fit-content;
+    margin-right: 5%;
+    background-color: #E9F1E4;
+}
+
+.page-five-content-right{
+    width: 45%;
+    margin-left: 5%;
+    background-color: #E9F1E4;
+}
+
+#page-five-prototype-image{
+    height: 200px;
+    width: 300px;
+    margin-left: 100px;
+}
+
+#price-button{
+    width: 200px;
+    height: 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0D7817;
+    color: white;
+    margin-left: 150px;
+    margin-top: 30px;
+    margin-bottom: 20px ;
+}

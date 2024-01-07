@@ -1,0 +1,58 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Add your background image here */
+    background-image: url("../../Images/page_04_bg.jpg");   
+    height: 85vh;
+}
+
+/* Pseudo-element to create an overlay */
+.bg-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* Adjust the opacity as needed */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+}
+
+.text-container {
+    width: 70%;
+    text-align: center;
+    color: #fff; /* Text color */
+    z-index: 1; /* Ensure text is on top of the overlay */
+}
+
+.secondary-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* Ensure content is on top of the overlay */
+
+}
+
+.symbol-image {
+    width: 400px; /* Adjust image size */
+    height: 350px; /* Adjust image size */
+}
+
+.join-us-button {
+    background-color: #0D7817;
+    color: white;
+    padding: 10px 20px; /* Adjust button padding */
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}

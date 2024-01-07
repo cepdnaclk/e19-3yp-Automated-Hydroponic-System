@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import "./LogIn.css";
-import Navbar from "../../components/Navbar/Navbar";
+import CommonNavBar from '../../components/Common_NavBar/Common_Navbar';
 import { useNavigate } from 'react-router-dom';
 import AUTHIMAGE from "../../Images/auth-img.png";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
@@ -14,7 +14,7 @@ function Login() {
   const [error, setError] = useState(null);
   const [passwordVisible, setPasswordVisible] = useState(false);
 
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // Store the email in a state variable
   const [email, setEmail] = useState('');
@@ -32,7 +32,7 @@ function Login() {
     localStorage.setItem('token', token);
   
     // Set a timer to remove the token after a certain time (e.g., 30 minutes)
-    const expirationTime = 24 * 60 * 60 * 1000; // 1 day in milliseconds
+    const expirationTime = 60 * 60 * 1000; // 1 hr in milliseconds
     setTimeout(() => {
       // Clear the token from local storage when the timer expires
       localStorage.removeItem('token');
@@ -63,7 +63,7 @@ function Login() {
 
   return (
     <>
-    <Navbar/>
+    <CommonNavBar/>
     <div className='login-container row'>
       <div className='login-inner-container'>
 
@@ -82,6 +82,7 @@ function Login() {
                   className='login-form-control row'
                   value={credentials.email}
                   onChange={handleChange}
+                  placeholder='example123@gmail.com'
                   required
                 />
               </div>
@@ -94,6 +95,7 @@ function Login() {
                   className='login-form-control row'
                   value={credentials.password}
                   onChange={handleChange}
+                  placeholder='password'
                   required
                 />
                 <span onClick={togglePasswordVisibility} className='eye-icon'>
@@ -103,6 +105,7 @@ function Login() {
 
               <div className='login-button-container row'>
                 <button id='login-button' type='submit' className='btn btn-success'>LogIn</button>
+                <p style={{padding: "5px"}}> Check Pages? | <a href='/Systems'>Check</a></p>
               </div>
 
             </form> 
