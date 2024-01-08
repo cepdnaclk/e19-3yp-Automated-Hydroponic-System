@@ -31,8 +31,8 @@ float message;
 float phHigh;
 float phLow;
 float tdslow;
-int button;
-const int waterPump = 25;
+float button = 0;
+const int waterPump = 16;
 
 WiFiClientSecure net = WiFiClientSecure();
 PubSubClient client(net);
@@ -45,7 +45,7 @@ void messageHandler(char* topic, byte* payload, unsigned int length) {
     StaticJsonDocument<200> doc;
     deserializeJson(doc, payload);
     message = doc["message"];
-    Serial.print(message);
+    Serial.println(message);
 
     if ((strcmp(topic, PH_HIGH_TOPIC) == 0) && (message > 0)) {
 
@@ -61,17 +61,7 @@ void messageHandler(char* topic, byte* payload, unsigned int length) {
       
     } else if (strcmp(topic, WATER_PUMP_TOPIC) == 0) {
 
-        if (message < 1) {
-
-            
-            button = message;
-
-        } else {
-
-            
-            button = 1;
-
-        } 
+        button = message;
 
     } else {
 
