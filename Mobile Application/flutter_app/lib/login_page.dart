@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import 'dart:convert';
-
-=======
->>>>>>> f86cfe13b45520cd13205f35dfe8b0720137b9ad
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -151,25 +146,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _buildLoginButton(){
     return ElevatedButton(
-<<<<<<< HEAD
-
-      onPressed: () async {
-        String email = emailController.text;
-        String password = passwordController.text;
-
-        var url = Uri.http('/api/v1/auth/authenticate'); // api
-        var response = await http.post(url, body: {
-          "email" : email,
-          "password" : password,
-        });
-
-        var data = jsonDecode(response.body);
-        //according to PHP file
-      },
-
-=======
       onPressed: () {},
->>>>>>> f86cfe13b45520cd13205f35dfe8b0720137b9ad
       style: ElevatedButton.styleFrom(
         shape: const StadiumBorder(),
         elevation: 20,
