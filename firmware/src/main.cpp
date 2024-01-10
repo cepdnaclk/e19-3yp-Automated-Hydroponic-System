@@ -28,7 +28,7 @@ void activatePumps() {
         digitalWrite(nutrientAdd, HIGH);
         tdson = 1;
         publishMessage(tdson, TDS_PUMP_TOPIC, "tdspumpstate");
-        delay(100);
+        delay(1000);
         digitalWrite(nutrientAdd, LOW);
         
         if (tdsValue <= tdslow) {
@@ -44,7 +44,7 @@ void activatePumps() {
         digitalWrite(phAdd, HIGH);
         phlowon = 1;
         publishMessage(phlowon, PH_LOW_PUMP_TOPIC, "phlowpumpstate");
-        delay(100);
+        delay(1000);
         digitalWrite(phAdd, LOW);  
         
         if (phValue <= phLow) {
@@ -59,7 +59,7 @@ void activatePumps() {
         digitalWrite(phMinus, HIGH);
         phhighon = 1;
         publishMessage(phhighon, PH_HIGH_PUMP_TOPIC, "phhighpumpstate");
-        delay(100);
+        delay(1000);
         digitalWrite(phMinus, LOW);
         
         if (phValue >= phHigh) {
@@ -72,14 +72,10 @@ void activatePumps() {
   
             digitalWrite(waterPump, LOW);
 
-    }
-    
-    if (button == 0) {
+    } else {
             
                 digitalWrite(waterPump, HIGH);
     }
-    
-   
 
     
 
@@ -99,7 +95,7 @@ void setup() {
     pinMode(phMinus,OUTPUT);
     pinMode(nutrientAdd,OUTPUT);
     pinMode(waterPump,OUTPUT);
-    
+    digitalWrite(waterPump, HIGH);
     
 
     connectAWS();
@@ -115,9 +111,7 @@ void setup() {
 void loop() {
     
   checkPhValue();
-  Serial.print("ph high: ");
   Serial.println(phLow);
-  Serial.print("ph low: ");
   Serial.println(phHigh);
   Serial.print(F(" ph: "));
   Serial.println(phValue);
@@ -126,11 +120,7 @@ void loop() {
 
   checkTdsValue();
 
- Serial.print("tds value: ");
   Serial.println(tdsValue);
-
-  Serial.print("tds low: ");
-    Serial.println(tdslow);
 
   checkFloatSensor();
 
@@ -156,7 +146,3 @@ void loop() {
   delay(10000);
   
 } 
-
-
-
-

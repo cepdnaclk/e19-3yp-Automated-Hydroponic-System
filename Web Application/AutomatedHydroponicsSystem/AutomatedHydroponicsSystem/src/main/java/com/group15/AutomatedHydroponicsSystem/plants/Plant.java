@@ -12,10 +12,13 @@ public class Plant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
+    @Setter
     @Getter
     String name;
+    @Setter
     @Getter
     String details;
+    @Setter
     @Getter
     @Lob
     @Column(length = 5242880)
@@ -25,15 +28,4 @@ public class Plant {
 
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setDetails(String details) {
-        this.details = details;
-    }
-
-    public void setImage(byte[] image) {
-        this.image = image;
-    }
 }

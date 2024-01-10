@@ -17,19 +17,23 @@ public class PlantController {
     @Autowired
     private PlantRepository plantRepository;
 
+//    @PostMapping("/plants/add")
+//    public void addPlant(
+//            @RequestParam("name") String name,
+//            @RequestParam("details") String details,
+//            @RequestParam("image")MultipartFile image
+//    ) throws IOException {
+//        Plant plant = new Plant();
+//
+//        plant.setName(name);
+//        plant.setDetails(details);
+//        plant.setImage(image.getBytes());
+//
+//        plantRepository.save(plant);
+//    }
     @PostMapping("/plants/add")
-    public void addPlant(
-            @RequestParam("name") String name,
-            @RequestParam("details") String details,
-            @RequestParam("image")MultipartFile image
-    ) throws IOException {
-        Plant plant = new Plant();
-
-        plant.setName(name);
-        plant.setDetails(details);
-        plant.setImage(image.getBytes());
-
-        plantRepository.save(plant);
+    Plant plant(@RequestBody Plant newPlant){
+        return plantRepository.save(newPlant);
     }
 
     @GetMapping("/plants/all")

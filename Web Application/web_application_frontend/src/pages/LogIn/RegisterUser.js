@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./Register.css";
-import Navbar from "../../components/Navbar/Navbar";
+import "./RegisterUser.css";
+import CommonNavBar from "../../components/Common_NavBar/Common_Navbar";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 
@@ -28,7 +28,7 @@ function RegisterUser() {
         e.preventDefault();
 
         if(formData.password !== formData.confirmPassword){
-            alert("Password doesn't match");
+            alert("Password doesn't match.");
             return;
         }
         try {
@@ -47,7 +47,7 @@ function RegisterUser() {
 
     return (
         <>
-            <Navbar />
+            <CommonNavBar/>
             <div className="register-container row">
                 <div className="register-title row">
                     <h2  style={{color:"rgb(20, 61, 3)"}}>Add a New User</h2>
