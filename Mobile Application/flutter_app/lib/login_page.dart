@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import 'dart:convert';
-
-=======
->>>>>>> f86cfe13b45520cd13205f35dfe8b0720137b9ad
+import 'package:http/http.dart' as http;
+import 'package:testapp/sidebar.dart';
 import 'package:flutter/material.dart';
+import 'package:testapp/plant_log/plant_log.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -151,25 +150,49 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _buildLoginButton(){
     return ElevatedButton(
-<<<<<<< HEAD
 
-      onPressed: () async {
-        String email = emailController.text;
-        String password = passwordController.text;
+      onPressed: ()  {
+        if (emailController.text == 'customer@gmail.com' && passwordController.text == 'customer123') {
+          Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => SideBarState()),
+            );
+        }
+        else {
+          print('Failed to authenticate');
+          Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => LoginPage()),
+            );
+        }
+        // Navigator.pushReplacement(
+        //       context,
+        //       MaterialPageRoute(builder: (context) => SideBarState()),
+        //     );
+        // String email = emailController.text;
+        // String password = passwordController.text;
 
-        var url = Uri.http('/api/v1/auth/authenticate'); // api
-        var response = await http.post(url, body: {
-          "email" : email,
-          "password" : password,
-        });
+        // var url = Uri.http('https://localhost:8080/api/v1/auth/authenticate'); // api
+        // var response = await http.post(url, body: {
+        //   "email" : email,
+        //   "password" : password,
+        // });
 
-        var data = jsonDecode(response.body);
+        //if (response.statusCode == 200) {
+            // Successful authentication
+            //var responseData = json.decode(response.body);
+            // Handle the responseData, such as setting authentication tokens or navigating to the next screen
+            
+
+          // } else {
+            // Error in authentication
+            //print('Failed to authenticate. Status code: ${response.statusCode}');
+            //print('Response body: ${response.body}');
+            // Display an error message to the user or handle the error accordingly
+          //}
         //according to PHP file
       },
 
-=======
-      onPressed: () {},
->>>>>>> f86cfe13b45520cd13205f35dfe8b0720137b9ad
       style: ElevatedButton.styleFrom(
         shape: const StadiumBorder(),
         elevation: 20,

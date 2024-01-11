@@ -1,47 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:testapp/header.dart';
 import 'package:testapp/help.dart';
-import 'package:testapp/login_page.dart';
-import 'package:testapp/plant_log.dart';
+import 'package:testapp/plant_log/plant_log.dart';
 import 'package:testapp/profile.dart';
 import 'package:testapp/user_manual.dart';
 
-void main() {
-  runApp(const MyApp());
-}
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class SideBarState extends StatefulWidget {
+  const SideBarState({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    Color myColor = const Color(0xFFFFFF);
-    Color myGreenColor = const Color(0xFF0D7817);
-
-    return MaterialApp(
-      title: 'HydroGrowPro',
-      theme: ThemeData (
-        colorScheme: ColorScheme.fromSeed(seedColor: myGreenColor),
-        useMaterial3: true,
-      ),
-
-      // Login Page
-      home: LoginPage(),
-      //home: _SideBarState(),
-      
-      debugShowCheckedModeBanner: false,
-    );
-  }
+  State<SideBarState> createState() => _SideBarStateState();
 }
 
-class _SideBarState extends StatefulWidget {
-  const _SideBarState({super.key});
-
-  @override
-  State<_SideBarState> createState() => __SideBarStateState();
-}
-
-class __SideBarStateState extends State<_SideBarState> {
+class _SideBarStateState extends State<SideBarState> {
 
   var currentPage = DrawerSections.plant_log;
 

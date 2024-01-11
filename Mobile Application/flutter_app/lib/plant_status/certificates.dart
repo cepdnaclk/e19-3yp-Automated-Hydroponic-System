@@ -1,4 +1,4 @@
-class Certificates {
+/*class Certificates {
   static const String AWS_CERT_CA = '''
     -----BEGIN CERTIFICATE-----
     MIIDQTCCAimgAwIBAgITBmyfz5m/jAo54vB4ikPmljZbyjANBgkqhkiG9w0BAQsF
@@ -74,4 +74,4 @@ class Certificates {
     TFN/IyawtIPWmC9D0jpCb6XogduwMFeesJzRCEwr51YUaD4Q0MPL
     -----END RSA PRIVATE KEY-----
   ''';
-}
+}*/
