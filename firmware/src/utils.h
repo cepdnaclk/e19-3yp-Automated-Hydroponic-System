@@ -4,6 +4,7 @@
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
 #include <WiFiClientSecure.h>
+#include <WiFiManager.h>
 
 /* Define publish and subscribe topics */
 #define AWS_IOT_PUBLISH_TOPIC   "esp32pub"
@@ -12,14 +13,25 @@
 #define TDS_SENSOR_TOPIC "tdssensor"
 #define FLOAT_SENSOR_TOPIC "floatsensor"
 #define WATER_PUMP_TOPIC "waterpump"
-#define PH_VALUE_TOPIC "phvalue"
+#define PH_HIGH_TOPIC "phhigh"
 #define TDS_VALUE_TOPIC "tdsvalue"
+#define PH_LOW_TOPIC "phlow"
+#define PH_HIGH_PUMP_TOPIC "phpump"
+#define PH_LOW_PUMP_TOPIC "phlowpump"
+#define TDS_PUMP_TOPIC "tdspump"
+#define PH_HIGH_ERROR_TOPIC "phhigherror"
+#define PH_LOW_ERROR_TOPIC "phlowerror"
+#define TDS_ERROR_TOPIC "tdserror"
+#define PH_SENSOR_ERROR_TOPIC "phsensorerror"
+#define TDS_SENSOR_ERROR_TOPIC "tdssensorerror"
+
+
 
 float message;
 float phHigh;
 float phLow;
 float tdslow;
-int button = 1;
+int button;
 const int waterPump = 25;
 
 WiFiClientSecure net = WiFiClientSecure();
@@ -35,50 +47,31 @@ void messageHandler(char* topic, byte* payload, unsigned int length) {
     message = doc["message"];
     Serial.print(message);
 
-    if (strcmp(topic, PH_VALUE_TOPIC) == 0) {
+    if ((strcmp(topic, PH_HIGH_TOPIC) == 0) && (message > 0)) {
 
-        if (message > 0 && message < 9) {
+        phHigh = message;
+      
+    } else if ((strcmp(topic, PH_LOW_TOPIC) == 0) && (message > 0)) {
 
             phLow = message;
 
-        } else if (message > 9 && message < 14) {
-
-            phHigh = message;
-
-        } else {
-
-            Serial.println("Invalid value");
-
-        }
-
-    } else if (strcmp(topic, TDS_VALUE_TOPIC) == 0) {
-
-        if (message > 0 && message < 600) {
+    } else if ((strcmp(topic, TDS_VALUE_TOPIC) == 0) && (message > 0)) {
 
             tdslow = message;
-
-        } else {
-
-            Serial.println("Invalid value");
-
-        }
+      
     } else if (strcmp(topic, WATER_PUMP_TOPIC) == 0) {
 
-        if (message == 1) {
+        if (message < 1) {
 
-            digitalWrite(waterPump, HIGH);
-            button = 1;
-
-        } else if (message == 0) {
-
-            digitalWrite(waterPump, LOW);
-            button = 0;
+            
+            button = message;
 
         } else {
 
-            Serial.println("Invalid value");
+            
+            button = 1;
 
-        }
+        } 
 
     } else {
 
@@ -154,6 +147,3 @@ void subscribeToTopic(const char* topic) {
     client.subscribe(topic);
     
 }
-
-
-

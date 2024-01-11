@@ -47,6 +47,6 @@ void checkPhValue() {
 
     phValue = (avgValue * 5.0 / 1024);  // convert the analog into volt
 
-    phValue = phValue / 2 - 2;  // convert the volt into ph value
+    phValue = phValue / 2 + 4;  // convert the volt into ph value
 
 }
