@@ -5,38 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78e606ca-8da8-43d3-9370-feddef44668b" name="Changes" comment="new files">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/login_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/new_plant.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/new_plant.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/plant_log.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/plant_log.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/plant_log/plant_log.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/plant_log/plant_log.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/plant_status/certificates.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/plant_status/certificates.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/plant_status/plant_status.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/plant_status/plant_status.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_31_2023_7_37_PM_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_31_2023_7_37_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_31_2023_7_37_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_31_2023_7_37_PM__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/system/SystemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/system/SystemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/AutomatedHydroponicsSystemApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/AutomatedHydroponicsSystemApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/Demo/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/Demo/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/Demo/DemoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/Demo/DemoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/Demo/ManagementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/Demo/ManagementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/Demo/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/Demo/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/User/Permission.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/User/Permission.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/User/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/User/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/User/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/User/User$UserBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/User/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/User/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/User/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/User/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/User/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/User/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationRequest$AuthenticationRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationRequest$AuthenticationRequestBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationResponse$AuthenticationResponseBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationResponse$AuthenticationResponseBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/auth/RegisterRequest$RegisterRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/auth/RegisterRequest$RegisterRequestBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/auth/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/auth/RegisterRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/config/ApplicationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/config/ApplicationConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/config/JwtAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/config/JwtAuthenticationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/config/JwtService.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/config/JwtService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/config/LogoutService.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/config/LogoutService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/config/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/config/SecurityConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/plants/PlantController.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/plants/PlantController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/system/SystemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/system/SystemRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/token/Token$TokenBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/token/Token$TokenBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/token/Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/token/Token.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/token/TokenRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/token/TokenRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/token/TokenType.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/token/TokenType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web_application_frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../web_application_frontend/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,37 +83,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/Project Components/demo",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/#SEMESTER 5/3YP/e19-3yp-Automated-Hydroponic-System/Web Application/AutomatedHydroponicsSystem&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.group15.AutomatedHydroponicsSystem.exception" />
