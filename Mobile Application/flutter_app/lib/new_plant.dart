@@ -1,9 +1,133 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/plant_log/plant_log.dart';
 import 'package:testapp/plant_log2.dart';
+import 'package:testapp/sidebar.dart';
 import 'package:testapp/static_header.dart';
 import 'header.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
+
+import 'package:flutter/material.dart';
+
+/// Flutter code sample for [DropdownMenu].
+
+const List<String> list = <String>['Aloe Vera', 'Tomato', 'Onion', 'General Case'];
+
+void main() => runApp(
+  const NewPlant()
+  );
+
+class NewPlant extends StatelessWidget {
+  const NewPlant({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(useMaterial3: true),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: StaticHeader(),
+        body: Padding(
+          padding: const EdgeInsets.all(40.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(bottom:20.0),
+                child: Center(
+                  child: Text(
+                    'Want to have another plant?',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontFamily: 'Poppins',
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+              Center(
+                child: DropdownMenuExample(),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 45.0),
+                child: Center(
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(maxWidth: 130),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => SideBarState()),
+                       );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      shape: const StadiumBorder(),
+                      elevation: 1,
+                      shadowColor: Color(0xFF0D7817),
+                      backgroundColor: Color(0xFF0D7817),
+                      minimumSize: const Size.fromHeight(45),
+                    ),
+                    child: Text(
+                      'SUBMIT',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'Poppins',
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                        letterSpacing: 3.0,
+                      ),
+                    ),
+                  ),
+                ),
+                            ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class DropdownMenuExample extends StatefulWidget {
+  const DropdownMenuExample({super.key});
+
+  @override
+  State<DropdownMenuExample> createState() => _DropdownMenuExampleState();
+}
+
+class _DropdownMenuExampleState extends State<DropdownMenuExample> {
+  String dropdownValue = list.first;
+
+  @override
+  Widget build(BuildContext context) {
+    return DropdownMenu<String>(
+      initialSelection: list.first,
+      onSelected: (String? value) {
+        // This is called when the user selects an item.
+        setState(() {
+          dropdownValue = value!;
+        });
+      },
+      dropdownMenuEntries: list.map<DropdownMenuEntry<String>>((String value) {
+        return DropdownMenuEntry<String>(
+          value: value,
+          label: value);
+      }).toList(),
+      textStyle: TextStyle(
+        fontFamily: 'Poppins',
+        color: Color(0xFF0D7817),
+      ),
+      menuStyle: MenuStyle(
+
+        //fontFamily: 'Poppins',
+      ),
+    );
+  }
+}
+
 
 // class NewPlant extends StatefulWidget {
 //   const NewPlant({Key? key}) : super(key: key);
@@ -172,114 +296,3 @@ import 'dart:io';
 //   }
 // }
 
-//
-import 'package:flutter/material.dart';
-
-/// Flutter code sample for [DropdownMenu].
-
-const List<String> list = <String>['Aloe Vera', 'Tomato', 'Onion', 'General Case'];
-
-void main() => runApp(
-  const NewPlant()
-  );
-
-class NewPlant extends StatelessWidget {
-  const NewPlant({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(useMaterial3: true),
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: StaticHeader(),
-        body: Padding(
-          padding: const EdgeInsets.all(40.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(bottom:20.0),
-                child: Center(
-                  child: Text(
-                    'Want to have another plant?',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontFamily: 'Poppins',
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
-              Center(
-                child: DropdownMenuExample(),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 45.0),
-                child: Center(
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(maxWidth: 130),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (context) => PlantLog2()),
-                       );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      shape: const StadiumBorder(),
-                      elevation: 1,
-                      shadowColor: Color(0xFF0D7817),
-                      backgroundColor: Color(0xFF0D7817),
-                      minimumSize: const Size.fromHeight(45),
-                    ),
-                    child: Text(
-                      'SUBMIT',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Poppins',
-                        fontSize: 12,
-                        fontWeight: FontWeight.w600,
-                        letterSpacing: 3.0,
-                      ),
-                    ),
-                  ),
-                ),
-                            ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class DropdownMenuExample extends StatefulWidget {
-  const DropdownMenuExample({super.key});
-
-  @override
-  State<DropdownMenuExample> createState() => _DropdownMenuExampleState();
-}
-
-class _DropdownMenuExampleState extends State<DropdownMenuExample> {
-  String dropdownValue = list.first;
-
-  @override
-  Widget build(BuildContext context) {
-    return DropdownMenu<String>(
-      initialSelection: list.first,
-      onSelected: (String? value) {
-        // This is called when the user selects an item.
-        setState(() {
-          dropdownValue = value!;
-        });
-      },
-      dropdownMenuEntries: list.map<DropdownMenuEntry<String>>((String value) {
-        return DropdownMenuEntry<String>(value: value, label: value);
-      }).toList(),
-    );
-  }
-}

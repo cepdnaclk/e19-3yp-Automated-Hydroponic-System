@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:testapp/header.dart';
 import 'package:testapp/help.dart';
 import 'package:testapp/login_page.dart';
+import 'package:testapp/open_screen.dart';
 import 'package:testapp/plant_log.dart';
 import 'package:testapp/profile.dart';
 import 'package:testapp/user_manual.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       ),
 
       // Login Page
-      home: LoginPage(),
+      home: OpenScreen(),
       //home: _SideBarState(),
       
       debugShowCheckedModeBanner: false,
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+/*
 class _SideBarState extends StatefulWidget {
   const _SideBarState({super.key});
 
@@ -180,3 +182,4 @@ enum DrawerSections {
   help,
   user_manual,
 }
+*/

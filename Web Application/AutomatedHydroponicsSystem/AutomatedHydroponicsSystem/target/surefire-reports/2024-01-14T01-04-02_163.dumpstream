@@ -1,0 +1,5 @@
+# Created at 2024-01-14T01:04:02.372
+Boot Manifest-JAR contains absolute paths in classpath 'E:\#SEMESTER 5\3YP\e19-3yp-Automated-Hydroponic-System\Web Application\AutomatedHydroponicsSystem\AutomatedHydroponicsSystem\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
