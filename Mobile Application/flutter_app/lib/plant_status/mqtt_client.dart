@@ -1,3 +1,4 @@
+/*
 import 'dart:async';
 import 'dart:io';
 import 'dart:convert';
@@ -64,7 +65,7 @@ class MQTTService {
   }
 
   static void getJson(String message) {
-    print("Trying.......................................................");
+    print("Trying..");
     print(message);
     try {
       dynamic json = jsonDecode(message);
@@ -93,3 +94,4 @@ class MQTTService {
     client.disconnect();
   }
 }
+*/

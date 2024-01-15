@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:testapp/plant_status.dart';
 import 'package:testapp/static_header.dart';
 //import 'header.dart';
@@ -123,4 +123,4 @@ class _PlantDetails2State extends State<PlantDetails2> {
       ),
     );
   }
-}
+}*/

@@ -1,8 +1,11 @@
-import 'dart:convert';
-import 'package:http/http.dart' as http;
-import 'package:testapp/sidebar.dart';
+//import 'dart:convert';
+//import 'package:http/http.dart' as http;
+import 'package:testapp/controllers/auth_controller.dart';
+//import 'package:testapp/sidebar.dart';
 import 'package:flutter/material.dart';
 import 'package:testapp/plant_log/plant_log.dart';
+import 'package:testapp/sidebar.dart';
+//import 'package:testapp/plant_log/plant_log.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -14,8 +17,8 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   late Size mediaSize;
   late Color myGreenColor;
-  TextEditingController passwordController = TextEditingController();
-  TextEditingController emailController = TextEditingController();
+
+  AuthController authController = AuthController();
 
   @override
   Widget build(BuildContext context) {
@@ -98,10 +101,10 @@ class _LoginPageState extends State<LoginPage> {
       ),
         const SizedBox(height: 30),
         _buildText("Enter your Email Address"),
-        _buildInputField(emailController),
+        _buildInputField(authController.emailController),
         const SizedBox(height: 30),
         _buildText("Enter your Password"),
-        _buildInputField(passwordController, isPassword: true),
+        _buildInputField(authController.passwordController),
         _buildRememberForgot(),
         const SizedBox(height: 40),
         _buildLoginButton(),
@@ -120,13 +123,19 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  Widget _buildInputField(TextEditingController controller, {isPassword = false}){
+  Widget _buildInputField(TextEditingController controller){
     return TextField(
       controller: controller,
       decoration: InputDecoration(
-        suffixIcon: isPassword ? Icon(Icons.remove_red_eye) : Icon(Icons.done),
+        hintText: 'Type Here',
+        hintStyle: TextStyle(
+          fontFamily: 'Poppins',
+          fontSize: 10,
+          color: Colors.grey,
+        )
+        //suffixIcon: isPassword ? Icon(Icons.remove_red_eye) : Icon(Icons.done),
       ),
-      obscureText: isPassword,
+      //obscureText: isPassword,
     );
   }
 
@@ -135,7 +144,14 @@ class _LoginPageState extends State<LoginPage> {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         TextButton(
-          onPressed: (){},
+          onPressed: (){
+            Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SideBarState(), // Replace YourAddPage with the add page widget
+                      ),
+                    );
+          },
           child: Text("Forgot Password?",
             style: TextStyle(
               fontSize: 10,
@@ -152,19 +168,58 @@ class _LoginPageState extends State<LoginPage> {
     return ElevatedButton(
 
       onPressed: ()  {
-        if (emailController.text == 'customer@gmail.com' && passwordController.text == 'customer123') {
-          Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => SideBarState()),
-            );
-        }
-        else {
-          print('Failed to authenticate');
-          Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => LoginPage()),
-            );
-        }
+        authController.loginUser();
+      },
+
+      style: ElevatedButton.styleFrom(
+        shape: const StadiumBorder(),
+        elevation: 20,
+        shadowColor: myGreenColor,
+        backgroundColor: myGreenColor,
+        minimumSize: const Size.fromHeight(60),
+      ),
+      child: const Text("LOGIN",
+        style: TextStyle(
+          color: Colors.white,
+          fontFamily: 'Poppins',
+          fontSize: 15,
+          fontWeight: FontWeight.w600,
+          letterSpacing: 3.0,
+        ),
+      ),
+    );
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// if (emailController.text == 'customer@gmail.com' && passwordController.text == 'customer123') {
+        //   Navigator.pushReplacement(
+        //       context,
+        //       MaterialPageRoute(builder: (context) => SideBarState()),
+        //     );
+        // }
+        // else {
+        //   print('Failed to authenticate');
+        //   Navigator.pushReplacement(
+        //       context,
+        //       MaterialPageRoute(builder: (context) => LoginPage()),
+        //     );
+        // }
         // Navigator.pushReplacement(
         //       context,
         //       MaterialPageRoute(builder: (context) => SideBarState()),
@@ -191,26 +246,4 @@ class _LoginPageState extends State<LoginPage> {
             // Display an error message to the user or handle the error accordingly
           //}
         //according to PHP file
-      },
-
-      style: ElevatedButton.styleFrom(
-        shape: const StadiumBorder(),
-        elevation: 20,
-        shadowColor: myGreenColor,
-        backgroundColor: myGreenColor,
-        minimumSize: const Size.fromHeight(60),
-      ),
-      child: const Text("LOGIN",
-        style: TextStyle(
-          color: Colors.white,
-          fontFamily: 'Poppins',
-          fontSize: 15,
-          fontWeight: FontWeight.w600,
-          letterSpacing: 3.0,
-        ),
-      ),
-    );
-  }
-
-}
 

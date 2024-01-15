@@ -1,8 +1,99 @@
 import 'package:flutter/material.dart';
-import 'package:testapp/plant_status.dart';
-import 'package:testapp/static_header.dart';
-//import 'header.dart';
 
+class PlantDetails extends StatelessWidget {
+  final String text;
+  const PlantDetails({Key? key, required this.text}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        children: [
+          Positioned(
+            left: 0.0,
+            right: 0.0,
+            child: Container(
+              width: double.maxFinite,
+              height: 370,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assets/aloevera.jpg",
+
+                  ),
+                  fit: BoxFit.cover, 
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 340.0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: Container(
+              padding: EdgeInsets.only(top: 40,right: 30, left: 30),
+              decoration: BoxDecoration(
+                color: Color(0xFFF5F9F2),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(30),
+                  topRight: Radius.circular(30),
+                )
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    text,
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w600,
+                      color: Color(0xFF0D7817),
+                    ),
+                  ),
+                  
+                  SizedBox(height: 25.0),
+              
+                  Text(
+                    "Description goes here. This can be a longer description text.",
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
+                      fontSize: 12,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )
+        ],
+      )
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 class PlantDetails extends StatefulWidget {
   const PlantDetails({super.key});
 
@@ -123,4 +214,4 @@ class _PlantDetailsState extends State<PlantDetails> {
       ),
     );
   }
-}
+}*/

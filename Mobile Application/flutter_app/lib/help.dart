@@ -9,7 +9,7 @@ class Help extends StatefulWidget {
 
 class _HelpState extends State<Help> {
 
-  TextEditingController _descriptionController = TextEditingController();
+  TextEditingController descriptionController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -145,7 +145,7 @@ class _HelpState extends State<Help> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 30.0, horizontal: 30.0),
             child: TextField(
-              controller: _descriptionController,
+              controller: descriptionController,
               decoration: InputDecoration(
                 hintText: 'Enter your matter here ...',
                 border: OutlineInputBorder(),
@@ -165,9 +165,9 @@ class _HelpState extends State<Help> {
               child: ElevatedButton(
                   onPressed: () {
                       // Use _descriptionController.text to access the entered text
-                    String description = _descriptionController.text;
+                    //String description = _descriptionController.text;
                     // Handle submission here
-                    print('Description submitted: $description');
+                    //print('Description submitted: $description');
                   },
                   style: ElevatedButton.styleFrom(
                     shape: const StadiumBorder(),

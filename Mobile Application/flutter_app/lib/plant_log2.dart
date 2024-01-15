@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:testapp/new_plant.dart';
 import 'package:testapp/plant_details.dart';
 import 'package:testapp/plant_details2.dart';
@@ -160,7 +160,7 @@ class _PlantLog2State extends State<PlantLog2> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => PlantDetails2(), // Replace YourAddPage with the add page widget
+                                builder: (context) => PlantDetails(), // Replace YourAddPage with the add page widget
                               ),
                             );
                           },
@@ -255,3 +255,4 @@ class _PlantLog2State extends State<PlantLog2> {
   }
 }
 
+*/
