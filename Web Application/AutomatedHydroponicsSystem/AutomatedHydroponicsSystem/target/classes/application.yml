@@ -1,0 +1,39 @@
+#spring:
+#    datasource:
+#        url: jdbc:mysql://database-test1.cnc0wy0euvsl.ap-south-1.rds.amazonaws.com:3306/user_details?createDatabaseIfNotExist=true
+#        username: Danujan
+#        password: Laptopproject
+#        driver-class-name: com.mysql.cj.jdbc.Driver
+#    jpa:
+#        hibernate:
+#            ddl-auto: update # create-drop used in the video
+#        show-sql: true
+#        properties:
+#            hibernate:
+#                format_sql: true
+#        database: mysql
+#        database-platform: org.hibernate.dialect.MySQLDialect
+spring:
+    datasource:
+        url: jdbc:mysql://localhost:3306/user_details
+        username: root
+        password:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+        properties:
+            hibernate:
+                format_sql: true
+        database: mysql
+        database-platform: org.hibernate.dialect.MySQLDialect
+
+
+application:
+    security:
+        jwt:
+            secret-key: 529424ba8964aa3c4de609cf5b23f29a0741602186e31fdbd6605252faeef089
+            expiration: 86400000
+            refresh-token:
+                expiration: 604800000

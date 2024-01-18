@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.group15.AutomatedHydroponicsSystem.AutomatedHydroponicsSystemApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.669 s - in com.group15.AutomatedHydroponicsSystem.AutomatedHydroponicsSystemApplicationTests

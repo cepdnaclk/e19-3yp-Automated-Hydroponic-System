@@ -21,11 +21,12 @@ public class Token {
     @Enumerated(EnumType.STRING)
     private TokenType tokenType;
     private boolean expired;
+    // Can be used to revoke the token when starting the system or manually revoking the system
     private boolean revoked ;
 
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
+    @ManyToOne //Many tokens can be belonged to one user
+    @JoinColumn(name = "user_id")  // user_id is the one collabarating with the token columns
     private User user;
 
 }
