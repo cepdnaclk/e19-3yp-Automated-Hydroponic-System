@@ -2,12 +2,14 @@ import React from "react";
 import "./Navbar.css";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import LOGO from "../../Images/Logo.png"
+import {Link} from "react-router-dom";
+
 
 
 function NavBar() {
     const menuData = [
         {
-            path: "/",
+            path: "/Home_User_New",
             name: "Home"
         },
         {
@@ -27,14 +29,14 @@ function NavBar() {
     return (
         <Navbar className="navbar" expand="lg">
             <Container className="navbar-container">
-                <Navbar.Brand href="#Home"><img src={LOGO} alt="Logo Not Found" className="responsive-logo"/></Navbar.Brand>
+                <Navbar.Brand as={Link} to="/Home_User_New"><img src={LOGO} alt="Logo Not Found" className="responsive-logo"/></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                         {menuData.map((item) => (
-                            <Nav.Link to={item.path} key={item.name}>
+                            <Link to={item.path} key={item.name} className="nav-link">
                                 <div className="list-item me-3">{item.name}</div>
-                            </Nav.Link>
+                            </Link>
                         ))}
                     </Nav>
                 </Navbar.Collapse>
