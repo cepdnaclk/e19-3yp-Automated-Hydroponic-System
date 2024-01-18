@@ -17,6 +17,10 @@ function AdminNavBar() {
         {
             path: "/RegisterUser",
             name: "User Management"
+        },
+        {
+            path: "/",
+            name: "Log Out"
         }
     ];
 
