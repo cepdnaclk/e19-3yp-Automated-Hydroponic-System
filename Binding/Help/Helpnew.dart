@@ -1,4 +1,4 @@
-class Help extends StatelessWidget {
+/*class Help extends StatelessWidget {
   TextEditingController _descriptionController = TextEditingController();
 
   Widget buildContactInfoRow(IconData icon, String text) {
@@ -103,4 +103,4 @@ Future<void> submitDescription(String description) async {
       ),
     );
   }
-}
+}*/

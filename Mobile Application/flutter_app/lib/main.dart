@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:testapp/header.dart';
-import 'package:testapp/help.dart';
-import 'package:testapp/login_page.dart';
+// import 'package:testapp/header.dart';
+// import 'package:testapp/help.dart';
+// import 'package:testapp/login_page.dart';
 import 'package:testapp/open_screen.dart';
-import 'package:testapp/plant_log.dart';
-import 'package:testapp/profile.dart';
-import 'package:testapp/user_manual.dart';
+// import 'package:testapp/plant_log.dart';
+// import 'package:testapp/profile.dart';
+// import 'package:testapp/user_manual.dart';
 
-void main() {
+import 'helper/dependencies.dart' as dep;
+
+Future <void> main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await dep.init;
   runApp(const MyApp());
 }
 
@@ -16,7 +20,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color myColor = const Color(0xFFFFFF);
+    //Color myColor = const Color(0xFFFFFF);
     Color myGreenColor = const Color(0xFF0D7817);
 
     return MaterialApp(

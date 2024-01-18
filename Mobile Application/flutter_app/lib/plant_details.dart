@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/widgets/expandable_text.dart';
 
 class PlantDetails extends StatelessWidget {
   final String text;
@@ -26,6 +27,7 @@ class PlantDetails extends StatelessWidget {
               ),
             ),
           ),
+          
           Positioned(
             top: 340.0,
             left: 0,
@@ -41,7 +43,7 @@ class PlantDetails extends StatelessWidget {
                 )
               ),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     text,
@@ -52,20 +54,33 @@ class PlantDetails extends StatelessWidget {
                       color: Color(0xFF0D7817),
                     ),
                   ),
-                  
-                  SizedBox(height: 25.0),
-              
+
+                  SizedBox(height: 20.0),
+
                   Text(
-                    "Description goes here. This can be a longer description text.",
+                    "Your Happy, Healthy Plant!",
                     style: TextStyle(
+                      fontSize: 18,
                       fontFamily: 'Poppins',
-                      fontSize: 12,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
+
+                  SizedBox(height:14.0),
+
+                  Expanded(
+                    child: SingleChildScrollView(
+                      child: ExpandableText(
+                       //text: "HI",
+                        text: "Meet Aloe Vera, the green superhero of your garden! Originally from the Arabian Peninsula, this special plant with thick, green leaves is famous worldwide. Its magical gel is loaded with vitamins and good things, making it a natural remedy for happy skin and a healthy you. Aloe Vera is a skin spa, healing cuts and enhancing beauty. Sip its juice for a stomach hug, and harness essential nutrients for overall well-being. Your health's best friend! For Aloe Vera joy in hydroponics, aim for a slightly sour pH (6.0-7.0) – like lemonade. Maintain TDS sensor levels at 1000-1600 ppm for the perfect nutrient mix. Aloe Vera ensures a happy, green paradise!",
+                        ),
+                    ),
+                  )
                 ],
               ),
             ),
           )
+          
         ],
       )
     );

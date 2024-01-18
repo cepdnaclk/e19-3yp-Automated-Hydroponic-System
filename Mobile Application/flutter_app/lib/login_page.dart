@@ -127,7 +127,7 @@ class _LoginPageState extends State<LoginPage> {
     return TextField(
       controller: controller,
       decoration: InputDecoration(
-        hintText: 'Type Here',
+        //hintText: 'Type Here',
         hintStyle: TextStyle(
           fontFamily: 'Poppins',
           fontSize: 10,
