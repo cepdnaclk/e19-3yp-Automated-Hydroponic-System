@@ -46,7 +46,7 @@ class _PlantLogState extends State<PlantLog> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 40.0,right: 50.0,left: 50.0,bottom: 40.0),
+            padding: const EdgeInsets.only(top: 40.0,right: 60.0,left: 60.0,bottom: 40.0),
             child: ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -65,13 +65,13 @@ class _PlantLogState extends State<PlantLog> {
                 overlayColor: getColor(Color.fromARGB(255, 7, 148, 33), Color.fromARGB(255, 9, 43, 13)),
               ),
                     child: const Text(
-                      "GO TO STATUS",
+                      "CHECK OUT THE PLANTS",
                       style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'Poppins',
-                        fontSize: 15,
+                        fontSize: 14,
                         fontWeight: FontWeight.w600,
-                        letterSpacing: 2.0,
+                        letterSpacing: 1.0,
                       ),
                     ),
             ),
