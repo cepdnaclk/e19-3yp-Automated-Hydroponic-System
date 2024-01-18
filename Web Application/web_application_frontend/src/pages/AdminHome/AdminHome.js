@@ -40,13 +40,15 @@ function AdminHome() {
         <div className="main-container row">
             <div className="Home-container row">
                 <div className="plant-container row">
+                    <br></br>
+                    <h1>Exsisting Systems</h1>
                     {systemData.map((system) => (
                         <div className="plant-card row" key={system.id}>
                             <div className="plant-image-container col-md-2">
                                 <img className="plant-image" src={SYSTEM_IMAGE} />
                             </div>
 
-                            <div className="plant-data-container col-md-8">
+                            <div className="plAnt-data-container col-md-8">
                                 <ul>
                                     <li><h4> System ID : {system.Hardware_setup_id}</h4></li>
                                     <li>User Name : {system.name}</li>

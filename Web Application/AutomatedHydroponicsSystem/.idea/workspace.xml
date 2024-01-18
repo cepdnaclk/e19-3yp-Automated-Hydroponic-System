@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78e606ca-8da8-43d3-9370-feddef44668b" name="Changes" comment="new files">
-      <change beforePath="$PROJECT_DIR$/../../Binding/Help/Helpnew.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Binding/Help/Helpnew.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Binding/Login/flutternew.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Binding/Login/flutternew.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/login_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/plant_details.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/plant_details.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/plant_log/plant_log.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/plant_log/plant_log.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/auth/AuthenticationController.java" afterDir="false" />
-    </list>
+    <list default="true" id="78e606ca-8da8-43d3-9370-feddef44668b" name="Changes" comment="new files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,8 +14,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -71,6 +61,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RequestMappingsPanelOrder0": "0",
@@ -93,6 +84,43 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "vcs.Git",
     "vue.rearranger.settings.migration": "true"
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.AutomatedHydroponicsSystemApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.HydroponicsSystemTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlantControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlantControllerTest.testAddPlant.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlantControllerTest.testDeletePlant_NotFound.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.PlantControllerTest.testGetPlantById.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlantControllerTest.testGetPlantById_NotFound.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PlantTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SystemControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.testMethod1.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AutomatedHydroponicsSystemApplication.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Programming/CI_CD Pipeline/GitHub-actions-testing/Github_actions_Testing&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+>>>>>>> 5144afa1e596850c8e49578a80896963496ecd3e
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -105,14 +133,101 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.group15.AutomatedHydroponicsSystem.exception" />
-      <recent name="com.group15.AutomatedHydroponicsSystem.token" />
       <recent name="com.group15.AutomatedHydroponicsSystem.auth" />
+      <recent name="com.group15.AutomatedHydroponicsSystem.token" />
       <recent name="com.group15.AutomatedHydroponicsSystem.config" />
       <recent name="com.group15.AutomatedHydroponicsSystem.User" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.group15.AutomatedHydroponicsSystem.User" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.group15.AutomatedHydroponicsSystem.User" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.AutomatedHydroponicsSystemApplication">
+    <configuration name="PlantControllerTest.testAddPlant" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AutomatedHydroponicsSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.group15.AutomatedHydroponicsSystem.Plant.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.group15.AutomatedHydroponicsSystem.Plant" />
+      <option name="MAIN_CLASS_NAME" value="com.group15.AutomatedHydroponicsSystem.Plant.PlantControllerTest" />
+      <option name="METHOD_NAME" value="testAddPlant" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlantControllerTest.testGetPlantById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AutomatedHydroponicsSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.group15.AutomatedHydroponicsSystem.Plant.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.group15.AutomatedHydroponicsSystem.Plant" />
+      <option name="MAIN_CLASS_NAME" value="com.group15.AutomatedHydroponicsSystem.Plant.PlantControllerTest" />
+      <option name="METHOD_NAME" value="testGetPlantById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlantControllerTest.testGetPlantById_NotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AutomatedHydroponicsSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.group15.AutomatedHydroponicsSystem.Plant.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.group15.AutomatedHydroponicsSystem.Plant" />
+      <option name="MAIN_CLASS_NAME" value="com.group15.AutomatedHydroponicsSystem.Plant.PlantControllerTest" />
+      <option name="METHOD_NAME" value="testGetPlantById_NotFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AutomatedHydroponicsSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.group15.AutomatedHydroponicsSystem.User.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.group15.AutomatedHydroponicsSystem.User" />
+      <option name="MAIN_CLASS_NAME" value="com.group15.AutomatedHydroponicsSystem.User.UserTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.testMethod1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AutomatedHydroponicsSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.group15.AutomatedHydroponicsSystem.User.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.group15.AutomatedHydroponicsSystem.User" />
+      <option name="MAIN_CLASS_NAME" value="com.group15.AutomatedHydroponicsSystem.User.UserTest" />
+      <option name="METHOD_NAME" value="testMethod1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AutomatedHydroponicsSystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="AutomatedHydroponicsSystem" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.group15.AutomatedHydroponicsSystem.AutomatedHydroponicsSystemApplication" />
@@ -120,6 +235,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserTest" />
+        <item itemvalue="JUnit.PlantControllerTest.testGetPlantById_NotFound" />
+        <item itemvalue="JUnit.PlantControllerTest.testAddPlant" />
+        <item itemvalue="JUnit.PlantControllerTest.testGetPlantById" />
+        <item itemvalue="JUnit.UserTest.testMethod1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -142,6 +266,24 @@
       <workItem from="1703584805759" duration="2764000" />
       <workItem from="1703642313074" duration="12543000" />
       <workItem from="1703664814519" duration="2104000" />
+      <workItem from="1704560670792" duration="412000" />
+      <workItem from="1704561343405" duration="1670000" />
+      <workItem from="1704564668019" duration="4633000" />
+      <workItem from="1704612970437" duration="874000" />
+      <workItem from="1704614866147" duration="5289000" />
+      <workItem from="1704635760356" duration="2423000" />
+      <workItem from="1704647669172" duration="10942000" />
+      <workItem from="1704682280089" duration="1176000" />
+      <workItem from="1704706340282" duration="1174000" />
+      <workItem from="1704908830598" duration="4102000" />
+      <workItem from="1704945551869" duration="6680000" />
+      <workItem from="1705069605974" duration="808000" />
+      <workItem from="1705246487129" duration="1835000" />
+      <workItem from="1705309084912" duration="161000" />
+      <workItem from="1705392979654" duration="10161000" />
+      <workItem from="1705508968492" duration="1325000" />
+      <workItem from="1705567001766" duration="3111000" />
+      <workItem from="1705571096885" duration="4334000" />
     </task>
     <task id="LOCAL-00001" summary="User class added">
       <option name="closed" value="true" />
@@ -250,5 +392,20 @@
     <MESSAGE value="Required Files Added" />
     <MESSAGE value="Required Files Add" />
     <option name="LAST_COMMIT_MESSAGE" value="Required Files Add" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/system/HydroponicsSystem.java</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/AutomatedHydroponicsSystem/src/main/java/com/group15/AutomatedHydroponicsSystem/system/HydroponicsSystem.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

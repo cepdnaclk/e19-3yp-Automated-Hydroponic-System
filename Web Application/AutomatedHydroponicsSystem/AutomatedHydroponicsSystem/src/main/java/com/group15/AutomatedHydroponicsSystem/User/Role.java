@@ -13,7 +13,7 @@ import static com.group15.AutomatedHydroponicsSystem.User.Permission.*;
 @Getter
 public enum Role {
 
-    USER(Collections.emptySet()),
+    USER(Collections.emptySet()), // USER have no roles
     ADMIN(
             Set.of(
                     ADMIN_READ,
@@ -46,7 +46,7 @@ public enum Role {
                 .stream()
                 .map(permission -> new SimpleGrantedAuthority(permission.getPermission()))
                 .collect(Collectors.toList());
-        authorities.add(new SimpleGrantedAuthority("Role_" + this.name()));
+        authorities.add(new SimpleGrantedAuthority("ROLE_" + this.name()));
         return authorities;
     }
 }

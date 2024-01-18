@@ -51,7 +51,7 @@ function Home_User_New() {
                                 <img className="plant-image" src={plant.image} alt={plant.name} />
                             </div>
 
-                            <div className="plant-data-container col-md-8">
+                            <div className="Plant-data-container col-md-8">
                                 <ul>
                                     <li><h2>{plant.name}</h2></li>
                                     <li>{plant.Hardware_setup_id}</li>

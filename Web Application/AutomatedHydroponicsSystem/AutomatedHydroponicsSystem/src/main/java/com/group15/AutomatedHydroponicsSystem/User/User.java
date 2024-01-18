@@ -13,20 +13,23 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.List;
 
-@Data // Equivalent to getters and setters
-@Builder
+@Data   // Equivalent to getters and setters
+@Builder // Build the user object in an easy way
+@AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table
-@AllArgsConstructor
-public class User implements UserDetails {
-    @Id
+@Table  //(name = "_user")
+// UserDetails interface have bunch of methods
+public class User implements UserDetails, UserDetailsNew {
+    @Id // To indicate the primary key
     @GeneratedValue(strategy = GenerationType.TABLE)
     private Integer id;
     private String firstname;
     private String lastname;
     private String email;
     private String password;
+
+    // Added after the role base authentication enabled
     @Column(length = 200) // Adjust the length accordingly
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -34,7 +37,7 @@ public class User implements UserDetails {
     @OneToMany(mappedBy = "user")
     private List<Token> tokens;
 
-    @Override
+    @Override // Will return a list of roles
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return role.getAuthorities();
     }
@@ -68,4 +71,11 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+    @Override
+    public Role getRole() {
+        return role;
+    }
+
+
 }

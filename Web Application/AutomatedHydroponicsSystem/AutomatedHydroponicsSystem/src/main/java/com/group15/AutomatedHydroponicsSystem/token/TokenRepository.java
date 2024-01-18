@@ -13,6 +13,7 @@ public interface TokenRepository extends JpaRepository<Token, Integer> {
             where u.id = :userId and (t.expired = false or t.revoked = false)
             """
     )
+    // find the valid tokens for a specific user
     List<Token> findAllValidTokensByUser(Integer userId);
 
     Optional<Token> findByToken(String token);

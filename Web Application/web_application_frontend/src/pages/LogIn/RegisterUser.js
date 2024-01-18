@@ -3,6 +3,7 @@ import "./RegisterUser.css";
 import CommonNavBar from "../../components/Common_NavBar/Common_Navbar";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import AdminNavBar from "../../components/Admin_Navbar/AdminNavBar";
 
 function RegisterUser() {
     const [formData, setFormData] = useState({
@@ -18,6 +19,8 @@ function RegisterUser() {
 
     const [registrationError, setRegistrationError] = useState(null);
     //const navigate = useNavigate();
+
+    const [users, setUsers] = useState([]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -39,6 +42,8 @@ function RegisterUser() {
                 //navigate("/LandingPage");
             } else if (response.status === 400) {
                 alert("User already exists");
+            } else if (response.status === 409) {
+                alert("User already registered");
             }
         } catch (error) {
             setRegistrationError('Registration failed. Please check your information.');
@@ -47,7 +52,7 @@ function RegisterUser() {
 
     return (
         <>
-            <CommonNavBar/>
+            <AdminNavBar/>
             <div className="register-container row">
                 <div className="register-title row">
                     <h2  style={{color:"rgb(20, 61, 3)"}}>Add a New User</h2>
@@ -151,6 +156,40 @@ function RegisterUser() {
                         </div>
                     </form>
                 </div>
+                <div className="register-title row">
+                    <h2  style={{color:"rgb(20, 61, 3)"}}>Existing Users</h2>
+                </div>
+                <div className="py-4">
+                    <table className="table border shadow " style={{width: "80%", height: "fitContent", justifyContent: "center",marginLeft: "10%"}}>
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Password</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody className="table-group-divider">
+                        {users.map((user, index) => (
+                        <tr key={index}>
+                            <th scope="row">{index + 1}</th>
+                            <td>{user.firstname}</td>
+                            <td>{user.lastname}</td>
+                            <td>{user.email}</td>
+                            <td>{user.role}</td>
+                            <td>
+                            {/*<Link className="link-dark" onClick={() => deleteSystem(user.id)}>
+                                <i className="bi bi-trash fs-5"></i>
+                        </Link>*/}
+                            </td>
+                        </tr> 
+                        ))}
+                    </tbody>
+                    </table>
+            </div>
             </div>
         </>
     )

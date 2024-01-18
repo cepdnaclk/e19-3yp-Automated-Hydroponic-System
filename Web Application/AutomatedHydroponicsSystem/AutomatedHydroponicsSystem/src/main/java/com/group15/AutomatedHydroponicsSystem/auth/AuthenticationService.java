@@ -30,7 +30,14 @@ public class AuthenticationService {
     private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
-    public AuthenticationResponse register(RegisterRequest request) {
+
+    public AuthenticationResponse register(RegisterRequest request) throws UserAlreadyExistsException {
+
+        // Check if the user with the provided email already exists
+        if (repository.findByEmail(request.getEmail()).isPresent()) {
+            // Handle the case where the user is already registered
+            throw new UserAlreadyExistsException("User with this email already exists");
+        }
         var user = User.builder()
                 .firstname(request.getFirstname())
                 .lastname(request.getLastname())
@@ -82,6 +89,8 @@ public class AuthenticationService {
         });
         tokenRepository.saveAll(validUserTokens);
     }
+
+    // Creating a token and save it to the database
     private void saveUserToken(User user, String jwtToken) {
         var token = Token.builder()
                 .user(user)

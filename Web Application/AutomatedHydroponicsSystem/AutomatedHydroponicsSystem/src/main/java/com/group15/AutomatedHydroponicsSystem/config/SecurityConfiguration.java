@@ -29,7 +29,8 @@ public class SecurityConfiguration {
     private final JwtAuthenticationFilter jwtAuthFilter;
     private final AuthenticationProvider authenticationProvider;
     private final LogoutHandler logoutHandler;
-    @Bean
+
+    @Bean // responsible for the all http functions
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
 
 
@@ -45,6 +46,7 @@ public class SecurityConfiguration {
                                         .requestMatchers(HttpMethod.PUT,"/api/v1/management/**").hasAnyAuthority(ADMIN_UPDATE.name(),MANAGER_UPDATE.name())
                                         .requestMatchers(HttpMethod.DELETE,"/api/v1/management/**").hasAnyAuthority(ADMIN_DELETE.name(),MANAGER_DELETE.name())
 
+                                        
                                         .anyRequest()
                                         .authenticated()
 

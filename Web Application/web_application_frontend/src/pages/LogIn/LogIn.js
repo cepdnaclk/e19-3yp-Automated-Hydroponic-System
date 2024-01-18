@@ -5,6 +5,9 @@ import CommonNavBar from '../../components/Common_NavBar/Common_Navbar';
 import { useNavigate } from 'react-router-dom';
 import AUTHIMAGE from "../../Images/auth-img.png";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import {jwtDecode}   from "jwt-decode";
+
+
 
 function Login() {
   const [credentials, setCredentials] = useState({
@@ -45,14 +48,29 @@ function Login() {
   
     try {
       const response = await axios.post('http://localhost:8080/api/v1/auth/authenticate', credentials);
-  
+      console.log(response);
       if (response.status === 200) {
-        const token = response.data.token;
+        const token = response.data.access_token;
         setTokenInLocalStorage(token); // Set the token and start the timer
         // Set the email in state and navigate to the LandingPage
         setEmail(credentials.email);
-        alert("Authentication successfull")
-        //navigate('/LandingPage', { state: { email: credentials.email } });
+        
+        
+        const decodedToken = jwtDecode(token);
+        const authorities = decodedToken.authorities;
+        console.log('authorities', authorities);
+
+        
+        if(authorities.includes("ROLE_ADMIN")){
+          alert("Authentication successfull");
+          navigate('/AdminHome');
+        }else if(authorities.includes("ROLE_USER")){
+          alert("Authentication successfull");
+          navigate('/Home_User_New');
+        }else{
+          alert("You are not authorized to access the data");
+          navigate('/')
+        }
       }
     } catch (error) {
       console.error('Login failed', error);
@@ -72,7 +90,7 @@ function Login() {
           </div>
 
           <div className='auth-form'>
-            <form onSubmit={{handleSubmit}}>
+            <form onSubmit={handleSubmit}>
 
               <div className='user-name row'>
                 <label className='login-form-label row' htmlFor="email">Enter Email Address:</label>
