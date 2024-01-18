@@ -18,14 +18,17 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @RequiredArgsConstructor
 public class ApplicationConfig {
 
+    // to fetch the user details from the database
     private final UserRepository repository;
 
     @Bean
     public UserDetailsService userDetailsService(){
         return username -> repository.findByEmail(username)
+                // When the username is not found in the database
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
     }
     @Bean
+    // Data access object which is responsible to fetch the user details and password and so on
     public AuthenticationProvider authenticationProvider(){
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
         authProvider.setUserDetailsService(userDetailsService());

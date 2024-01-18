@@ -13,8 +13,11 @@ import org.springframework.stereotype.Service;
 import java.security.Key;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
+import java.util.stream.Collectors;
+import org.springframework.security.core.GrantedAuthority;
 
 import static javax.crypto.Cipher.SECRET_KEY;
 
@@ -27,25 +30,50 @@ public class JwtService {
     @Value("${application.security.jwt.refresh-token.expiration}")
     private long refreshExpiration;
     //= "529424ba8964aa3c4de609cf5b23f29a0741602186e31fdbd6605252faeef089";
+
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
-    }
+    } // Here the subject is the email or username of the user
 
+    // To extract one single claim
     public <T> T extractClaim(String token, Function<Claims, T> claimsResolver){
         final Claims claims = extractAllClaims(token);
         return claimsResolver.apply(claims);
 
     }
 
+    // Only use userDetails to generate the token
     public String generateToken(UserDetails userDetails){
         return generateToken(new HashMap<>(), userDetails);
     }
-
+    // Uses extraClaims and userDetails to generate the token
     public String generateToken(
+            // To pass authority details
             Map<String, Object> extraClaims,
             UserDetails userDetails
-    ){
-        return buildToken(extraClaims,userDetails,jwtExpiration);
+    ){  List<String> authorities = userDetails.getAuthorities()
+            .stream()
+            .map(GrantedAuthority::getAuthority)
+            .collect(Collectors.toList());
+
+        // Add user authorities to claims
+        Map<String, Object> claims = new HashMap<>();
+        claims.put("authorities", authorities);
+
+        // Add extra claims if provided
+        if (extraClaims != null && !extraClaims.isEmpty()) {
+            claims.putAll(extraClaims);
+        }
+        //return buildToken(extraClaims,userDetails,jwtExpiration);
+        return Jwts
+                .builder()
+                .setClaims(claims)
+                .setSubject(userDetails.getUsername())
+                //.setSubject(userDetails.getAuthorities().toString())
+                .setIssuedAt(new Date(System.currentTimeMillis()))
+                .setExpiration(new Date(System.currentTimeMillis()+ 1000 * 60*60*24))
+                .signWith(getSignInKey(), SignatureAlgorithm.HS256)
+                .compact();
     }
 
     public String generateRefreshToken(
@@ -65,7 +93,7 @@ public class JwtService {
                 .setClaims(extraClaims)
                 .setSubject(userDetails.getUsername())
                 .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis()+ 1000 * 60*60*24))
+                .setExpiration(new Date(System.currentTimeMillis()+ expiration))
                 .signWith(getSignInKey(), SignatureAlgorithm.HS256)
                 .compact();
     }
@@ -83,13 +111,14 @@ public class JwtService {
         return extractClaim(token, Claims::getExpiration);
     }
 
+    // To extract all the claims
     private Claims extractAllClaims(String token){
         return Jwts
-                .parserBuilder()
-                .setSigningKey(getSignInKey())
-                .build()
-                .parseClaimsJws(token)
-                .getBody();
+                .parserBuilder()   // Create a JWT parser builder
+                .setSigningKey(getSignInKey())   // Set the signing key for verifying the token
+                .build()   // Build the JWT parser
+                .parseClaimsJws(token)   // Parse the provided token
+                .getBody();   // Get the body of the JWT, which contains the claims
     }
 
     private Key getSignInKey() {
