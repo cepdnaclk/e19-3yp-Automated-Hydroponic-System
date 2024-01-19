@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:testapp/controllers/plant_controller.dart';
 import 'package:testapp/new_plant.dart';
 import 'package:testapp/plant_details.dart';
 // import 'package:testapp/plant_log/models/Plant.dart';
@@ -7,7 +9,12 @@ import 'package:testapp/plant_details.dart';
 import 'package:testapp/plant_status/plant_status.dart';
 //import 'header.dart';
 import 'package:http/http.dart';
+import 'package:testapp/routes/route_helper.dart';
+import 'package:testapp/tempPlantArray.dart';
+import 'package:testapp/utils/app_constants.dart';
 //import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+
+
 
 class PlantLog extends StatefulWidget {
   const PlantLog({super.key});
@@ -17,6 +24,9 @@ class PlantLog extends StatefulWidget {
 }
 
 class _PlantLogState extends State<PlantLog> {
+
+  //TempPlantArray tempPlantArray = TempPlantArray();
+
 //   late Future<List<Plant>> _futurePlants;
 
 //   @override
@@ -52,7 +62,7 @@ class _PlantLogState extends State<PlantLog> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => PlantDetails(text: "Aloe Vera"), 
+                    builder: (context) => PlantStatus(), 
                   ),
                 );
               }, 
@@ -93,15 +103,20 @@ class _PlantLogState extends State<PlantLog> {
             ),
           ),
 
-          Expanded(
-            child: Container(
-              height: 900,
-              child: ListView.builder(
-                physics: AlwaysScrollableScrollPhysics(),
-                //shrinkWrap: true,
-                itemCount: 10,
-                itemBuilder: (context,index) {
-                  return Container(
+          GetBuilder<PlantController>(builder: (plant) {
+            return plant.isLoaded ? Expanded(
+            child: ListView.builder(
+              physics: AlwaysScrollableScrollPhysics(),
+              //plant.(tempPlants[index]);
+              //shrinkWrap: true,
+              itemCount: tempPlants.length,
+              itemBuilder: (context,index) {
+                return GestureDetector(
+                  onTap: () {
+                    //print("index is : $index");
+                    Get.toNamed(RouteHelper.getPlantDetails(int.parse(tempPlants[index])-1));
+                  },
+                  child: Container(
                     margin: EdgeInsets.only(right: 20.0, left: 20.0, bottom: 20.0),
                     child: Row(
                       children: [
@@ -115,9 +130,13 @@ class _PlantLogState extends State<PlantLog> {
                               topRight: Radius.circular(10),
                               bottomRight: Radius.circular(10),
                             ),
-                            color: Colors.white38,
+                            color: Color.fromARGB(97, 89, 135, 64),
+                            
                             image: DecorationImage(
                               image: AssetImage(
+                                //"https://images.pexels.com/photos/1454288/pexels-photo-1454288.jpeg?auto=compress&cs=tinysrgb&w=600"
+                                //(AppConstants.BASE_URL + "/api/v1/auth/plants/" + (tempPlants[index])),
+                                
                                 "assets/aloevera.jpg"
                               ), 
                               fit: BoxFit.cover,
@@ -140,7 +159,9 @@ class _PlantLogState extends State<PlantLog> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Aloe Vera',
+                                    plant.plantList[int.parse(tempPlants[index])-1].name!,
+                                    //'Aloe Vera',
+                                    //plant.uniquePlant.toString(),
                                     style: TextStyle(
                                       fontFamily: 'Poppins',
                                       fontSize: 18,
@@ -148,7 +169,8 @@ class _PlantLogState extends State<PlantLog> {
                                     ),
                                   ),
                                   Text(
-                                    'Description is something like this I think this will work fine! Please do work fine !!!',
+                                    plant.plantList[int.parse(tempPlants[index])-1].details!,
+                                    //'Description is something like this I think this will work fine! Please do work fine !!!',
                                     style: TextStyle(
                                       fontFamily: 'Poppins',
                                       fontSize: 11,
@@ -164,11 +186,12 @@ class _PlantLogState extends State<PlantLog> {
                         )
                       ]
                       ),
-                  );
-                }
-              ),
+                  ),
+                );
+              }
             ),
-          )
+          ) : CircularProgressIndicator( color: Color(0xFF0D7817));
+          }) 
 
 ////////////////////////////////////////// CARD /////////////////////////////////////////////////
 
