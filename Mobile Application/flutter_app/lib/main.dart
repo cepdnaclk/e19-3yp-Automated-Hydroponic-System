@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:testapp/controllers/plant_controller.dart';
+import 'package:testapp/data/repository/plant_repo.dart';
 // import 'package:testapp/header.dart';
 // import 'package:testapp/help.dart';
 // import 'package:testapp/login_page.dart';
@@ -7,11 +10,17 @@ import 'package:testapp/open_screen.dart';
 // import 'package:testapp/profile.dart';
 // import 'package:testapp/user_manual.dart';
 
-import 'helper/dependencies.dart' as dep;
+import 'package:testapp/helper/dependencies.dart' as dep;
+import 'package:testapp/routes/route_helper.dart';
+import 'package:testapp/tempPlantArray.dart';
 
 Future <void> main() async{
+  print("In main");
   WidgetsFlutterBinding.ensureInitialized();
-  await dep.init;
+  await dep.init();
+  // print("In main 2");
+  //Get.put(PlantController(plantRepo: Get.find()));
+  //Get.find<PlantController>().getPlantList();
   runApp(const MyApp());
 }
 
@@ -19,19 +28,30 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
+    Get.find<PlantController>().getPlantList();
+    //Get.find<PlantController>().getPlant(int.parse(tempPlants[1]));
+    // for (int i=0; i<tempPlants.length; i++) {
+    //   Get.find<PlantController>().getPlant(int.parse(tempPlants[i]));
+    // }
+    
+  //Get.find<PlantController>().getPlant(1);
+   print("In MyApp");
+
     //Color myColor = const Color(0xFFFFFF);
     Color myGreenColor = const Color(0xFF0D7817);
 
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'HydroGrowPro',
-      theme: ThemeData (
-        colorScheme: ColorScheme.fromSeed(seedColor: myGreenColor),
-        useMaterial3: true,
-      ),
+      // theme: ThemeData (
+      //   colorScheme: ColorScheme.fromSeed(seedColor: myGreenColor),
+      //   useMaterial3: true,
+      // ),
 
       // Login Page
       home: OpenScreen(),
+      initialRoute: RouteHelper.initial,
+      getPages: RouteHelper.routes,
       //home: _SideBarState(),
       
       debugShowCheckedModeBanner: false,

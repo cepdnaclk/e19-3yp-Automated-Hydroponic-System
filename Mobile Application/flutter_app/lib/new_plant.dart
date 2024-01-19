@@ -1,132 +1,300 @@
+//import 'dart:js_interop';
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:testapp/controllers/plant_controller.dart';
 import 'package:testapp/plant_log/plant_log.dart';
-import 'package:testapp/plant_log2.dart';
 import 'package:testapp/sidebar.dart';
 import 'package:testapp/static_header.dart';
-import 'header.dart';
-import 'package:image_picker/image_picker.dart';
-import 'dart:io';
+import 'package:testapp/tempPlantArray.dart';
 
-import 'package:flutter/material.dart';
 
-/// Flutter code sample for [DropdownMenu].
 
-const List<String> list = <String>['Aloe Vera', 'Tomato', 'Onion', 'General Case'];
-
-void main() => runApp(
-  const NewPlant()
-  );
-
-class NewPlant extends StatelessWidget {
+class NewPlant extends StatefulWidget {
   const NewPlant({super.key});
 
   @override
+  State<NewPlant> createState() => _NewPlantState();
+}
+
+class _NewPlantState extends State<NewPlant> {
+
+  TempPlantArray tempPlantArray = TempPlantArray();
+
+  //List<String> tempPlants = ["Aloe Vera", "Cherry Tomato", "Mint", "Sunflower"];
+  //List<String> tempArray = [];
+
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(useMaterial3: true),
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: StaticHeader(),
-        body: Padding(
-          padding: const EdgeInsets.all(40.0),
+    return Scaffold(
+      appBar: StaticHeader(),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(bottom:20.0),
-                child: Center(
-                  child: Text(
-                    'Want to have another plant?',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontFamily: 'Poppins',
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+              SizedBox(
+                height: 10.0,
+              ),
+
+              Text(
+                'Want to adjust plants ? ',
+                style: TextStyle(
+                  fontFamily: 'Poppins',
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
-              Center(
-                child: DropdownMenuExample(),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 45.0),
-                child: Center(
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(maxWidth: 130),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (context) => SideBarState()),
-                       );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      shape: const StadiumBorder(),
-                      elevation: 1,
-                      shadowColor: Color(0xFF0D7817),
-                      backgroundColor: Color(0xFF0D7817),
-                      minimumSize: const Size.fromHeight(45),
-                    ),
-                    child: Text(
-                      'SUBMIT',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'Poppins',
-                        fontSize: 12,
-                        fontWeight: FontWeight.w600,
-                        letterSpacing: 3.0,
-                      ),
-                    ),
-                  ),
+              
+              Text(
+                'Great! you\'ve come to the right place',
+                style: TextStyle(
+                  fontFamily: 'Poppins',
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
                 ),
+              ),
+
+              SizedBox(
+                height: 30.0,
+              ),
+
+              GetBuilder<PlantController>(builder: (plant) {
+                return plant.isLoaded ? Expanded(
+                child: ListView.builder(
+                  
+                  itemCount: plant.plantList.length,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(top:10.0),
+                      child: Card(
+                        elevation: 0.0,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            border: Border(
+                              bottom: BorderSide(
+                                color: Colors.black, 
+                                width: 0.5,          
+                              ),
                             ),
-              ),
+                          ),
+                          child: ListTile(
+                            title: Text(
+                              plant.plantList[index].name!,
+                              style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xFF0D7817),
+                              ),
+                            ),
+                            
+                            trailing: InkWell(
+                              onTap: () {
+                                setState(() {
+
+                                  tempPlantArray.toggleItemStatus(plant.plantList[index].id.toString());
+
+                                  // if (tempArray.contains(plant.plantList[index].id.toString())) {
+                                  //   tempArray.remove(plant.plantList[index].id.toString());
+                                  // }
+                                  // else {
+                                  //   tempArray.add(plant.plantList[index].id.toString());
+                                  // }
+                                });
+                              
+                                print('my value : ');
+                                print(tempPlants);
+                                
+                              },
+                              child: Container(
+                                height: 40,
+                                width: 100,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(18.0),
+                                  color: tempPlantArray.getItemStatus(plant.plantList[index].id.toString()) ? const Color.fromARGB(255, 215, 86, 77) : Color(0xFF0D7817),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    tempPlantArray.getItemStatus(plant.plantList[index].id.toString()) ? 'REMOVE' : 'ADD',
+                                  style: TextStyle(
+                                        fontFamily: 'Poppins',
+                                        fontSize: 11,
+                                        letterSpacing: 1.0,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                  ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    );
+                  }
+                ),
+              ) : CircularProgressIndicator( color: Color(0xFF0D7817));
+              })
+
             ],
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => SideBarState(), 
+            ),
+          );
+        },
+        child: Icon(
+          Icons.arrow_back,
+          color: Colors.white,
+        ),
+        backgroundColor: Color(0xFF0D7817),
+        shape: CircleBorder(),
+        foregroundColor: Color.fromARGB(0, 25, 70, 2),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }
 
-class DropdownMenuExample extends StatefulWidget {
-  const DropdownMenuExample({super.key});
 
-  @override
-  State<DropdownMenuExample> createState() => _DropdownMenuExampleState();
-}
+// import 'package:flutter/material.dart';
+// import 'package:testapp/plant_log/plant_log.dart';
+// import 'package:testapp/plant_log2.dart';
+// import 'package:testapp/sidebar.dart';
+// import 'package:testapp/static_header.dart';
+// import 'header.dart';
+// import 'package:image_picker/image_picker.dart';
+// import 'dart:io';
 
-class _DropdownMenuExampleState extends State<DropdownMenuExample> {
-  String dropdownValue = list.first;
+// import 'package:flutter/material.dart';
 
-  @override
-  Widget build(BuildContext context) {
-    return DropdownMenu<String>(
-      initialSelection: list.first,
-      onSelected: (String? value) {
-        // This is called when the user selects an item.
-        setState(() {
-          dropdownValue = value!;
-        });
-      },
-      dropdownMenuEntries: list.map<DropdownMenuEntry<String>>((String value) {
-        return DropdownMenuEntry<String>(
-          value: value,
-          label: value);
-      }).toList(),
-      textStyle: TextStyle(
-        fontFamily: 'Poppins',
-        color: Color(0xFF0D7817),
-      ),
-      menuStyle: MenuStyle(
+// /// Flutter code sample for [DropdownMenu].
 
-        //fontFamily: 'Poppins',
-      ),
-    );
-  }
-}
+// const List<String> list = <String>['Aloe Vera', 'Tomato', 'Onion', 'General Case'];
+
+// void main() => runApp(
+//   const NewPlant()
+//   );
+
+// class NewPlant extends StatelessWidget {
+//   const NewPlant({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       theme: ThemeData(useMaterial3: true),
+//       debugShowCheckedModeBanner: false,
+//       home: Scaffold(
+//         appBar: StaticHeader(),
+//         body: Padding(
+//           padding: const EdgeInsets.all(40.0),
+//           child: Column(
+//             mainAxisAlignment: MainAxisAlignment.start,
+            
+//             children: [
+//               Padding(
+//                 padding: const EdgeInsets.only(bottom:20.0),
+//                 child: Center(
+//                   child: Text(
+//                     'Want to have another plant?',
+//                     style: TextStyle(
+//                       color: Colors.black,
+//                       fontFamily: 'Poppins',
+//                       fontSize: 16,
+//                       fontWeight: FontWeight.bold,
+//                     ),
+//                   ),
+//                 ),
+//               ),
+//               Center(
+//                 child: DropdownMenuExample(),
+//               ),
+//               Padding(
+//                 padding: const EdgeInsets.only(top: 45.0),
+//                 child: Center(
+//                 child: ConstrainedBox(
+//                   constraints: BoxConstraints(maxWidth: 130),
+//                   child: ElevatedButton(
+//                     onPressed: () {
+//                       Navigator.pushReplacement(
+//                         context,
+//                         MaterialPageRoute(builder: (context) => SideBarState()),
+//                        );
+//                     },
+//                     style: ElevatedButton.styleFrom(
+//                       shape: const StadiumBorder(),
+//                       elevation: 1,
+//                       shadowColor: Color(0xFF0D7817),
+//                       backgroundColor: Color(0xFF0D7817),
+//                       minimumSize: const Size.fromHeight(45),
+//                     ),
+//                     child: Text(
+//                       'SUBMIT',
+//                       style: TextStyle(
+//                         color: Colors.white,
+//                         fontFamily: 'Poppins',
+//                         fontSize: 12,
+//                         fontWeight: FontWeight.w600,
+//                         letterSpacing: 3.0,
+//                       ),
+//                     ),
+//                   ),
+//                 ),
+//                             ),
+//               ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+// class DropdownMenuExample extends StatefulWidget {
+//   const DropdownMenuExample({super.key});
+
+//   @override
+//   State<DropdownMenuExample> createState() => _DropdownMenuExampleState();
+// }
+
+// class _DropdownMenuExampleState extends State<DropdownMenuExample> {
+//   String dropdownValue = list.first;
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return DropdownMenu<String>(
+//       initialSelection: list.first,
+//       onSelected: (String? value) {
+//         // This is called when the user selects an item.
+//         setState(() {
+//           dropdownValue = value!;
+//         });
+//       },
+//       dropdownMenuEntries: list.map<DropdownMenuEntry<String>>((String value) {
+//         return DropdownMenuEntry<String>(
+//           value: value,
+//           label: value);
+//       }).toList(),
+//       textStyle: TextStyle(
+//         fontFamily: 'Poppins',
+//         color: Color(0xFF0D7817),
+//       ),
+//       menuStyle: MenuStyle(
+
+//         //fontFamily: 'Poppins',
+//       ),
+//     );
+//   }
+// }
 
 
 // class NewPlant extends StatefulWidget {

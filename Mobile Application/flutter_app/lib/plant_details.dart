@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:testapp/controllers/plant_controller.dart';
 import 'package:testapp/widgets/expandable_text.dart';
 
 class PlantDetails extends StatelessWidget {
-  final String text;
-  const PlantDetails({Key? key, required this.text}) : super(key: key);
+  //final String text;
+  final int pageId;
+  const PlantDetails({Key? key, required this.pageId}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var plant = Get.find<PlantController>().plantList[pageId];
+    print("Page Id is "+pageId.toString());
     return Scaffold(
       body: Stack(
         children: [
@@ -18,8 +23,10 @@ class PlantDetails extends StatelessWidget {
               height: 370,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(
-                    "assets/aloevera.jpg",
+                  image: NetworkImage(
+                    "https://images.pexels.com/photos/1454288/pexels-photo-1454288.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    //"https://images.pexels.com/photos/1840270/pexels-photo-1840270.jpeg?auto=compress&cs=tinysrgb&w=600",
+                    //"assets/aloevera.jpg",
 
                   ),
                   fit: BoxFit.cover, 
@@ -46,7 +53,7 @@ class PlantDetails extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    text,
+                    plant.name!,
                     style: TextStyle(
                       fontSize: 20,
                       fontFamily: 'Poppins',
@@ -71,8 +78,9 @@ class PlantDetails extends StatelessWidget {
                   Expanded(
                     child: SingleChildScrollView(
                       child: ExpandableText(
+                        text: plant.details!,
                        //text: "HI",
-                        text: "Meet Aloe Vera, the green superhero of your garden! Originally from the Arabian Peninsula, this special plant with thick, green leaves is famous worldwide. Its magical gel is loaded with vitamins and good things, making it a natural remedy for happy skin and a healthy you. Aloe Vera is a skin spa, healing cuts and enhancing beauty. Sip its juice for a stomach hug, and harness essential nutrients for overall well-being. Your health's best friend! For Aloe Vera joy in hydroponics, aim for a slightly sour pH (6.0-7.0) – like lemonade. Maintain TDS sensor levels at 1000-1600 ppm for the perfect nutrient mix. Aloe Vera ensures a happy, green paradise!",
+                        //text: "Meet Aloe Vera, the green superhero of your garden! Originally from the Arabian Peninsula, this special plant with thick, green leaves is famous worldwide. Its magical gel is loaded with vitamins and good things, making it a natural remedy for happy skin and a healthy you. Aloe Vera is a skin spa, healing cuts and enhancing beauty. Sip its juice for a stomach hug, and harness essential nutrients for overall well-being. Your health's best friend! For Aloe Vera joy in hydroponics, aim for a slightly sour pH (6.0-7.0) – like lemonade. Maintain TDS sensor levels at 1000-1600 ppm for the perfect nutrient mix. Aloe Vera ensures a happy, green paradise!",
                         ),
                     ),
                   )

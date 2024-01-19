@@ -1,12 +1,32 @@
 class Plant {
+  late List<PlantModel> _plants;
+  List<PlantModel> get plants => _plants;
+
+  Plant({required plants}) {
+    this._plants = plants;
+  }
+
+  Plant.fromJson(Map<String, dynamic> json) {
+    if (json['plants'] != null) {
+      _plants = (json['plants'] as List<dynamic>)
+          .map((v) => PlantModel.fromJson(v))
+          .toList();
+    } else {
+      _plants = [];
+    }
+  }
+}
+
+
+class PlantModel {
   int? id;
   String? name;
   String? details;
   String? image;
 
-  Plant({this.id, this.name, this.details, this.image});
+  PlantModel({required this.id, required this.name, required this.details, required this.image});
 
-  Plant.fromJson(Map<String, dynamic> json) {
+  PlantModel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     name = json['name'];
     details = json['details'];
@@ -14,11 +34,11 @@ class Plant {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['name'] = this.name;
-    data['details'] = this.details;
-    data['image'] = this.image;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['name'] = name;
+    data['details'] = details;
+    data['image'] = image;
     return data;
   }
 }
