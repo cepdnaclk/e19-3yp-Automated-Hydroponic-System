@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:testapp/controllers/plant_controller.dart';
+import 'package:testapp/sidebar.dart';
 import 'package:testapp/widgets/expandable_text.dart';
 
 class PlantDetails extends StatelessWidget {
@@ -23,10 +24,10 @@ class PlantDetails extends StatelessWidget {
               height: 370,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: NetworkImage(
-                    "https://images.pexels.com/photos/1454288/pexels-photo-1454288.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  image: AssetImage(
+                    //"https://images.pexels.com/photos/1454288/pexels-photo-1454288.jpeg?auto=compress&cs=tinysrgb&w=600"
                     //"https://images.pexels.com/photos/1840270/pexels-photo-1840270.jpeg?auto=compress&cs=tinysrgb&w=600",
-                    //"assets/aloevera.jpg",
+                    "assets/aloevera.jpg",
 
                   ),
                   fit: BoxFit.cover, 
@@ -53,6 +54,7 @@ class PlantDetails extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
+                    //'Aloe Vera',
                     plant.name!,
                     style: TextStyle(
                       fontSize: 20,
@@ -80,7 +82,7 @@ class PlantDetails extends StatelessWidget {
                       child: ExpandableText(
                         text: plant.details!,
                        //text: "HI",
-                        //text: "Meet Aloe Vera, the green superhero of your garden! Originally from the Arabian Peninsula, this special plant with thick, green leaves is famous worldwide. Its magical gel is loaded with vitamins and good things, making it a natural remedy for happy skin and a healthy you. Aloe Vera is a skin spa, healing cuts and enhancing beauty. Sip its juice for a stomach hug, and harness essential nutrients for overall well-being. Your health's best friend! For Aloe Vera joy in hydroponics, aim for a slightly sour pH (6.0-7.0) – like lemonade. Maintain TDS sensor levels at 1000-1600 ppm for the perfect nutrient mix. Aloe Vera ensures a happy, green paradise!",
+                       // text: "Meet Aloe Vera, the green superhero of your garden! Originally from the Arabian Peninsula, this special plant with thick, green leaves is famous worldwide. Its magical gel is loaded with vitamins and good things, making it a natural remedy for happy skin and a healthy you. Aloe Vera is a skin spa, healing cuts and enhancing beauty. Sip its juice for a stomach hug, and harness essential nutrients for overall well-being. Your health's best friend! For Aloe Vera joy in hydroponics, aim for a slightly sour pH (6.0-7.0) – like lemonade. Maintain TDS sensor levels at 1000-1600 ppm for the perfect nutrient mix. Aloe Vera ensures a happy, green paradise!",
                         ),
                     ),
                   )
@@ -90,7 +92,25 @@ class PlantDetails extends StatelessWidget {
           )
           
         ],
-      )
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => SideBarState(), 
+            ),
+          );
+        },
+        child: Icon(
+          Icons.arrow_back,
+          color: Colors.white,
+        ),
+        backgroundColor: Color(0xFF0D7817),
+        shape: CircleBorder(),
+        foregroundColor: Color.fromARGB(0, 25, 70, 2),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }

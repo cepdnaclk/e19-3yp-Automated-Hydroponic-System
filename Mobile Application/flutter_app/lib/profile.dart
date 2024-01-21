@@ -42,7 +42,7 @@ class _ProfileState extends State<Profile> {
                     image: AssetImage("assets/Profile.jpg"),
                   ),
                 ),
-              ),
+          ),
           Text(
             "Yashoda De Silva",
             style: TextStyle(

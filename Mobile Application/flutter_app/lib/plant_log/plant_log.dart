@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:testapp/controllers/auth_controller.dart';
 import 'package:testapp/controllers/plant_controller.dart';
 import 'package:testapp/new_plant.dart';
 import 'package:testapp/plant_details.dart';
@@ -59,12 +60,19 @@ class _PlantLogState extends State<PlantLog> {
             padding: const EdgeInsets.only(top: 40.0,right: 60.0,left: 60.0,bottom: 40.0),
             child: ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => PlantStatus(), 
-                  ),
-                );
+
+                if(Get.find<AuthController>().userLoggedIn()) {
+                  print("login checked");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => PlantStatus(), 
+                    ),
+                  );
+                }
+                else {
+                  Get.toNamed(RouteHelper.loginPage);
+                }
               }, 
               style: ButtonStyle(
                 shape: MaterialStateProperty.all<OutlinedBorder>(StadiumBorder()),
@@ -109,6 +117,8 @@ class _PlantLogState extends State<PlantLog> {
               physics: AlwaysScrollableScrollPhysics(),
               //plant.(tempPlants[index]);
               //shrinkWrap: true,
+              //itemCount: 5,
+
               itemCount: tempPlants.length,
               itemBuilder: (context,index) {
                 return GestureDetector(
@@ -190,7 +200,10 @@ class _PlantLogState extends State<PlantLog> {
                 );
               }
             ),
-          ) : CircularProgressIndicator( color: Color(0xFF0D7817));
+          ) : Center(child: Container(
+            height: 70,
+            width: 70,
+            child: CircularProgressIndicator( color: Color(0xFF0D7817))));
           }) 
 
 ////////////////////////////////////////// CARD /////////////////////////////////////////////////
@@ -260,12 +273,18 @@ class _PlantLogState extends State<PlantLog> {
 
     floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => NewPlant(), 
-            ),
-          );
+          if(Get.find<AuthController>().userLoggedIn()) {
+                  print("login checked");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => NewPlant(), 
+                    ),
+                  );
+          }
+          else {
+                  Get.toNamed(RouteHelper.loginPage);
+          }
         },
         child: Icon(
           Icons.add,

@@ -5,20 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="008857d6-bc05-4b0c-9d0d-6aab9a69e59a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/controllers/plant_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/controllers/plant_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/controllers/auth_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/controllers/auth_controller.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/data/api/api_client.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/data/api/api_client.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/data/repository/plant_repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/data/repository/plant_repo.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/helper/dependencies.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/helper/dependencies.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/models/plant_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/models/plant_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/login_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/login_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/new_plant.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/new_plant.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/plant_details.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/plant_details.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/plant_log/plant_log.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/plant_log/plant_log.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/profile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/profile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/routes/route_helper.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/routes/route_helper.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/sidebar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/sidebar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/utils/app_constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/lib/utils/app_constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Mobile Application/flutter_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Mobile Application/flutter_app/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/AutomatedHydroponicsSystemApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/AutomatedHydroponicsSystemApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/Demo/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/Demo/AdminController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/Demo/DemoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/AutomatedHydroponicsSystem/target/classes/com/group15/AutomatedHydroponicsSystem/Demo/DemoController.class" afterDir="false" />
@@ -116,13 +123,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.group15.AutomatedHydroponicsSystem.auth" />
@@ -240,7 +247,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="78e606ca-8da8-43d3-9370-feddef44668b" name="Changes" comment="" />
+      <changelist id="008857d6-bc05-4b0c-9d0d-6aab9a69e59a" name="Changes" comment="" />
       <created>1703399342246</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />

@@ -1,9 +1,12 @@
 //import 'dart:convert';
 //import 'package:http/http.dart' as http;
+import 'package:get/get.dart';
+import 'package:testapp/base/show_custom_message.dart';
 import 'package:testapp/controllers/auth_controller.dart';
 //import 'package:testapp/sidebar.dart';
 import 'package:flutter/material.dart';
 import 'package:testapp/plant_log/plant_log.dart';
+import 'package:testapp/routes/route_helper.dart';
 import 'package:testapp/sidebar.dart';
 //import 'package:testapp/plant_log/plant_log.dart';
 
@@ -17,24 +20,54 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   late Size mediaSize;
   late Color myGreenColor;
+  var passwordController = TextEditingController();
+  var emailController = TextEditingController();
 
-  AuthController authController = AuthController();
+  void _login(AuthController authController) {
+
+      String email = emailController.text.trim();
+      String password = passwordController.text.trim();
+
+      if (email.isEmpty) {
+        showCustomSnackbar("Sorry you have to fill all the fields!", title: "Field Error");
+      }
+      else if(!GetUtils.isEmail(email)) {
+        showCustomSnackbar("It is not a valid email address!", title: "Email Address");
+      }
+      else if(password.isEmpty) {
+        showCustomSnackbar("Sorry you have to fill all the fields!", title: "Field Error");
+      }
+      else {
+        authController.login(email, password).then((status){
+          if(status.isSuccess) {
+            Get.toNamed(RouteHelper.getPlantLog());
+            showCustomSnackbar("You are now in the system", title: "Congratulations !!!");
+            print("Successful Authentication");
+          }
+          else {
+            showCustomSnackbar(status.message);
+          }
+        });
+      }
+    }
 
   @override
   Widget build(BuildContext context) {
+    
     myGreenColor = const Color(0xFF0D7817);
     mediaSize = MediaQuery.of(context).size;
+
     return Container(
       decoration: BoxDecoration(
         color: myGreenColor,
         image: DecorationImage(image: AssetImage("assets/Login.png"))
       ),
       child: Scaffold(
-        body: Stack(children: [
-          Positioned(top: 0, child: _buildTop()),
-          Positioned(bottom: 0, child: _buildBottom()),
-        ]),
-      ),
+      body: Stack(children: [
+        Positioned(top: 0, child: _buildTop()),
+        Positioned(bottom: 0, child: _buildBottom()),
+      ]),
+            )
     );
   }
 
@@ -101,10 +134,10 @@ class _LoginPageState extends State<LoginPage> {
       ),
         const SizedBox(height: 30),
         _buildText("Enter your Email Address"),
-        _buildInputField(authController.emailController),
+        _buildInputField(emailController, false),
         const SizedBox(height: 30),
         _buildText("Enter your Password"),
-        _buildInputField(authController.passwordController),
+        _buildInputField(passwordController, true),
         _buildRememberForgot(),
         const SizedBox(height: 40),
         _buildLoginButton(),
@@ -123,8 +156,9 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  Widget _buildInputField(TextEditingController controller){
+  Widget _buildInputField(TextEditingController controller, bool isObsecure){
     return TextField(
+      obscureText: isObsecure,
       controller: controller,
       decoration: InputDecoration(
         //hintText: 'Type Here',
@@ -145,14 +179,9 @@ class _LoginPageState extends State<LoginPage> {
       children: [
         TextButton(
           onPressed: (){
-            Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => SideBarState(), // Replace YourAddPage with the add page widget
-                      ),
-                    );
+            Get.toNamed(RouteHelper.getPlantLog());
           },
-          child: Text("Forgot Password?",
+          child: Text("Check out the App",
             style: TextStyle(
               fontSize: 10,
               fontFamily: 'Poppins',
@@ -165,10 +194,12 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _buildLoginButton(){
-    return ElevatedButton(
+
+    return GetBuilder<AuthController>(builder: (authController) {
+      return !authController.isLoading ? ElevatedButton(
 
       onPressed: ()  {
-        authController.loginUser();
+        _login(authController);
       },
 
       style: ElevatedButton.styleFrom(
@@ -187,7 +218,8 @@ class _LoginPageState extends State<LoginPage> {
           letterSpacing: 3.0,
         ),
       ),
-    );
+    ) : Center(child: CircularProgressIndicator( color: Color(0xFF0D7817)));
+    });
   }
 
 }
