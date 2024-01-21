@@ -1,57 +1,59 @@
 import 'dart:convert';
+import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
+import 'package:testapp/data/repository/auth_repo.dart';
+import 'package:testapp/models/response_model.dart';
 
-class AuthController {
+class AuthController extends GetxController implements GetxService {
+  final AuthRepo authRepo;
 
-  TextEditingController passwordController = TextEditingController();
-  TextEditingController emailController = TextEditingController();
+  AuthController ({
+    required this.authRepo,
+  });
 
-  Future loginUser() async {
+  bool _isLoading = false;
+  bool get isLoading => _isLoading;
 
-    //const url = 'http://192.168.232.2:8080/api/v1/auth/authenticate';
-    const url = 'http://10.0.2.2:8080/api/v1/auth/authenticate';
+  Future<ResponseModel> login(String email, String password) async {
+    _isLoading = true;
+    update();
 
-    print(emailController.text);
-    print(passwordController.text);
+    print("In authController");
 
-    try {
-        var response = await http.post(Uri.parse(url), body: jsonEncode(
-          {
-            "email" : emailController.text,
-            "password" : passwordController.text,
-          }
-        ));
-        print('Response body: ${response.body}');
+    Response response = await authRepo.login(email, password);
 
-        if (response.statusCode == 200) {
-          var loginArr = json.decode(response.body);
-          print(loginArr);
-        } else {
-          var code = response.statusCode;
-          print("Authentication Failed");
-          print("Status Code : $code");
-        }
-      } catch (e) {
-        print("Error during HTTP request: $e");
-      }
-
-
-    // var response = await http.post(Uri.parse(url), body: jsonEncode(
-    // {
-    //   "email" : emailController.text,
-    //   "password" : passwordController.text,
-    // }
-    // ));
-
-    // if (response.statusCode == 200) {
-    //   var loginArr = json.decode(response.body);
-    //   print(loginArr);
-    // }
-    // else {
-    //   print(emailController);
-    //   print("Authentication Failed");
-    // }
-
+    late ResponseModel responseModel;
+    if (response.statusCode == 200) {
+      authRepo.saveUserToken(response.body["access_token"]);
+      responseModel = ResponseModel(true, response.body["access_token"]);
+      print("token: "+ response.body["access_token"]);
+    }
+    else {
+      var code = response.statusCode;
+      print("status code of your error : $code");
+      responseModel = ResponseModel(false, ("$code Error : Authentication Failed"));
+    }
+    _isLoading = false;
+    update();
+    return responseModel;
   }
+
+  void saveUserEmailAndPassword(String email, String password) async {
+    authRepo.saveUserEmailAndPassword(email, password);
+  }
+
+  bool userLoggedIn(){
+    return authRepo.userLoggedIn();
+  }
+
+  bool clearSharedData() {
+    return authRepo.clearSharedData();
+  }
+
 }
+
+//     const url = 'http://10.0.2.2:8080/api/v1/auth/authenticate';
+
+//     print(emailController.text);
+//     print(passwordController.text);

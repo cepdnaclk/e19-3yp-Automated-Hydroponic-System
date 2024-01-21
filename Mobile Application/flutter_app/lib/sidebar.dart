@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/account/account_page.dart';
 import 'package:testapp/header.dart';
 import 'package:testapp/help.dart';
 import 'package:testapp/plant_log/plant_log.dart';
@@ -21,8 +22,8 @@ class _SideBarStateState extends State<SideBarState> {
   Widget build(BuildContext context) {
 
     var container;
-    if (currentPage == DrawerSections.profile) {
-      container = Profile();
+    if (currentPage == DrawerSections.account_page) {
+      container = AccountPage();
     }
     else if (currentPage == DrawerSections.plant_log) {
       container = PlantLog();
@@ -44,9 +45,9 @@ class _SideBarStateState extends State<SideBarState> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Image.asset(
-                'assets/logo.png', // Replace 'assets/logo.png' with your logo's path
-                width: 50, // Adjust the width as needed
-                height: 50, // Adjust the height as needed
+                'assets/logo.png', 
+                width: 50, 
+                height: 50, 
               ),
             ],
           ),
@@ -75,8 +76,8 @@ class _SideBarStateState extends State<SideBarState> {
       padding: EdgeInsets.only(top: 30.0),
       child: Column(
         children: [
-          menuItem(1, "Profile", Icons.arrow_forward_ios_outlined,
-            currentPage == DrawerSections.profile ? true : false
+          menuItem(1, "Your Profile", Icons.arrow_forward_ios_outlined,
+            currentPage == DrawerSections.account_page ? true : false
           ),
           menuItem(2, "Plant Log", Icons.arrow_forward_ios_outlined,
             currentPage == DrawerSections.plant_log ? true : false
@@ -103,7 +104,7 @@ class _SideBarStateState extends State<SideBarState> {
           Navigator.pop(context);
           setState(() {
             if (id == 1) {
-              currentPage = DrawerSections.profile;
+              currentPage = DrawerSections.account_page;
             }
             else if (id == 2) {
               currentPage = DrawerSections.plant_log;
@@ -147,7 +148,7 @@ class _SideBarStateState extends State<SideBarState> {
 }
 
 enum DrawerSections {
-  profile,
+  account_page,
   plant_log,
   help,
   user_manual,

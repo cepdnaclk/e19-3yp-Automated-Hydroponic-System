@@ -105,7 +105,7 @@ class _NewPlantState extends State<NewPlant> {
                                   // }
                                 });
                               
-                                print('my value : ');
+                                print('tempPlantArray : ');
                                 print(tempPlants);
                                 
                               },

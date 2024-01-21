@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:testapp/login_page.dart';
+import 'package:get/get.dart';
+import 'package:testapp/controllers/auth_controller.dart';
+import 'package:testapp/routes/route_helper.dart';
+import 'package:testapp/sidebar.dart';
 
 class OpenScreen extends StatefulWidget {
   const OpenScreen({super.key});
@@ -14,11 +18,20 @@ class _OpenScreenState extends State<OpenScreen> {
     return Scaffold(
       body: Center(
         child: ElevatedButton(
+          
           onPressed: () {
-            Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => LoginPage()),
-            );
+            if(Get.find<AuthController>().userLoggedIn()) {
+                  print("login checked");
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SideBarState(), 
+                    ),
+                  );
+            }
+            else {
+                  Get.toNamed(RouteHelper.loginPage);
+            }
           },
           child: Text(
             'GET STARTED',
