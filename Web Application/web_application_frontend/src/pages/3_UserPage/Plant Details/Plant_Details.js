@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Plant_Details.css";
-import Navbar from "../../components/Navbar/Navbar"
-import alovera_image from "../../Images/alovera.png"
-import SearchBar from "../../components/Search/Searchbar"
+import Navbar from "../../../components/Navbar/Navbar"
+import alovera_image from "../../../Images/alovera.png"
+import SearchBar from "../../../components/Search/Searchbar"
 
 function PlantDetails(){
    /*

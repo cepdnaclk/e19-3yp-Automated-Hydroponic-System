@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
-import alovera_image from "../../Images/alovera.png";
-import strawberry_image from "../../Images/strawberry.png";
+import alovera_image from "../../../Images/alovera.png";
+import strawberry_image from "../../../Images/strawberry.png";
 import "./Home_User_New.css";
-import Navbar from "../../components/Navbar/Navbar"
+import Navbar from "../../../components/Navbar/Navbar"
 
 
 function Home_User_New() {
