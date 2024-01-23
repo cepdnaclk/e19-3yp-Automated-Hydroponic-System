@@ -14,7 +14,7 @@ function LandingPage(){
                     <h1 style={{color:"#0D7817"}}>Garden of Tomorrow, Today: Immerse Yourself in the Ease of Automated Hydroponics!</h1>
                 </div>
                 <div className="secondary-container ">
-                    <img src={Symbol} alt="Symbol Loading..." className="symbol-image row" width="1400" height="1400"/>
+                    <img src={Symbol} alt="Symbol Loading..." className="symbol-image row" />
                     <button className="join-us-button row">Join Us</button>
                 </div>
             </div>
