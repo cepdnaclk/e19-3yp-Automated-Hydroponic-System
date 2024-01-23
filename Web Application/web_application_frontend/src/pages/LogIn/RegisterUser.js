@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./RegisterUser.css";
-import CommonNavBar from "../../components/Common_NavBar/Common_Navbar";
 import axios from 'axios';
-import { useNavigate } from "react-router-dom";
 import AdminNavBar from "../../components/Admin_Navbar/AdminNavBar";
 
 function RegisterUser() {
@@ -18,10 +16,17 @@ function RegisterUser() {
     });
 
     const [registrationError, setRegistrationError] = useState(null);
-    //const navigate = useNavigate();
 
     const [users, setUsers] = useState([]);
 
+    useEffect(() => {
+        loadUsers();
+    }, []);
+
+    const loadUsers = async () => {
+        const result = await axios.get("https://springapplicationbackend.el.r.appspot.com/api/v1/auth/users/all");
+        setUsers(result.data.reverse());
+    };
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
