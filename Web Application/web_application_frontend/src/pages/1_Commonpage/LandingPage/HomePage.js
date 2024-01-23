@@ -1,7 +1,7 @@
 import React from "react";
-import "./LandingPage.css";
-import CommonNavBar from "../../components/Common_NavBar/Common_Navbar";
-import Symbol from "../../Images/symbol.png"
+import "./HomePage.css";
+import CommonNavBar from "../../../components/Common_NavBar/Common_Navbar";
+import Symbol from "../../../Images/symbol.png"
 
 function LandingPage(){
     return(
@@ -10,10 +10,11 @@ function LandingPage(){
         <div className="main-container row">
             <div className="bg-image-container row">
                 <div className="text-container row">
-                    <h1 style={{color:"#0D7817"}}>Want An Automated Hydroponic System?</h1>
+                    <br/>
+                    <h1 style={{color:"#0D7817"}}>Garden of Tomorrow, Today: Immerse Yourself in the Ease of Automated Hydroponics!</h1>
                 </div>
                 <div className="secondary-container ">
-                    <img src={Symbol} alt="Symbol Loading..." className="symbol-image row"/>
+                    <img src={Symbol} alt="Symbol Loading..." className="symbol-image row" width="1400" height="1400"/>
                     <button className="join-us-button row">Join Us</button>
                 </div>
             </div>

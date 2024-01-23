@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     /* Add your background image here */
-    background-image: url("../../Images/page_04_bg.jpg");   
+    background-image: url("../../../Images/page_04_bg.jpg");   
     height: 85vh;
 }
 
@@ -44,8 +44,8 @@
 }
 
 .symbol-image {
-    width: 400px; /* Adjust image size */
-    height: 350px; /* Adjust image size */
+    width: 500px; /* Adjust image size */
+    height: 500px; /* Adjust image size */
 }
 
 .join-us-button {

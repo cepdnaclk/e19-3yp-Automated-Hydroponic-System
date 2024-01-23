@@ -10,7 +10,6 @@ function App() {
   return (
     <>
     <div>
-
       <Router basename="/">
         <RoutesConfig/>
       </Router>
