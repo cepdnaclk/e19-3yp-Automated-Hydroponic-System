@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./RegisterUser.css";
-import CommonNavBar from "../../components/Common_NavBar/Common_Navbar";
 import axios from 'axios';
-import { useNavigate } from "react-router-dom";
 import AdminNavBar from "../../components/Admin_Navbar/AdminNavBar";
 
 function RegisterUser() {
@@ -18,10 +16,17 @@ function RegisterUser() {
     });
 
     const [registrationError, setRegistrationError] = useState(null);
-    //const navigate = useNavigate();
 
     const [users, setUsers] = useState([]);
 
+    useEffect(() => {
+        loadUsers();
+    }, []);
+
+    const loadUsers = async () => {
+        const result = await axios.get("https://springapplicationbackend.el.r.appspot.com/api/v1/auth/users/all");
+        setUsers(result.data.reverse());
+    };
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
@@ -30,12 +35,12 @@ function RegisterUser() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if(formData.password !== formData.confirmPassword){
+        /*if(formData.password !== formData.confirmPassword){
             alert("Password doesn't match.");
             return;
-        }
+        }*/
         try {
-            const response = await axios.post('http://localhost:8080/api/v1/auth/register', formData);
+            const response = await axios.post('https://springapplicationbackend.el.r.appspot.com/api/v1/auth/register', formData);
 
             if (response.status === 200) {
                 alert("Registration successful");
@@ -136,7 +141,7 @@ function RegisterUser() {
                             />
                         </div>
 
-                        <div className="confirm-password row">
+                        {/*<div className="confirm-password row">
                             <label htmlFor="confirmPassword" className="form-label col-3">
                                 Confirm Password* :
                             </label>
@@ -150,7 +155,7 @@ function RegisterUser() {
                                 placeholder="password@#$%12"
                                 required
                             />
-                        </div>
+    </div>*/}
                         <div className="register-button-container row">
                         <button type="submit" className="btn btn-success mt-3" style={{width:"100px",backgroundColor:"#0D7817"}}>Register</button>
                         </div>

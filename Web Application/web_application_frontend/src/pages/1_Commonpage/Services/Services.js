@@ -1,7 +1,7 @@
 import React from "react";
 import "./Services.css";
-import CommonNavBar from "../../components/Common_NavBar/Common_Navbar";
-import Prototype from "../../Images/prototype.jpg";
+import CommonNavBar from "../../../components/Common_NavBar/Common_Navbar";
+import Prototype from "../../../Images/prototype.jpg";
 
 function Services() {
   const plants = [
