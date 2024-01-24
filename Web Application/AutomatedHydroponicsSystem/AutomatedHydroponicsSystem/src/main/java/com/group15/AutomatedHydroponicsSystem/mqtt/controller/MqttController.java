@@ -10,7 +10,6 @@ import com.group15.AutomatedHydroponicsSystem.plants.Plant;
 import com.group15.AutomatedHydroponicsSystem.plants.PlantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import com.group15.AutomatedHydroponicsSystem.plants.Plant;
 
 
 import java.util.List;
@@ -34,13 +33,15 @@ public class MqttController {
 
 
     @PostMapping("/connect-iot")
-    public void connectToIoT() throws AWSIotException, InterruptedException {
+    public String connectToIoT() throws AWSIotException, InterruptedException {
         mqttConfig.connectToIoT();
+        return "Connected to an IoT device successfully.";
     }
 
     @PostMapping("/disconnect-iot")
-    public void disconnectToIot() throws AWSIotException {
+    public String disconnectToIot() throws AWSIotException {
         mqttConfig.disconncetFromIoT();
+        return "Disconnected from IoT device successfully.";
     }
     @GetMapping("/select-plant")
     public String selectPlants(@RequestParam int id) {
