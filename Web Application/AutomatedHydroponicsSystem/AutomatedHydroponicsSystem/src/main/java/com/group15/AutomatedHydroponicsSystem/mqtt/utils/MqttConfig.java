@@ -3,10 +3,8 @@ package com.group15.AutomatedHydroponicsSystem.mqtt.utils;
 import com.amazonaws.services.iot.client.AWSIotException;
 import com.amazonaws.services.iot.client.AWSIotMqttClient;
 import com.amazonaws.services.iot.client.AWSIotQos;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.group15.AutomatedHydroponicsSystem.mqtt.dto.MyMessage;
 import com.group15.AutomatedHydroponicsSystem.mqtt.dto.MyTopic;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
@@ -28,12 +26,9 @@ public class MqttConfig {
             return "Connected to IoT device successfully.";
     }
 
-    public String disconncetFromIoT() throws AWSIotException {
-        client = new AWSIotMqttClient(clientEndpoint, clientId, awsAccessKeyId, awsSecretAccessKey, null);
+    public void disconncetFromIoT() throws AWSIotException {
         client.disconnect();
         System.out.println("Disconnected from IoT");
-
-        return "Disconnected from IoT device successfully.";
     }
 
 
