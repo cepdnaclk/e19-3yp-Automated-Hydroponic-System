@@ -12,20 +12,28 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MqttConfig {
 
-    String clientEndpoint = "YOUR_END_POINT";
-    String clientId = "YOUR_CLIENT_ID";
-    String awsAccessKeyId ="YOUR_ACCESS_KEY";
-    String awsSecretAccessKey = "YOUR_SECRET_ACCESS_KEY";
+    String clientEndpoint = "a398am5o3vbqfl-ats.iot.ap-south-1.amazonaws.com";
+    String clientId = "Test_client";
+    String awsAccessKeyId ="AKIATY6FSZD72T45UQXE";
+    String awsSecretAccessKey = "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";
     AWSIotMqttClient client = null;
 
-    public void connectToIoT() throws AWSIotException, InterruptedException {
+    public String connectToIoT() throws AWSIotException, InterruptedException {
             client = new AWSIotMqttClient(clientEndpoint, clientId, awsAccessKeyId, awsSecretAccessKey, null);
             client.connect();
             System.out.println("Connected to IoT");
 //            Thread.sleep(10000);
 //            client.disconnect();
 //        System.out.println("Disconnected from IoT");
+            return "Connected to IoT device successfully.";
+    }
 
+    public String disconncetFromIoT() throws AWSIotException {
+        client = new AWSIotMqttClient(clientEndpoint, clientId, awsAccessKeyId, awsSecretAccessKey, null);
+        client.disconnect();
+        System.out.println("Disconnected from IoT");
+
+        return "Disconnected from IoT device successfully.";
     }
 
 

@@ -2,6 +2,7 @@ package com.group15.AutomatedHydroponicsSystem.plants;
 
 import com.group15.AutomatedHydroponicsSystem.Exception.PlantNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -17,24 +18,11 @@ public class PlantController {
     @Autowired
     private PlantRepository plantRepository;
 
-//    @PostMapping("/plants/add")
-//    public void addPlant(
-//            @RequestParam("name") String name,
-//            @RequestParam("details") String details,
-//            @RequestParam("image")MultipartFile image
-//    ) throws IOException {
-//        Plant plant = new Plant();
-//
-//        plant.setName(name);
-//        plant.setDetails(details);
-//        plant.setImage(image.getBytes());
-//
-//        plantRepository.save(plant);
-//    }
     @PostMapping("/plants/add")
     Plant plant(@RequestBody Plant newPlant){
         return plantRepository.save(newPlant);
     }
+
 
     @GetMapping("/plants/all")
     public List<Plant> getAllPlants(){
