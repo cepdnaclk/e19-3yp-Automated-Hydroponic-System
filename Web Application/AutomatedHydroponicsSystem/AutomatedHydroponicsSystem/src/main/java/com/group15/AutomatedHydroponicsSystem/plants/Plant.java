@@ -4,37 +4,70 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Data
 @Builder
 @AllArgsConstructor
 public class Plant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
-    @Setter
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Getter
     String name;
-    @Setter
     @Getter
     String details;
-    @Setter
+
     @Getter
     @Lob
     @Column(length = 5242880)
     byte [] image;
 
-    @Setter
+
     @Getter
     float phLow;
-    @Setter
     @Getter
     float phHigh;
-    @Setter
     @Getter
     float tdsHigh;
-    @Setter
     @Getter
     float tdsLow;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDetails(String details) {
+        this.details = details;
+    }
+
+    public void setImage(byte[] image) {
+        this.image = image;
+    }
+
+    public void setPhLow(float phLow) {
+        this.phLow = phLow;
+    }
+
+    public void setPhHigh(float phHigh) {
+        this.phHigh = phHigh;
+    }
+
+    public void setTdsHigh(float tdsHigh) {
+        this.tdsHigh = tdsHigh;
+    }
+
+    public void setTdsLow(float tdsLow) {
+        this.tdsLow = tdsLow;
+    }
+
+
 
     public Plant() {
 
