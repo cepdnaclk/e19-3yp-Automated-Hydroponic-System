@@ -2,6 +2,8 @@ package com.group15.AutomatedHydroponicsSystem.Plant;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import com.group15.AutomatedHydroponicsSystem.plants.Plant;
+import com.group15.AutomatedHydroponicsSystem.plants.PlantRepository;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -88,7 +90,7 @@ public class PlantControllerTest {
         plant.setDetails("Beautiful red flower");
         plant.setImage(new byte[]{0, 1, 2, 3, 4});
 
-        when(plantRepository.findById(1)).thenReturn(Optional.of(plant));
+        when(plantRepository.findById(1)).thenReturn(plant);
 
         mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/auth/plants/1"))
                 .andExpect(status().isOk())
