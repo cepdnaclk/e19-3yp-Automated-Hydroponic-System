@@ -1,21 +1,16 @@
 package com.group15.AutomatedHydroponicsSystem.Plant;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.group15.AutomatedHydroponicsSystem.Exception.PlantNotFoundException;
-import com.group15.AutomatedHydroponicsSystem.plants.Plant;
-import com.group15.AutomatedHydroponicsSystem.plants.PlantController;
 
+import com.group15.AutomatedHydroponicsSystem.plants.Plant;
 import com.group15.AutomatedHydroponicsSystem.plants.PlantRepository;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import java.util.Arrays;
@@ -95,7 +90,7 @@ public class PlantControllerTest {
         plant.setDetails("Beautiful red flower");
         plant.setImage(new byte[]{0, 1, 2, 3, 4});
 
-        when(plantRepository.findById(1)).thenReturn(Optional.of(plant));
+        when(plantRepository.findById(1)).thenReturn(plant);
 
         mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/auth/plants/1"))
                 .andExpect(status().isOk())

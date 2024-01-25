@@ -3,6 +3,7 @@ package com.group15.AutomatedHydroponicsSystem.mqtt.controller;
 
 import com.amazonaws.services.iot.client.AWSIotException;
 import com.group15.AutomatedHydroponicsSystem.mqtt.dto.MyTopic;
+import com.group15.AutomatedHydroponicsSystem.mqtt.dto.SelectedPlantIDListDTO;
 import com.group15.AutomatedHydroponicsSystem.mqtt.service.MqttService;
 import com.group15.AutomatedHydroponicsSystem.mqtt.utils.MqttConfig;
 import com.group15.AutomatedHydroponicsSystem.plants.Plant;
@@ -10,6 +11,8 @@ import com.group15.AutomatedHydroponicsSystem.plants.PlantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+
+import java.util.List;
 import java.util.Optional;
 
 @CrossOrigin
@@ -25,11 +28,20 @@ public class MqttController {
 
     @Autowired
     private MqttConfig  mqttConfig;
+    @Autowired
+    private SelectedPlantIDListDTO selectedPlantIDList;
 
 
     @PostMapping("/connect-iot")
-    public void connectToIoT() throws AWSIotException, InterruptedException {
+    public String connectToIoT() throws AWSIotException, InterruptedException {
         mqttConfig.connectToIoT();
+        return "Connected to an IoT device successfully.";
+    }
+
+    @PostMapping("/disconnect-iot")
+    public String disconnectToIot() throws AWSIotException {
+        mqttConfig.disconncetFromIoT();
+        return "Disconnected from IoT device successfully.";
     }
     @GetMapping("/select-plant")
     public String selectPlants(@RequestParam int id) {
@@ -60,6 +72,69 @@ public class MqttController {
             return "Plant not found with ID: " + id;
         }
     }
+
+    @GetMapping("/selected_plants")
+    public String selectPlantsByIdList(@RequestBody SelectedPlantIDListDTO plantIDList) {
+        List<Integer> plantIDs = plantIDList.getPlantIDs();
+
+        if (plantIDs == null || plantIDs.isEmpty()) {
+            return "No plants selected.";
+        }
+
+        Optional<Plant> firstPlant = repository.findById(plantIDs.get(0));
+
+        if (firstPlant.isEmpty()) {
+            return "Plant with ID " + plantIDs.get(0) + " not found.";
+        }
+
+        int lengthOfList = plantIDs.size();
+        float pHLow = firstPlant.get().getPhLow();
+        float pHHigh = firstPlant.get().getPhHigh();
+        float tdsLow = firstPlant.get().getTdsLow();
+        float tdsHigh = firstPlant.get().getTdsHigh();
+        float waterPump = 1; // Call a method for boolean
+
+        Plant currentPlant;
+
+        for (int i = 1; i < lengthOfList; i++) {
+            currentPlant = repository.findById(plantIDs.get(i)).orElse(null);
+
+            if (currentPlant != null) {
+                float pHLowCurrent = currentPlant.getPhLow();
+                float pHHighCurrent = currentPlant.getPhHigh();
+                float tdsLowCurrent = currentPlant.getTdsLow();
+                float tdsHighCurrent = currentPlant.getTdsHigh();
+
+                if (pHLowCurrent > pHLow) {
+                    pHLow = pHLowCurrent;
+                }
+                if (tdsLowCurrent > tdsLow) {
+                    tdsLow = tdsLowCurrent;
+                }
+                if (pHHighCurrent < pHHigh) {
+                    pHHigh = pHHighCurrent;
+                }
+                if (tdsHighCurrent < tdsHigh) {
+                    tdsHigh = tdsHighCurrent;
+                }
+            }
+        }
+
+        try {
+            service.publishMessageToTopic(tdsLow, "tdsvalue");
+            service.publishMessageToTopic(tdsHigh, "tdshigh");
+            service.publishMessageToTopic(pHLow, "phlow");
+            service.publishMessageToTopic(pHHigh, "phhigh");
+            service.publishMessageToTopic(waterPump, "waterpump"); // Call a method for boolean
+
+            return "Plants selection successful.";
+        } catch (AWSIotException | InterruptedException e) {
+            // Handle the AWSIotException, e.g., log the error or return an error message
+            return "Failed to publish messages to AWS IoT. Reason: " + e.getMessage();
+        }
+    }
+
+
 
     @GetMapping("/subscribeToTopics")
     public String subscribeToTopics() throws AWSIotException, InterruptedException {

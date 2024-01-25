@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
-import SYSTEM_IMAGE from "../../Images/System.jpg"
+import SYSTEM_IMAGE from "../../../Images/System.jpg"
 import "./AdminHome.css";
-import AdminNavBar from "../../components/Admin_Navbar/AdminNavBar";
+import AdminNavBar from "../../../components/Admin_Navbar/AdminNavBar";
 
 
 function AdminHome() {

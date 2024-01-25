@@ -1,14 +1,15 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import PlantDetails from "./pages/Plant Details/Plant_Details";
-import LandingPage from "./pages/LandingPage/LandingPage";
-import Services from "./pages/Services/Services";
-import Login from "./pages/LogIn/LogIn";
-import RegisterUser from "./pages/LogIn/RegisterUser";
-import Systems from "./pages/systems/systems";
-import AdminHome from "./pages/AdminHome/AdminHome";
-import Home_User_New from "./pages/Users Home/Home_User_New";
+
+import Login from "../LogIn/LogIn";
+import RegisterUser from "../LogIn/RegisterUser";
+import LandingPage from "../1_Commonpage/LandingPage/HomePage";
+import Services from "../1_Commonpage/Services/Services";
+import Systems from "../2_AdminPage/systems/systems";
+import AdminHome from "../2_AdminPage/AdminHome/AdminHome";
+import Home_User_New from "../3_UserPage/Users Home/Home_User_New";
+import PlantDetails from "../3_UserPage/Plant Details/Plant_Details";
 
 
 import ProtectedRoutes from "./protectedRoutes";
