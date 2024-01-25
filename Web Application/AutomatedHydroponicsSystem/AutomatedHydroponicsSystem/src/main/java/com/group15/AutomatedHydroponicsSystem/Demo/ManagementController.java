@@ -1,7 +1,7 @@
 package com.group15.AutomatedHydroponicsSystem.Demo;
 
 import org.springframework.web.bind.annotation.*;
-
+@CrossOrigin("http://65.2.179.127:3000")
 @RestController
 @RequestMapping("/api/v1/management")
 public class ManagementController {
