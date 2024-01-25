@@ -346,46 +346,66 @@
 
 
 
-import 'package:flutter/material.dart';
-import 'package:testapp/static_header.dart';
-//import 'header.dart';
-import 'package:http/http.dart';
+// import 'package:flutter/material.dart';
+// import 'package:testapp/sidebar.dart';
+// import 'package:testapp/static_header.dart';
+// //import 'header.dart';
+// import 'package:http/http.dart';
 
-class PlantStatus extends StatefulWidget {
-  const PlantStatus({super.key});
+// class PlantStatus extends StatefulWidget {
+//   const PlantStatus({super.key});
 
-  @override
-  State<PlantStatus> createState() => _PlantStatusState();
-}
+//   @override
+//   State<PlantStatus> createState() => _PlantStatusState();
+// }
 
-class _PlantStatusState extends State<PlantStatus> {
+// class _PlantStatusState extends State<PlantStatus> {
 
   //int sensorValue = 15; // Example sensor value
 
-  String getWaterLevelText(int sensorValue) {
-    if (sensorValue >= 10 && sensorValue < 20) {
-      return 'LOW';
-    } else if (sensorValue >= 20 && sensorValue < 40) {
-      return 'GOOD';
-    }
+  // String getWaterLevelText(int sensorValue) {
+  //   if (sensorValue >= 10 && sensorValue < 20) {
+  //     return 'LOW';
+  //   } else if (sensorValue >= 20 && sensorValue < 40) {
+  //     return 'GOOD';
+  //   }
     
-    return 'Unknown'; 
-  }
-  Color getWaterLevelColor(int sensorValue) {
-    if (sensorValue >= 10 && sensorValue < 20) {
-      return Colors.red;
-    } else if (sensorValue >= 20 && sensorValue < 40) {
-      return Colors.green;
-    }
-    return Colors.black; // Default color if condition doesn't match
-  }
+  //   return 'Unknown'; 
+  // }
+  // Color getWaterLevelColor(int sensorValue) {
+  //   if (sensorValue >= 10 && sensorValue < 20) {
+  //     return Colors.red;
+  //   } else if (sensorValue >= 20 && sensorValue < 40) {
+  //     return Colors.green;
+  //   }
+  //   return Colors.black; // Default color if condition doesn't match
+  // }
 
-  @override
-  Widget build(BuildContext context) {
+  // @override
+  // Widget build(BuildContext context) {
 
-    return Scaffold(
-     appBar: StaticHeader(),
-     body: Center(child: Text('Sensor data')),
+  //   return Scaffold(
+  //    appBar: StaticHeader(),
+  //    body: Center(child: Text('Sensor data')),
+
+    //  floatingActionButton: FloatingActionButton(
+    //     onPressed: () {
+    //       Navigator.push(
+    //         context,
+    //         MaterialPageRoute(
+    //           builder: (context) => SideBarState(), 
+    //         ),
+    //       );
+    //     },
+    //     child: Icon(
+    //       Icons.arrow_back,
+    //       color: Colors.white,
+    //     ),
+    //     backgroundColor: Color(0xFF0D7817),
+    //     shape: CircleBorder(),
+    //     foregroundColor: Color.fromARGB(0, 25, 70, 2),
+    //   ),
+    //   floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       // body: Column(
       //   children: [
       //     Column(
@@ -466,6 +486,6 @@ class _PlantStatusState extends State<PlantStatus> {
       //     ),
       //   ],
       // ),
-    );
-  }
-}
+//     );
+//   }
+// }

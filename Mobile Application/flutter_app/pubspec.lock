@@ -264,6 +264,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.2.1+1"
+  kdgaugeview:
+    dependency: "direct main"
+    description:
+      name: kdgaugeview
+      sha256: "8a13b8bc5e86b83c3fe26b26bf0056ab875f546db770f8f8f4baf8437c993551"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.5"
   lints:
     dependency: transitive
     description:
