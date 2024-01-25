@@ -9,10 +9,16 @@ class AppConstants {
 
   //plant endpoints
   static const String ALL_PLANTS = "/api/v1/auth/plants/all";
-  //static const String PLANT_BY_ID = "/api/v1/auth/plants/2";
 
   //auth endpoints
   static const String  LOGIN_URI= "/api/v1/auth/authenticate";
+
+  //mqtt endpoints
+  static const String IOT_CONNECT = "/api/v1/auth/connect-iot";
+  static const String SUBSCRIBE = "/api/v1/auth/subscribeToTopics";
+
+  //topics
+  static const String PH_DATA = "/api/v1/auth/get-ph-data";
 
   static const String TOEKN = "";
   static const String EMAIL = "";

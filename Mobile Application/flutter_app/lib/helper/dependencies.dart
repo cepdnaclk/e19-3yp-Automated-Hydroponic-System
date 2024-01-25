@@ -1,10 +1,12 @@
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:testapp/controllers/auth_controller.dart';
+import 'package:testapp/controllers/mqtt_controller.dart';
 import 'package:testapp/controllers/plant_controller.dart';
 import 'package:testapp/data/api/api_client.dart';
 import 'package:http/http.dart';
 import 'package:testapp/data/repository/auth_repo.dart';
+import 'package:testapp/data/repository/mqtt_repo.dart';
 import 'package:testapp/utils/app_constants.dart';
 import '../data/repository/plant_repo.dart';
 
@@ -20,12 +22,14 @@ Future<void> init() async {
 
   //repos
   Get.lazyPut(() => PlantRepo(apiClient: Get.find()));
-  Get.lazyPut(() => PlantRepo(apiClient: Get.find()));
+  //Get.lazyPut(() => PlantRepo(apiClient: Get.find()));
+  Get.lazyPut(() => MqttRepo(apiClient: Get.find()));
   Get.lazyPut(() => AuthRepo(apiClient: Get.find(), sharedPreferences: Get.find()));
 
   //controllers
   Get.put(PlantController(plantRepo: Get.find()));
   Get.put(AuthController(authRepo: Get.find()));
+  Get.put(MqttController(mqttRepo: Get.find()));
 
   print("In dependencies");
 
