@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:testapp/controllers/mqtt_controller.dart';
 import 'package:testapp/controllers/plant_controller.dart';
 import 'package:testapp/data/repository/plant_repo.dart';
 // import 'package:testapp/header.dart';
@@ -18,9 +19,7 @@ Future <void> main() async{
   print("In main");
   WidgetsFlutterBinding.ensureInitialized();
   await dep.init();
-  // print("In main 2");
-  //Get.put(PlantController(plantRepo: Get.find()));
-  //Get.find<PlantController>().getPlantList();
+  Get.find<MqttController>().getIoTData();
   runApp(const MyApp());
 }
 
@@ -29,13 +28,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) { 
+
     Get.find<PlantController>().getPlantList();
-    //Get.find<PlantController>().getPlant(int.parse(tempPlants[1]));
-    // for (int i=0; i<tempPlants.length; i++) {
-    //   Get.find<PlantController>().getPlant(int.parse(tempPlants[i]));
-    // }
     
-  //Get.find<PlantController>().getPlant(1);
+    //Get.find<PlantController>().getPlant(1);
    print("In MyApp");
 
     //Color myColor = const Color(0xFFFFFF);

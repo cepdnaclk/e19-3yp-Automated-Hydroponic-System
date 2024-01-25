@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:testapp/controllers/auth_controller.dart';
+import 'package:testapp/controllers/mqtt_controller.dart';
 import 'package:testapp/controllers/plant_controller.dart';
 import 'package:testapp/new_plant.dart';
 import 'package:testapp/plant_details.dart';
 // import 'package:testapp/plant_log/models/Plant.dart';
 // import 'package:testapp/plant_log/models/plant_service.dart';
 // import 'package:testapp/plant_status/loading.dart';
-import 'package:testapp/plant_status/plant_status.dart';
+import 'package:testapp/dustbin/plant_status/plant_status.dart';
 //import 'header.dart';
 import 'package:http/http.dart';
+import 'package:testapp/plant_status.dart';
 import 'package:testapp/routes/route_helper.dart';
 import 'package:testapp/tempPlantArray.dart';
 import 'package:testapp/utils/app_constants.dart';
@@ -63,6 +65,9 @@ class _PlantLogState extends State<PlantLog> {
 
                 if(Get.find<AuthController>().userLoggedIn()) {
                   print("login checked");
+                  Get.find<MqttController>().subscribeToTopics();
+                  Get.find<MqttController>().getPhData();
+                  Get.find<MqttController>().getTdsData();
                   Navigator.push(
                     context,
                     MaterialPageRoute(

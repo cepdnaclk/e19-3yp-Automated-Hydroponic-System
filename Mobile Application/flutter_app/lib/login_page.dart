@@ -5,6 +5,7 @@ import 'package:testapp/base/show_custom_message.dart';
 import 'package:testapp/controllers/auth_controller.dart';
 //import 'package:testapp/sidebar.dart';
 import 'package:flutter/material.dart';
+import 'package:testapp/controllers/mqtt_controller.dart';
 import 'package:testapp/plant_log/plant_log.dart';
 import 'package:testapp/routes/route_helper.dart';
 import 'package:testapp/sidebar.dart';
@@ -180,6 +181,7 @@ class _LoginPageState extends State<LoginPage> {
         TextButton(
           onPressed: (){
             Get.toNamed(RouteHelper.getPlantLog());
+            Get.find<MqttController>().getIoTData();
           },
           child: Text("Check out the App",
             style: TextStyle(
