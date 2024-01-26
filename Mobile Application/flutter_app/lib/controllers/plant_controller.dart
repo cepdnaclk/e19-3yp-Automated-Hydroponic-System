@@ -12,8 +12,7 @@ class PlantController extends GetxController {
   // String get uniquePlant => _uniquePlant;
 
   List<dynamic> _plantList = [];
-  List<dynamic> get plantList => _plantList; //using plantList, we will be able to read data easily in the UI. It'll be a simple list.
-
+  List<dynamic> get plantList => _plantList; 
   bool _isLoaded = false;
   bool get isLoaded => _isLoaded;
 
@@ -34,19 +33,8 @@ class PlantController extends GetxController {
     }
   }
 
-//   Future<void> getPlant(int plantId) async {
-//   Response response = await plantRepo.getPlant(plantId);
-//   if (response.statusCode == 200) {
-//     print("Got the plant $plantId");
-//     // Handle the response to get a single plant
-//     _uniquePlant = PlantModel.fromJson(response.body);
-//     //print(plant);
-//     _isLoaded = true;
-//     update();
-//   } else {
-//     // Handle error
-//     print("Error fetching plant: ${response.statusCode}");
-//   }
-// }
+  
+
+
 
 }

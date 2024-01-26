@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:testapp/controllers/mqtt_controller.dart';
@@ -13,6 +15,46 @@ class PlantStatus extends StatefulWidget {
 }
 
 class _PlantStatusState extends State<PlantStatus> {
+
+  late Timer _timer;
+ // String sensorData = 'No Data';
+  late MqttController mqttController;
+
+  @override
+  void initState() {
+
+    super.initState();
+    
+    _timer = Timer.periodic(Duration(seconds: 5), (Timer timer) {
+      Get.find<MqttController>().subscribeToTopics();
+      Get.find<MqttController>().getPhData();
+      Get.find<MqttController>().getTdsData();
+      setState(() {});
+      print("Timer is running .........");
+    });
+  }
+
+  // Future<String> fetchDataFromSensor() async {
+  //   try {
+  //     // Use the MqttController to get the sensor data
+  //     double phData = await mqttController.getPhData();
+
+  //     // Update the UI with the latest sensor data
+  //     setState(() {
+  //       sensorData = phData.toString(); // Convert to String as needed
+  //     });
+  //     return sensorData;
+  //   } catch (e) {
+  //     print('Error fetching sensor data: $e');
+  //   }
+  // }
+
+  // @override
+  // void dispose() {
+    // Stop the timer when the widget is disposed
+  //   _timer.cancel();
+  //   super.dispose();
+  // }
 
     /*String getPhLevelText(int sensorValue) {
       if (sensorValue >= 8 && sensorValue < 5) {
@@ -52,6 +94,12 @@ class _PlantStatusState extends State<PlantStatus> {
   Widget build(BuildContext context) {
 
     return GetBuilder<MqttController>(builder: (mqtt) {
+
+      // String sensorData = mqtt.getPhData().toString();
+      //double phData =  mqtt.getPhData();
+      // print("sensorData : ${sensorData.toString()}");
+
+      //Future<double> phValue = mqtt.getPhData();
       return Scaffold(
       appBar: StaticHeader(),
 
@@ -93,7 +141,8 @@ class _PlantStatusState extends State<PlantStatus> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        FutureBuilder<String>(
+                        
+                        FutureBuilder<double>(
                           future: mqtt.getPhData(),
                           builder: (context, snapshot) {
                             if (snapshot.connectionState == ConnectionState.waiting) {
@@ -101,8 +150,10 @@ class _PlantStatusState extends State<PlantStatus> {
                             } else if (snapshot.hasError) {
                               return Text('Error: ${snapshot.error}');
                             } else {
+                              double? phValue = snapshot.data;
+                              String? phValueString = phValue!.toStringAsFixed(3);
                               return Text(
-                                '${snapshot.data}',
+                                '${phValueString}',
                                 style: const TextStyle(
                                   fontFamily: 'Poppins',
                                   fontSize: 80.0,
@@ -187,7 +238,7 @@ class _PlantStatusState extends State<PlantStatus> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        FutureBuilder<String>(
+                        FutureBuilder<double>(
                           future: mqtt.getTdsData(),
                           builder: (context, snapshot) {
                             if (snapshot.connectionState == ConnectionState.waiting) {
@@ -195,11 +246,13 @@ class _PlantStatusState extends State<PlantStatus> {
                             } else if (snapshot.hasError) {
                               return Text('Error: ${snapshot.error}');
                             } else {
+                              double? tdsValue = snapshot.data;
+                              String? tdsValueString = tdsValue!.toStringAsFixed(0);
                               return Text(
-                                '${(snapshot.data)}',
+                                '${tdsValueString}',
                                 style: const TextStyle(
                                   fontFamily: 'Poppins',
-                                  fontSize: 80.0,
+                                  fontSize: 70.0,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.red,
                                           
@@ -253,6 +306,7 @@ class _PlantStatusState extends State<PlantStatus> {
       ),
          floatingActionButton: FloatingActionButton(
         onPressed: () {
+          _timer.cancel();
           Navigator.push(
             context,
             MaterialPageRoute(

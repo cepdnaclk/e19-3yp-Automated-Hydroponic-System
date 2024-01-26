@@ -11,6 +11,10 @@ class MqttRepo extends GetxService {
     return await apiClient.postIot(AppConstants.IOT_CONNECT);
   }
 
+  Future<Response> disconnectIoT() async {
+    return await apiClient.postIot(AppConstants.IOT_DISCONNECT);
+  }
+
   Future<Response> subscribeToTopics() async {
     return await apiClient.getData(AppConstants.SUBSCRIBE);
   }
@@ -20,7 +24,7 @@ class MqttRepo extends GetxService {
   }
 
   Future<Response> getTdsData() async {
-    return await apiClient.getData(AppConstants.PH_DATA);
+    return await apiClient.getData(AppConstants.TDS_DATA);
   }
 
 }
