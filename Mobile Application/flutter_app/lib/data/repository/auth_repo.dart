@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:testapp/controllers/mqtt_controller.dart';
 import 'package:testapp/data/api/api_client.dart';
 import 'package:testapp/utils/app_constants.dart';
 
@@ -60,6 +61,7 @@ class AuthRepo {
     sharedPreferences.remove(AppConstants.EMAIL);
     apiClient.token = '';
     apiClient.updateHeader('');
+    Get.find<MqttController>().disconnectIoT();
     return true;
   }
 

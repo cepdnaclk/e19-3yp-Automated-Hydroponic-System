@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:testapp/controllers/mqtt_controller.dart';
@@ -19,7 +21,7 @@ Future <void> main() async{
   print("In main");
   WidgetsFlutterBinding.ensureInitialized();
   await dep.init();
-  Get.find<MqttController>().getIoTData();
+  
   runApp(const MyApp());
 }
 

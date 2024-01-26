@@ -29,6 +29,7 @@ class AuthController extends GetxController implements GetxService {
       authRepo.saveUserToken(response.body["access_token"]);
       responseModel = ResponseModel(true, response.body["access_token"]);
       print("token: "+ response.body["access_token"]);
+      Get.find<MqttController>().getIoTData();
     }
     else {
       var code = response.statusCode;

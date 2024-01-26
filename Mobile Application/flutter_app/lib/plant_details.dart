@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:testapp/controllers/plant_controller.dart';
@@ -24,10 +26,8 @@ class PlantDetails extends StatelessWidget {
               height: 370,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(
-                    //"https://images.pexels.com/photos/1454288/pexels-photo-1454288.jpeg?auto=compress&cs=tinysrgb&w=600"
-                    //"https://images.pexels.com/photos/1840270/pexels-photo-1840270.jpeg?auto=compress&cs=tinysrgb&w=600",
-                    "assets/aloevera.jpg",
+                  image: NetworkImage(
+                    utf8.decode(base64.decode(plant.image)),
 
                   ),
                   fit: BoxFit.cover, 

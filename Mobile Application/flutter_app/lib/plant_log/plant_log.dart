@@ -1,5 +1,9 @@
+import 'dart:async';
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:testapp/base/show_custom_message.dart';
 import 'package:testapp/controllers/auth_controller.dart';
 import 'package:testapp/controllers/mqtt_controller.dart';
 import 'package:testapp/controllers/plant_controller.dart';
@@ -27,6 +31,8 @@ class PlantLog extends StatefulWidget {
 }
 
 class _PlantLogState extends State<PlantLog> {
+
+  
 
   //TempPlantArray tempPlantArray = TempPlantArray();
 
@@ -63,11 +69,9 @@ class _PlantLogState extends State<PlantLog> {
             child: ElevatedButton(
               onPressed: () {
 
-                if(Get.find<AuthController>().userLoggedIn()) {
+                if(Get.find<AuthController>().userLoggedIn() && Get.find<MqttController>().isConnected) {
                   print("login checked");
-                  Get.find<MqttController>().subscribeToTopics();
-                  Get.find<MqttController>().getPhData();
-                  Get.find<MqttController>().getTdsData();
+                  
                   Navigator.push(
                     context,
                     MaterialPageRoute(
@@ -75,8 +79,11 @@ class _PlantLogState extends State<PlantLog> {
                     ),
                   );
                 }
-                else {
+                else if (!(Get.find<AuthController>().userLoggedIn()) && Get.find<MqttController>().isConnected){
                   Get.toNamed(RouteHelper.loginPage);
+                }
+                else if (Get.find<AuthController>().userLoggedIn() && !(Get.find<MqttController>().isConnected)){
+                  showCustomSnackbar("Wait for your Hydroponic system to connect!", title: "Please Wait !!!");
                 }
               }, 
               style: ButtonStyle(
@@ -148,14 +155,12 @@ class _PlantLogState extends State<PlantLog> {
                             color: Color.fromARGB(97, 89, 135, 64),
                             
                             image: DecorationImage(
-                              image: AssetImage(
-                                //"https://images.pexels.com/photos/1454288/pexels-photo-1454288.jpeg?auto=compress&cs=tinysrgb&w=600"
-                                //(AppConstants.BASE_URL + "/api/v1/auth/plants/" + (tempPlants[index])),
-                                
-                                "assets/aloevera.jpg"
-                              ), 
+                              image: NetworkImage(
+                                utf8.decode(base64.decode(plant.plantList[int.parse(tempPlants[index]) - 1].image)),
+                              ),
                               fit: BoxFit.cover,
                             )
+
                           ),
                         ),
                         Expanded(

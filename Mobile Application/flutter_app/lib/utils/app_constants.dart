@@ -15,10 +15,12 @@ class AppConstants {
 
   //mqtt endpoints
   static const String IOT_CONNECT = "/api/v1/auth/connect-iot";
+  static const String IOT_DISCONNECT = "/api/v1/auth/connect-iot";
   static const String SUBSCRIBE = "/api/v1/auth/subscribeToTopics";
 
   //topics
   static const String PH_DATA = "/api/v1/auth/get-ph-data";
+  static const String TDS_DATA = "/api/v1/auth/get-tds-data";
 
   static const String TOEKN = "";
   static const String EMAIL = "";

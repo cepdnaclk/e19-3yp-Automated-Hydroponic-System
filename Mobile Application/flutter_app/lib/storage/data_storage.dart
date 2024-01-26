@@ -1,8 +1,9 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-class DataStorage {
-  static const String SELECTED_PLANTS_KEY = 'selectedPlants';
+const String SELECTED_PLANTS_KEY = 'selectedPlants';
 
+class DataStorage {
+  
   static Future<void> saveSelectedPlants(List<String> array) async {
     try {
       SharedPreferences prefs = await SharedPreferences.getInstance();
