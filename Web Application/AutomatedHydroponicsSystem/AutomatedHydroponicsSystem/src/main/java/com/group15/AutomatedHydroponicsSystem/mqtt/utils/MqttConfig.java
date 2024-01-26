@@ -32,18 +32,27 @@ public class MqttConfig {
     }
 
 
-    public void publishFloatData(float payLoad, String topic) {
+    public void publishData(Object payLoad, String topic) {
         AWSIotQos qos = AWSIotQos.QOS1;
         long timeout = 3000;
 
         try {
-            MyMessage message = new MyMessage(topic,qos, String.valueOf(payLoad));
-            client.publish(message,timeout);
+            // Create a JSON object with your data
+            JSONObject jsonPayload = new JSONObject();
+            jsonPayload.put("message", payLoad);
+
+            // Convert the JSON object to a string
+            String jsonString = jsonPayload.toString();
+
+            // Create a message with the JSON payload
+            MyMessage message = new MyMessage(topic, qos, jsonString);
+
+            // Publish the message
+            client.publish(message, timeout);
         } catch (AWSIotException e) {
             throw new RuntimeException(e);
         }
     }
-
     public void subscribeToTopic(String topicName) throws AWSIotException {
         AWSIotQos qos = AWSIotQos.QOS1;
 

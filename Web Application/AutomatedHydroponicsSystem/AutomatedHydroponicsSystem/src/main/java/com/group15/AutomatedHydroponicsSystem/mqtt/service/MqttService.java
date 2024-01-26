@@ -12,15 +12,11 @@ public class MqttService {
     private MqttConfig mqttConfig;
 
 
-    public void publishMessageToTopic(float payLoad, String topic) throws AWSIotException, InterruptedException {
-        //mqttConfig.connectToIoT();
-        mqttConfig.publishFloatData(payLoad,topic);
-
+    public void publishMessageToTopic(Object payLoad, String topic) throws AWSIotException, InterruptedException {
+        mqttConfig.publishData(payLoad,topic);
     }
 
-
-    public void suscribeToTopic(String topic) throws AWSIotException, InterruptedException {
-        //mqttConfig.connectToIoT();
+    public void suscribeToTopic(String topic) throws AWSIotException {
         mqttConfig.subscribeToTopic(topic);
     }
 }
