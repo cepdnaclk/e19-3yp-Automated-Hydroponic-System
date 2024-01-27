@@ -69,6 +69,16 @@ The problem we are trying to solve is the need for an automated hydroponic syste
 
 ![model](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/1ec8d227-9b70-4bd4-bd61-eb7508469982)
 
+### 3D Model
+
+![Circuit Box v112](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/30d92916-6934-458e-bbcf-d45f5f3dcc9c)
+
+![Circuit Box v114](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/4f89f385-7b0e-4a68-975e-3b9debfe6843)
+
+#### 3D Model For Scalability
+
+![Circuit Box v12 scalability1](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/a5c17668-cf99-4791-b888-77f18ce68e97)
+
 ### Dealing With Hardware Limitations
 
 - Contamination & Maintenance Requirement
