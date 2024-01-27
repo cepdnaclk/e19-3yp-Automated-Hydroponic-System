@@ -4,7 +4,7 @@
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
 #include <WiFiClientSecure.h>
-#include <WiFiManager.h>
+
 
 /* Define publish and subscribe topics */
 #define AWS_IOT_PUBLISH_TOPIC   "esp32pub"
@@ -24,14 +24,16 @@
 #define TDS_ERROR_TOPIC "tdserror"
 #define PH_SENSOR_ERROR_TOPIC "phsensorerror"
 #define TDS_SENSOR_ERROR_TOPIC "tdssensorerror"
+#define VOLTAGE_SENSOR_SP_TOPIC "voltagesensorsp"
+#define VOLTAGE_SENSOR_WP_TOPIC "voltagesensorwp"
 
 
 
 float message;
-float phHigh;
-float phLow;
-float tdslow;
-int button;
+float phHigh = 10;
+float phLow = 2;
+float tdslow = 100;
+int button = 1;
 const int waterPump = 25;
 
 WiFiClientSecure net = WiFiClientSecure();

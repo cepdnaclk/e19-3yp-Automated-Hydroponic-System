@@ -5,6 +5,7 @@
 #include "ph_meter.h"
 #include "ec_meter.h"
 #include "float_sensor.h"
+#include "voltagesensor.h"
 
 // Declare variables for ph range and tds range
 const int phAdd = 27;  // declaring increasing ph pump
@@ -28,7 +29,7 @@ void activatePumps() {
         digitalWrite(nutrientAdd, HIGH);
         tdson = 1;
         publishMessage(tdson, TDS_PUMP_TOPIC, "tdspumpstate");
-        delay(1000);
+        delay(500);
         digitalWrite(nutrientAdd, LOW);
         
         if (tdsValue <= tdslow) {
@@ -44,7 +45,7 @@ void activatePumps() {
         digitalWrite(phAdd, HIGH);
         phlowon = 1;
         publishMessage(phlowon, PH_LOW_PUMP_TOPIC, "phlowpumpstate");
-        delay(1000);
+        delay(500);
         digitalWrite(phAdd, LOW);  
         
         if (phValue <= phLow) {
@@ -59,7 +60,7 @@ void activatePumps() {
         digitalWrite(phMinus, HIGH);
         phhighon = 1;
         publishMessage(phhighon, PH_HIGH_PUMP_TOPIC, "phhighpumpstate");
-        delay(1000);
+        delay(500);
         digitalWrite(phMinus, LOW);
         
         if (phValue >= phHigh) {
@@ -95,7 +96,8 @@ void setup() {
     pinMode(phMinus,OUTPUT);
     pinMode(nutrientAdd,OUTPUT);
     pinMode(waterPump,OUTPUT);
-    digitalWrite(waterPump, HIGH);
+    pinMode(VoltageSensorPin1,INPUT);
+    pinMode(VoltageSensorPin2,INPUT);
     
 
     connectAWS();
@@ -133,15 +135,20 @@ void loop() {
 
   activatePumps();
 
-  if (phHigh > 14 || phLow < 0) {
+  if (phValue > 14 || phValue < 0) {
     phError = 1;
     publishMessage(phError, PH_SENSOR_ERROR_TOPIC, "phsensorerror");
   }
 
-  if (tdslow < 0 || tdslow > 5000) {
+  if (tdsValue < 0 || tdsValue > 5000) {
     tdsError = 1;
     publishMessage(tdsError, TDS_SENSOR_ERROR_TOPIC, "tdssensorerror");
   }
+
+  checkVoltageLevel();
+
+    publishMessage(vin1, VOLTAGE_SENSOR_SP_TOPIC, "voltagesensorsp");
+    publishMessage(vin2, VOLTAGE_SENSOR_WP_TOPIC, "voltagesensorwp");
   
   delay(10000);
   
