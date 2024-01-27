@@ -15,8 +15,8 @@ int value2 = 0;
 void checkVoltageLevel() {
     value1 = analogRead(VoltageSensorPin1);
     value2 = analogRead(VoltageSensorPin2);
-    vout1 = (value1 * 3.3) / 4095.0;
-    vout2 = (value2 * 3.3) / 4095.0;
+    vout1 = (value1 * 5) / 4095.0;
+    vout2 = (value2 * 5) / 4095.0;
     vin1 = vout1 / (R2 / (R1 + R2));
     vin2 = vout2 / (R2 / (R1 + R2));
     vin1 = vin1 - correctionfactor;
