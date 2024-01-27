@@ -255,6 +255,9 @@ Implement unit testing with Unity framework via Platformio
 
 ![platformio](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/411ffb51-3589-4b65-b81c-910deb19ecc3)
 
+![testclient](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/bca300fd-5db1-45b6-8d38-f6cfc1e2f8d9)
+
+
 ### Software Testing
 
 #### <b>Testing Java Spring Boot Backend:</b>
@@ -263,6 +266,8 @@ Implement unit testing with Unity framework via Platformio
 
 JUnit testing will be used to write unit tests for individual components, services, repositories, and controllers. Mock dependencies and test the functionality of each unit in isolation.
 
+![jest](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/b601ce82-878b-4883-89ec-957569a40996)
+
 <b>Integration Testing:</b> 
 
 Verify the interaction between various components within the Spring context. Spring's testing annotations like @SpringBootTest to perform integration tests that cover multiple layers of the application
@@ -270,7 +275,11 @@ Verify the interaction between various components within the Spring context. Spr
 <b>REST API Testing:</b>
 
 Postman will be used to test endpoints' functionality, input validation, error handling, and authentication/authorization mechanisms.
+
+![postman](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/36febb33-2f9b-4c19-b7b0-fdd3971d8710)
+
 <br>
+
 <br>
 
 #### <b>Testing React Web Application:</b>
@@ -297,9 +306,15 @@ Flutter's testing framework to write unit tests for individual widgets and test 
 
 Flutter_driver package to perform integration tests that drive the app as a real user would, testing interactions across multiple screen
 
+<img width="913" alt="selenium" src="https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/881f9b33-1fe2-4ecd-a7a3-e0fd74b97717">
+
+
 ### End-to-end-testing
 
 The end to end testing is done by using Netsparker and NoGotofail
+
+![netsparker](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/7a53d47f-5870-49c4-b34e-cc49da39f96e)
+![NoGotofail](https://github.com/cepdnaclk/e19-3yp-Automated-Hydroponic-System/assets/111074993/cb128b86-dc27-4dcc-8eb7-3377c8ac0044)
 
 ## Budget
 
