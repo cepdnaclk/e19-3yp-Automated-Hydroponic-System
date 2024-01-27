@@ -198,7 +198,7 @@ public class MqttController {
 
     // Returns the floating tube value received from an iot client
     @GetMapping("/get-floatSensor-data")
-    public boolean get_floatSensor_data() {
+    public double get_floatSensor_data() {
         System.out.println("The received float sensor data: " + DataVariables.floatSensorData);
         return DataVariables.floatSensorData;
     }
@@ -206,21 +206,21 @@ public class MqttController {
 
     // Returns the ph pump state
     @GetMapping("/get-phpump-data")
-    public boolean get_phpump_data() {
+    public double get_phpump_data() {
         System.out.println("The received ph pump data: " + DataVariables.phpumpData);
         return DataVariables.phpumpData;
     }
 
     // Returns the ph low pump state
     @GetMapping("/get-phlowpump-data")
-    public boolean get_phlowpump_data() {
+    public double get_phlowpump_data() {
         System.out.println("The received ph low pump data: " + DataVariables.phlowpumpData);
         return DataVariables.phlowpumpData;
     }
 
     // Returns the tds pump state
     @GetMapping("/get-tdspump-data")
-    public boolean get_tdspump_data() {
+    public double get_tdspump_data() {
         System.out.println("The received tds pump data: " + DataVariables.tdspumpData);
         return DataVariables.tdspumpData;
     }
@@ -228,35 +228,35 @@ public class MqttController {
 
     // Returns 1 / true if ph sensor does not work properly.
     @GetMapping("/get-phsensorerror-data")
-    public boolean get_phsensorerror_data() {
+    public double get_phsensorerror_data() {
         System.out.println("The received ph sensor error data: " + DataVariables.phsensorerrorData);
         return DataVariables.phsensorerrorData;
     }
 
     // Returns 1 / true if tds sensor does not work properly.
     @GetMapping("/get-tdssensorerror-data")
-    public boolean get_tdssensorerror_data() {
+    public double get_tdssensorerror_data() {
         System.out.println("The received tds sensor error data: " + DataVariables.tdssensorerrorData);
         return DataVariables.tdssensorerrorData;
     }
 
     // Returns 1 if the read ph value less than 0
     @GetMapping("/get-phlowerror-data")
-    public boolean get_phlowerror_data() {
+    public double get_phlowerror_data() {
         System.out.println("The received ph low error data: " + DataVariables.phlowerrorData);
         return DataVariables.phlowerrorData;
     }
 
     // Returns 1 if the read ph value is higher than 14
     @GetMapping("/get-phhigherror-data")
-    public boolean get_phhigherror_data() {
+    public double get_phhigherror_data() {
         System.out.println("The received ph high error data: " + DataVariables.phhigherrorData);
         return DataVariables.phhigherrorData;
     }
 
     // Returns 1 if the read tds value is  higher than threshold value
     @GetMapping("/get-tdserror-data")
-    public boolean get_tdserror_data() {
+    public double get_tdserror_data() {
         System.out.println("The received tds error data: " + DataVariables.tdserrorData);
         return DataVariables.tdserrorData;
     }
