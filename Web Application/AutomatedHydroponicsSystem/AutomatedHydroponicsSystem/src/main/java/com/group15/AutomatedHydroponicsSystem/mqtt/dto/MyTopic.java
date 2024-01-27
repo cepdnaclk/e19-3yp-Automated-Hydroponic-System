@@ -33,9 +33,9 @@ public class MyTopic extends AWSIotTopic {
                 System.out.println("PH value : " + DataVariables.pHData);
             }
             case Topics.phlowpumpTopic -> {
-                DataVariables.phlowpumpData = jsonData.getBoolean(JsonKeys.acidicPumpStateKey);
+                DataVariables.phlowpumpData = jsonData.getDouble(JsonKeys.acidicPumpStateKey);
                 System.out.println("PH pump state : " + DataVariables.phlowpumpData);
-                if (DataVariables.phlowpumpData) {
+                if (DataVariables.phlowpumpData == 1) {
                     DataVariables.phLowPumpCount++;
                     System.out.println("The acid pump is on"); // Display it on the page
                 } else {
@@ -56,8 +56,8 @@ public class MyTopic extends AWSIotTopic {
                 }
             }
             case Topics.phpumpTopic -> {
-                DataVariables.phpumpData = jsonData.getBoolean(JsonKeys.basePumpStateKey);
-                if (DataVariables.phpumpData) {
+                DataVariables.phpumpData = jsonData.getDouble(JsonKeys.basePumpStateKey);
+                if (DataVariables.phpumpData == 1) {
                     DataVariables.phPumpCount++;
                     System.out.println("The count : " + DataVariables.phPumpCount);
                     System.out.println("The base pump is on"); // Display it on the page
@@ -65,9 +65,9 @@ public class MyTopic extends AWSIotTopic {
                     System.out.println("The base pump is off");
                 }
 
-                if(DataVariables.phPumpCount == 5){
+                if(DataVariables.phPumpCount == 30){
                     System.out.println("Base liquid container is going to empty! REFILL IT.");
-                } else if (DataVariables.phPumpCount == 10) {
+                } else if (DataVariables.phPumpCount == 40) {
                     System.out.println("ALERT!!! Base liquid container is emptied"); // reset the count to 0 by clicking a button after refilling it
                     System.out.println("The base liquid pump is OFF");
 
@@ -83,16 +83,16 @@ public class MyTopic extends AWSIotTopic {
             // Not possible 99.99%
             case Topics.phhigherrorTopic -> {
 
-                DataVariables.phhigherrorData = jsonData.getBoolean(JsonKeys.pHHighErrorKey);
+                DataVariables.phhigherrorData = jsonData.getDouble(JsonKeys.pHHighErrorKey);
             }
 
             // Not possible 99.99%
             case Topics.phlowerrorTopic -> {
-                DataVariables.phlowerrorData = jsonData.getBoolean(JsonKeys.pHLowErrorKey);
+                DataVariables.phlowerrorData = jsonData.getDouble(JsonKeys.pHLowErrorKey);
             }
             case Topics.phsensorerrorTopic -> {
-                DataVariables.phsensorerrorData = jsonData.getBoolean(JsonKeys.pHSensorErrorKey);
-                if (DataVariables.phsensorerrorData) {
+                DataVariables.phsensorerrorData = jsonData.getDouble(JsonKeys.pHSensorErrorKey);
+                if (DataVariables.phsensorerrorData == 1) {
                     System.out.println("The ph sensor is not working properly."); // Alert the user
                 }
             }
@@ -101,8 +101,8 @@ public class MyTopic extends AWSIotTopic {
                 DataVariables.tdsData = jsonData.getDouble(JsonKeys.tdsKey);
             }
             case Topics.tdspumpTopic -> {
-                DataVariables.tdspumpData = jsonData.getBoolean(JsonKeys.tdsPumpStateKey);
-                if (DataVariables.tdspumpData) {
+                DataVariables.tdspumpData = jsonData.getDouble(JsonKeys.tdsPumpStateKey);
+                if (DataVariables.tdspumpData == 1) {
                     DataVariables.tdsPumpCount++;
                     System.out.println("The tds pump is on"); // Display it on the page
                 } else {
@@ -123,16 +123,16 @@ public class MyTopic extends AWSIotTopic {
                 }
             }
             case Topics.tdserrorTopic -> {
-                DataVariables.tdserrorData = jsonData.getBoolean(JsonKeys.tdsErrorKey);
+                DataVariables.tdserrorData = jsonData.getDouble(JsonKeys.tdsErrorKey);
             }
             case Topics.tdssensorerrorTopic -> {
-                DataVariables.tdssensorerrorData = jsonData.getBoolean(JsonKeys.tdsSensorErrorKey);
-                if (DataVariables.tdssensorerrorData) {
+                DataVariables.tdssensorerrorData = jsonData.getDouble(JsonKeys.tdsSensorErrorKey);
+                if (DataVariables.tdssensorerrorData == 1) {
                     System.out.println("The tds sensor is not working properly."); // Alert the user
                 }
             }
             case Topics.floatsensorTopic -> {
-                DataVariables.floatSensorData = jsonData.getBoolean(JsonKeys.floatKey);
+                DataVariables.floatSensorData = jsonData.getDouble(JsonKeys.floatKey);
             }
 
             default -> System.out.println("Received data not relevant to this device.");
