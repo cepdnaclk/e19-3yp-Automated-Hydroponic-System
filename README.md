@@ -20,6 +20,8 @@ ___
 - [Technology Stack](#technology-stack)
 - [Security & Privacy](#security-&-privacy)
 - [Power & Perfomance](#power-&-performance)
+- [User Experience](#user-experience)
+- [Design Decisions](#design-decisions)
 - [Scalability](#scalability)
 - [Testing](#hardware-testing)
 - [Budget](#budget)
@@ -212,6 +214,29 @@ The augmented product features that will differentiate our IoT-Based Automated H
 - Optimized apps
 - Caching Mechanism
 
+## User Experience
+
+- Eye Catching Outfit
+- Improved Portability
+- Easily Recognizable Liquid Input Ports
+- Filleted Edges
+- Proper Battery & Switch Ports
+- Lower Cost
+- Point to Remove Redundant Water
+- Point to Change Old Water
+
+## Design Decisions
+
+- **Outer Walls** - To protect the electronics parts and other parts of the entire product
+- **Nets** - To avoid entering unneccesary things (garbage, small animals), to have a better ventilation to the water tank and avoid using a airpump
+- **Big Solution Bottles** - To avoid frequent refilling
+- **Holes In the Bottom** = To avoid filling water in the outer tank (in an unexpected leakage or rainy situation)
+- **Larger Tank** - To avoid frequent spilling of water and stop water wastage
+- **Larger Circuit Box** - To reduce heating and proper connection between the parts in the entire system
+- **Waterproof Design** - To protect the system from unexpected leakages
+- **Two Power Modes** - To give the ability to the user to place the system in a place where no electricity is available
+- **Replaceable Componente** - To give the ability to the user to replace the parts when there is a failure in one or two parts in the system
+- **Suitable For Any Environment** - To give the ability to the users to use the system for domestic purposes or other outer usages 
 
 ## Scalability
 
@@ -219,7 +244,6 @@ The augmented product features that will differentiate our IoT-Based Automated H
 - Cost-Effective Solution
 - Monitoring & Maintenance
 - Testing and optimization
-
 
 ## Testing
 
