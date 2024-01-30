@@ -8,8 +8,7 @@
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
-  
-    <!-- Google Fonts -->
+     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
       rel="stylesheet"
@@ -42,7 +41,6 @@
     <!-- ======= Header ======= -->
     <header id="header" class="d-flex align-items-center">
       <div class="container d-flex align-items-center justify-content-between">
-       
         <a href="index.html" class="logo"
           ><img
             src="assets/img/Logo.png"
@@ -86,33 +84,124 @@
       </div>
     </header>
     <!-- End Header -->
-	
-	<section id="data flow" class="solution architecture">
-        <div class="container">
-          <div class="section-title">
-            
-            <h2><b>Data Flow</b></h2>
-          </div>
 
-          <div style= "text-align: center;" >
-            <img src="./assets/img/dataflow.jpg" alt="data flow" width="70%" >
+          
+            <div class="section-title">
+	<h2>Data Flow</h2>
+        </div>
+		
+		<div style= "text-align: center;" data-aos="fade-up">
+            <img src="./assets/img/dataflow.jpg" alt="data transmission" width="70%" >
           </div>
-		  
-		  <div class="col-lg-6">
+<section id="about" class="about">
+        <div class="container">
+          <div class="row">
+            <div class="section-title">
+	<h4>Power Availability Check:</h4>
+        </div>
+			  <div class="col-lg-6">
             <div class="content ps-lg-5">
               
-			  <h3>Power Availability Check:</h3>
               <ul>
-                <li><i class="bi bi-check-circle"></i>If power is available, proceed to check the AWS (Amazon Web Services) connection.</li>
-                <li><i class="bi bi-check-circle"></i> If power is not available, switch the power connection to the battery.</li>
-                
-                 </ul>
-            </div>
+                <li><i class="bi bi-check-circle"></i>If power is available, proceed to check the AWS (Amazon Web Services) connection.
+        </li>
+                <li><i class="bi bi-check-circle"></i>
+        If power is not available, switch the power connection to the battery.
+</li>
+               </ul>
           </div>
-		  
-		  </section>
+        </div>
+<div class="row">
+            <div class="section-title">
+	<h4>
+    AWS Connection Check:</h4>
+        </div>
+			  <div class="col-lg-6">
+            <div class="content ps-lg-5">
+              
+              <ul>
+                <li><i class="bi bi-check-circle"></i>
+        If AWS connection is available, check for user interaction with the system.
+        </li>
+				<li><i class="bi bi-check-circle"></i>If AWS connection is not available, buffer and handle basic functionalities to the MQTT broker 
+    </li>
+				</ul>
+          </div>
+        </div
+		
+		<div class="row">
+            <div class="section-title">
+	<h4>User Interaction Check:</h4>
+        </div>
+			  <div class="col-lg-6">
+            <div class="content ps-lg-5">
+              
+              <ul>
+                <li><i class="bi bi-check-circle"></i>If the user shuts down the system, end the process.
+        </li>
+				<li><i class="bi bi-check-circle"></i>If the user is interacting with the system, proceed to interact with the user's mobile application through the admin web.
+</li>
+				 </ul>
+          </div>
+        </div>
+		<div class="row">
+            <div class="section-title">
+	<h4>Environmental Parameter Checks:</h4>
+        </div>
+			  <div class="col-lg-6">
+            <div class="content ps-lg-5">
+              <p>Assuming power, connection, and user interaction are all okay, Check the Total Dissolved Solids (TDS) sensor value,
+        </p>
+              <ul>
+               <li><i class="bi bi-check-circle"></i>If the TDS value is not within the specified range, turn on or off the proper nutrient pump accordingly.
+            </li>
+                <li><i class="bi bi-check-circle"></i>If the TDS value is okay, proceed to the next check.
+</li>
+               </ul>
+          </div>
+        </div>
+		<div class="col-lg-6">
+            <div class="content ps-lg-5">
+              <p>Check the pH sensor value,</p>
+              <ul>
+               <li><i class="bi bi-check-circle"></i>
+            If the pH value is not within the specified range, turn on the proper pH pump.
+            </li>
+                <li><i class="bi bi-check-circle"></i>If the pH value is okay, proceed to the next check.
+</li>
+               </ul>
+          </div>
+        </div>
+		<div class="col-lg-6">
+            <div class="content ps-lg-5">
+              <p>Check if the floating switch is equal to 1,</p>
+              <ul>
+               <li><i class="bi bi-check-circle"></i>If the floating switch is not equal to 1, generate an alert to notify the user.
+</li>
+                
+               </ul>
+          </div>
+        </div>
+		<div class="row">
+            <div class="section-title">
+	<h4>Looping Process:</h4>
+        </div>
+			  <div class="col-lg-6">
+            <div class="content ps-lg-5">
+              
+              <ul>
+                <li><i class="bi bi-check-circle"></i>If all the values are within the proper range, execute the entire process as a loop to ensure the reliable and continuous operation of the automated hydroponic system.
 
- </main>
+
+</li>
+				</ul>
+          </div>
+        </div>
+		
+    </section>
+	
+	
+	</main>
     <!-- End #main -->
 
     <!-- ======= Footer ======= -->
